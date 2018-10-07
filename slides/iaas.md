@@ -1,41 +1,16 @@
 # Le IaaS
 
-* Point 1
-* Point 2
-
-----
-
-Vertical slide
-
-----
-
-## Second slide
-
-> Best quote ever.
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-
-Note: speaker notes FTW!
-
-----
-
-![Image](https://cdn-images-1.medium.com/max/1200/1*VD9n01kVn4hqOhyzY9X41w.png "icon")
-
-Inline <abbr title="Hypertext Markup Language">HTML</abbr> is supported.
-
 ----
 
 Immutable infrastructure
 
+![Image](https://martinfowler.com/bliki/images/immutableServer/PhoenixServerLifecycle.png)
+
 ----
 
 Pet vs Cattle
+
+![Image](https://i.stack.imgur.com/Lm3Td.jpg "Pet vs Cattle")
 
 ----
 
@@ -48,6 +23,10 @@ Infra as Code
 ----
 
 Scalabilité
+
+----
+
+Auto-scaling
 
 ----
 
@@ -96,3 +75,9 @@ Regions
 ----
 
 Network
+
+----
+
+Architecture
+
+<img src="https://blog.cds-global.com/hs-fs/hubfs/Imported_Blog_Media/eHub-AWS-Architecture.png?t=1538073581004&width=858&height=942&name=eHub-AWS-Architecture.png" width="50%" />
