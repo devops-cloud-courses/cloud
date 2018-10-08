@@ -18,6 +18,7 @@ La nouvelle coqueluche
   - Résilience supportée nativement par la plateforme
 - Gestion fine
   - Pay-per-use sur le cloud
+- Piloté par événements
 
 ----
 
@@ -31,6 +32,36 @@ La nouvelle coqueluche
 
 ----
 
+### Architecture traditionnelle
+
+![Image](https://martinfowler.com/articles/serverless/ps.svg)
+
+----
+
+### Séparons l'architecture
+
+<img src="https://martinfowler.com/bliki/images/serverless/sketch.png" width="50%" />
+
+----
+
+### Architecture serverless
+
+<img src="https://martinfowler.com/articles/serverless/sps.svg" width="75%" />
+
+----
+
+### Architecture
+
+Traditionnelle
+
+<img src="https://martinfowler.com/articles/serverless/cp.svg" width="75%" />
+
+Serverless
+
+<img src="https://martinfowler.com/articles/serverless/scp.svg" width="75%" />
+
+----
+
 ### Function-as-a-Service
 
 ----
@@ -41,6 +72,10 @@ La nouvelle coqueluche
 
 ### Autoscaling
 
+Contrairement au PaaS ou au IaaS, la scalabilité est automatique et basé sur des métriques techniques et fonctionnelles
+
 ----
 
 ### Scale to zero
+
+Du point de vue de l'utilisateur, s'il n'y a pas d'utilisation de l'environnement, il n'y a pas de coût associé
