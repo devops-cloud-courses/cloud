@@ -19,6 +19,6 @@
 ## Who we are ?
 
 > Arthur Mauvezin<br />
-> Cloud Solution Architect @ FFF
+> DevOps Engineer @ FFF
 
 <img src="https://avatars3.githubusercontent.com/u/10439516?s=460&v=4" width="200px" />
