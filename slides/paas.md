@@ -1,16 +1,18 @@
-# Le PaaS
+## Le PaaS
+
+Plateform-as-a-Service
 
 ----
 
-Managed services
+### Managed services
 
 ----
 
-Geo-replication
+### Geo-replication
 
 ----
 
-Callable by API
+### Callable by API
 
 ----
 
