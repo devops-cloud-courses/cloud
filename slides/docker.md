@@ -197,24 +197,174 @@ Removing intermediate container 02071fceb21b
 
 ----
 
-### Network
+### Démarrer un container
+
+```bash
+$ docker run --name test -it debian
+
+Unable to find image 'debian:latest' locally
+latest: Pulling from library/debian
+05d1a5232b46: Pull complete 
+Digest: sha256:07fe888a6090482fc6e930c1282d1edf67998a39a09a0b339242fbfa2b602fff
+Status: Downloaded newer image for debian:latest
+root@d6c0fe130dba:/# exit 13
+```
+
+```bash
+$ echo $?
+13
+```
+
+```bash
+$ docker ps -a | grep test
+d6c0fe130dba        debian:7            "/bin/bash"         26 seconds ago      Exited (13) 17 seconds ago                         test
+```
 
 ----
 
-### Volumes
+### Détacher un container
+
+```bash
+$ docker run --name test -it debian
+
+root@e2f798002584:/# 
+```
+
+```bash
+$ docker run --name test -d debian
+
+77b89ea9ce3537dff386149cb2cb51dc482413a19f8106b11814a66143d8360b
+```
+
+```bash
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES
+77b89ea9ce35        debian              "bash"              54 seconds ago      Exited (0) 53 seconds ago                       test
+```
 
 ----
 
-### Docker run
+### Les variables d'environnement
+
+Les variables d'environnements servent à paramétrer un container, par exemple pour mettre en place une chaine de connexion, ou un paramétrage particulier
+
+```bash
+$ docker run -d -e POSTGRES_ENV_POSTGRES_USER='bar' -e POSTGRES_ENV_POSTGRES_PASSWORD='foo' postgres
+```
 
 ----
 
-### Docker logs
+### Le réseau
+
+Pour accéder au service tournant dans le container, il faut passer par les ports réseaux
+
+- Exposer le service dans le Dockerfile
+
+```dockerfile
+FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+EXPOSE 80
+```
+
+- Mapper le port de la machine avec le service exposé
+
+```bash
+$ docker run --name nginx -p 8080:80 -d nginx
+```
 
 ----
 
-### Docker exec
+### La persistance
+
+Pour pouvoir persister des données provenant des containers, il est nécessaire de passer par des volumes
+
+```bash
+$ docker run -d --name devtest -v myvol2:/app nginx:latest
+```
+
+```bash
+"Mounts": [
+    {
+        "Type": "volume",
+        "Name": "myvol2",
+        "Source": "/var/lib/docker/volumes/myvol2/_data",
+        "Destination": "/app",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+    }
+]
+```
+
+----
+
+### Les fichiers de log
+
+Il est souvent nécessaire de voir ce qui se passe dans le container, notamment à des fins de monitoring et de debug
+
+Par défaut, Docker écrit sur la sortie standard STDOUT
+
+```bash
+$ docker run --name test -d busybox sh -c "while true; do $(echo date); sleep 1; done"
+```
+
+```bash
+$ date
+Tue 14 Nov 2017 16:40:00 CET
+```
+
+```bash
+$ docker logs -f --until=2s
+Tue 14 Nov 2017 16:40:00 CET
+Tue 14 Nov 2017 16:40:01 CET
+Tue 14 Nov 2017 16:40:02 CET
+```
+
+----
+
+### Docker compose
+
+Pour simplifier toutes les notions vues précédemment, Docker utilise un fichier yaml, ainsi qu'un outil afin de décrire une stack logicielle complète
+
+```yaml
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+```
 
 ----
 
 ### Quelques cas d'usage
+#### CI/CD
+<img src="http://codethebuild.github.io/slides/images/build-env-jenkins-containers.png" width="70%">
+
+----
+
+### Quelques cas d'usage
+#### Microservices
+<img src="https://github.com/dockersamples/example-voting-app/raw/master/architecture.png" width="60%">
