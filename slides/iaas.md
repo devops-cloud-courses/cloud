@@ -90,7 +90,11 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 
 ### Immutable infrastructure : outils
 
-Packer / AMI / Image
+- Création d'images contenant les patchs et l'OS
+- Création d'images contenant l'applicatif
+- Upgrade des images via Git et reconstruction de l'image
+
+![Image](https://i0.wp.com/codeblog.dotsandbrackets.com/wp-content/uploads/2017/05/packer-logo.jpg?resize=192%2C254)
 
 ----
 
@@ -231,3 +235,7 @@ Données qu'un système d'information peut être amené à perdre par suite d'un
 <img src="https://kubernetes.io/images/blog/2018-04-30-zero-downtime-deployment-kubernetes-jenkins/deployment-process.png" width="70%" />
 
 ----
+
+### Exemple d'architecture
+
+<img src="http://www.tenzing.com/wp-content/uploads/2014/05/multi-node-standard.png" width="80%" />
