@@ -26,17 +26,45 @@ Fourni une plateforme permettant de développer, exécuter et gérer des applica
 
 ----
 
-### Managed services
+### Service managés
+
+Le CSP s'occupe de maintenir la scalabilité, la résilience et le niveau de patch de la plateforme
+
+L'utilisateur se charge de définir l'architecture la plus adapatée
 
 ----
 
 ### Geo-replication
 
-----
-
-### Callable by API
+La géo-réplication est inclus de base dans la définition du PaaS
 
 ----
 
-No patch management
-No version
+### Backup / restore
+
+La notion de DRP vue précédemment est prise en charge par le CSP
+
+Cela devient une case à cocher
+
+----
+
+### Basé sur des APIs
+
+Toutes les briques PaaS sont appelables par APIs
+
+Ce qui rend la création d'architecture PaaS extrèmement facile
+
+----
+
+### Private PaaS
+
+Des PaaS privés existent on-premises
+- Azure Stack
+- IBM Cloud Private
+- Redhat Openshift
+
+----
+
+### Exemples d'architecture
+
+<img src="https://bizexc.files.wordpress.com/2017/01/big-data-ra.png"  width="65%" />
