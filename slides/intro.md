@@ -19,6 +19,6 @@
 ## Who we are ?
 
 > Arthur Mauvezin<br />
-> DevOps Engineer @ FFF
+> DevOps Engineer @ Ouidou Consulting
 
 <img src="https://avatars3.githubusercontent.com/u/10439516?s=460&v=4" width="200px" />
