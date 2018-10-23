@@ -153,25 +153,25 @@ data:
 
 ### Rolling update
 
-<img src="https://d33wubrfki0l68.cloudfront.net/30f75140a581110443397192d70a4cdb37df7bfc/fa906/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates1.svg" width="50%">
+<img src="https://d33wubrfki0l68.cloudfront.net/30f75140a581110443397192d70a4cdb37df7bfc/fa906/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates1.svg" width="50%" />
 
 ----
 
 ### Rolling update
 
-<img src="https://d33wubrfki0l68.cloudfront.net/678bcc3281bfcc588e87c73ffdc73c7a8380aca9/703a2/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates2.svg" width="50%">
+<img src="https://d33wubrfki0l68.cloudfront.net/678bcc3281bfcc588e87c73ffdc73c7a8380aca9/703a2/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates2.svg" width="50%" />
 
 ----
 
 ### Rolling update
 
-<img src="https://d33wubrfki0l68.cloudfront.net/9b57c000ea41aca21842da9e1d596cf22f1b9561/91786/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates3.svg" width="50%">
+<img src="https://d33wubrfki0l68.cloudfront.net/9b57c000ea41aca21842da9e1d596cf22f1b9561/91786/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates3.svg" width="50%" />
 
 ----
 
 ### Rolling update
 
-<img src="https://d33wubrfki0l68.cloudfront.net/6d8bc1ebb4dc67051242bc828d3ae849dbeedb93/fbfa8/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates4.svg" width="50%">
+<img src="https://d33wubrfki0l68.cloudfront.net/6d8bc1ebb4dc67051242bc828d3ae849dbeedb93/fbfa8/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates4.svg" width="50%" />
 
 ----
 
@@ -258,6 +258,28 @@ La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme par exempl
 
 ### Helm
 
+Helm est le package manager de Kubernetes
+
+Déploit des paquets appelés chart, contenant l'architecture complète du logiciel
+
+C'est l'équivalent de apt-get ou yum
+
+----
+
+### Helm architecture
+
+![Image](https://image.slidesharecdn.com/k8shelm-170706065852/95/helm-application-deployment-management-for-kubernetes-13-638.jpg?cb=1499324812)
+
 ----
 
 ### Service Mesh
+
+Un service mesh est un service qui assure la communication entre différentes versions d'une même application
+
+Il sert aussi pour tout ce qui est distributed tracing et debugging
+
+----
+
+### Istio architecture
+
+<img src="https://478h5m1yrfsa3bbe262u7muv-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/istio_sysdig_arch_overview.png" width="70%" />
