@@ -20,7 +20,7 @@
 
 ### Création des machines virtuelles
 
-![Image](https://www.packtpub.com/sites/default/files/Article-Images/2185EN_01_01.png)
+![Image](https://www.veeam.com/blog/wp-content/uploads/2015/10/2015-Q4-Physical-Servers-vs-VMs.png)
 
 ----
 
