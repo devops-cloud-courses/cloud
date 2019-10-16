@@ -34,7 +34,7 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 
 ### Regions : AWS
 
-![Image](https://images.techhive.com/images/article/2016/03/amazon-cloud-dc-map-100651841-large.idge.gif)
+![Image](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2018/10/28/aws_global_infra_map_featured_image.png)
 
 ----
 
