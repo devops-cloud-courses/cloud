@@ -40,7 +40,7 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 
 ### Regions : Azure
 
-![Image](hhttps://www.geeek.org/content/images/2019/06/azure-regions.png)
+![Image](https://www.geeek.org/content/images/2019/06/azure-regions.png)
 
 ----
 
@@ -238,4 +238,4 @@ Données qu'un système d'information peut être amené à perdre par suite d'un
 
 ### Exemple d'architecture
 
-<img src="https://docs.aws.amazon.com/quickstart/latest/magento/images/magento-with-aurora-architecture.png" width="80%" />
+<img src="https://docs.aws.amazon.com/quickstart/latest/magento/images/magento-with-aurora-architecture.png" width="60%" />
