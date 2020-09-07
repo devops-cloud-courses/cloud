@@ -238,4 +238,4 @@ Données qu'un système d'information peut être amené à perdre par suite d'un
 
 ### Exemple d'architecture
 
-<img src="http://www.tenzing.com/wp-content/uploads/2014/05/multi-node-standard.png" width="80%" />
+<img src="https://docs.aws.amazon.com/quickstart/latest/magento/images/magento-with-aurora-architecture.png" width="80%" />
