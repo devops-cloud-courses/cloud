@@ -40,7 +40,7 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 
 ### Regions : Azure
 
-![Image](https://i1.wp.com/buildazure.com/wp-content/uploads/2017/09/AzureRegionsMap_20170922.png?resize=900%2C469&ssl=1)
+![Image](hhttps://www.geeek.org/content/images/2019/06/azure-regions.png)
 
 ----
 
