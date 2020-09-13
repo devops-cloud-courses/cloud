@@ -52,4 +52,10 @@ Définition
 
 Hub & Spoke
 
-![Image](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/images/shared-services.png)
+<img src="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/images/shared-services.png" width="80%" />
+
+----
+
+### Cloud Services overview
+
+![Image](https://miro.medium.com/max/1400/0*Zd4nDSg6Tvh3MSfs)
