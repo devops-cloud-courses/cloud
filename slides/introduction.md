@@ -6,7 +6,7 @@
 <i><a target="_new" href="http://twitter.com/arthurmauvezin">@arthurmauvezin</a> | <a target="_new" href="http://github.com/arthurmauvezin">github.com/arthurmauvezin</a></i>
 <i><a target="_new" href="http://twitter.com/laurentgrangeau">@laurentgrangeau</a> | <a target="_new" href="http://github.com/laurentgrangeau">github.com/laurentgrangeau</a></i>
 
-<a href="#/2/2" style="font-size: 22px; background: #4141d8; text-decoration: none; padding: 20px; color: white; border-radius: 7px;">How to explore this doc</a>
+<a href="#/2/3" style="font-size: 22px; background: #4141d8; text-decoration: none; padding: 20px; color: white; border-radius: 7px;">How to explore this doc</a>
 
 ---
 
