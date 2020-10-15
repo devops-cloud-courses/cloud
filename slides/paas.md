@@ -12,8 +12,8 @@ Fourni une plateforme permettant de développer, exécuter et gérer des applica
 
 ### Les PaaS historiques
 
-<img src="https://camo.githubusercontent.com/30c7758f9ac63488d3c2814ed2dcd9dbb7e967f3/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6865726f6b752d312e737667" width="50%" />
-<img src="http://blog.al-aqel.com/wp-content/uploads/2013/01/google-app-engine-logo.jpg" width="25%" />
+<img src="https://camo.githubusercontent.com/30c7758f9ac63488d3c2814ed2dcd9dbb7e967f3/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6865726f6b752d312e737667" width="400px" style="background:none; border:none; box-shadow:none;"/>
+<img src="http://blog.al-aqel.com/wp-content/uploads/2013/01/google-app-engine-logo.jpg" width="200px" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
@@ -67,4 +67,4 @@ Des PaaS privés existent on-premises
 
 ### Exemples d'architecture
 
-<img src="https://bizexc.files.wordpress.com/2017/01/big-data-ra.png"  width="65%" />
+<img src="https://bizexc.files.wordpress.com/2017/01/big-data-ra.png" width="65%" style="background:none; border:none; box-shadow:none;"/>

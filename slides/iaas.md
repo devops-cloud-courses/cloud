@@ -34,20 +34,20 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 
 ### Regions : AWS
 
-![Image](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2018/10/28/aws_global_infra_map_featured_image.png)
+<img src="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2018/10/28/aws_global_infra_map_featured_image.png" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Regions : Azure
 
-![Image](https://www.geeek.org/content/images/2019/06/azure-regions.png)
+<img src="https://www.geeek.org/content/images/2019/06/azure-regions.png" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Availability zones
 
-<img src="https://www.agileit.com/wp-content/uploads/2017/11/az-graphic-two.png" width="35%" />
-<img src="https://image.slidesharecdn.com/awsoverviewv4-120611171440-phpapp02/95/overview-of-amazon-web-services-8-728.jpg?cb=1434492790" width="54%" />
+<img src="https://www.agileit.com/wp-content/uploads/2017/11/az-graphic-two.png" width="35%" style="background:none; border:none; box-shadow:none;" />
+<img src="https://image.slidesharecdn.com/awsoverviewv4-120611171440-phpapp02/95/overview-of-amazon-web-services-8-728.jpg?cb=1434492790" width="54%" style="background:none; border:none; box-shadow:none;" />
 
 Note: 
 C'est quoi le nombre de serveur du plus gros datacenter à dublin
@@ -85,7 +85,7 @@ Machine optimisée pour chaque usage
 
 ### Pet vs Cattle
 
-![Image](https://i.stack.imgur.com/Lm3Td.jpg "Pet vs Cattle")
+<img src="https://i.stack.imgur.com/Lm3Td.jpg" style="background:none; border:none; box-shadow:none;" />
 
 Note:
 * tout faire pour arreter de traiter l'unitaire
@@ -95,13 +95,13 @@ Note:
 
 ### Immutable infrastructure : problème
 
-![Image](https://martinfowler.com/bliki/images/immutableServer/PhoenixServerLifecycle.png)
+<img src="https://martinfowler.com/bliki/images/immutableServer/PhoenixServerLifecycle.png" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Immutable infrastructure : solution
 
-![Image](https://martinfowler.com/bliki/images/immutableServer/ImmutableServerLifecycle.png)
+<img src="https://martinfowler.com/bliki/images/immutableServer/ImmutableServerLifecycle.png" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
@@ -111,7 +111,7 @@ Note:
 - Création d'images contenant l'applicatif
 - Upgrade des images via Git et reconstruction de l'image
 
-![Image](https://i0.wp.com/codeblog.dotsandbrackets.com/wp-content/uploads/2017/05/packer-logo.jpg?resize=192%2C254)
+<img src="https://i0.wp.com/codeblog.dotsandbrackets.com/wp-content/uploads/2017/05/packer-logo.jpg?resize=192%2C254" width="100px" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
@@ -183,19 +183,19 @@ Données qu'un système d'information peut être amené à perdre par suite d'un
 
 ### RTO/RPO
 
-![Image](https://upload.wikimedia.org/wikipedia/commons/c/c4/RTO_RPO.gif)
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/RTO_RPO.gif" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Architecture
 
-<img src="https://blog.cds-global.com/hs-fs/hubfs/Imported_Blog_Media/eHub-AWS-Architecture.png?t=1538073581004&width=858&height=942&name=eHub-AWS-Architecture.png" width="50%" />
+<img src="https://blog.cds-global.com/hs-fs/hubfs/Imported_Blog_Media/eHub-AWS-Architecture.png?t=1538073581004&width=858&height=942&name=eHub-AWS-Architecture.png" width="50%" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Chaos engineering
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Netflix_simianarmy-768x797.jpg" width="50%" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Netflix_simianarmy-768x797.jpg" width="50%" style="background:none; border:none; box-shadow:none;" />
 
 Note:
 * inventé par un mec de netflix
@@ -239,28 +239,28 @@ Note:
 
 ### Blue/green deployment
 
-<img src="https://martinfowler.com/bliki/images/blueGreenDeployment/blue_green_deployments.png" width="75%" />
+<img src="https://martinfowler.com/bliki/images/blueGreenDeployment/blue_green_deployments.png" width="75%" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Canary release
 
-![Image](https://akiselev87.files.wordpress.com/2018/02/2018-02-08_8-46-21.jpg)
+<img src="https://akiselev87.files.wordpress.com/2018/02/2018-02-08_8-46-21.jpg" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### A/B testing
 
-<img src="https://splitmetrics.com/wp-content/uploads/2016/07/v5.png" width="70%" />
+<img src="https://splitmetrics.com/wp-content/uploads/2016/07/v5.png" width="70%" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Zero downtime deployment
 
-<img src="https://kubernetes.io/images/blog/2018-04-30-zero-downtime-deployment-kubernetes-jenkins/deployment-process.png" width="70%" />
+<img src="https://kubernetes.io/images/blog/2018-04-30-zero-downtime-deployment-kubernetes-jenkins/deployment-process.png" width="70%" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Exemple d'architecture
 
-<img src="https://docs.aws.amazon.com/quickstart/latest/magento/images/magento-with-aurora-architecture.png" width="60%" />
+<img src="https://docs.aws.amazon.com/quickstart/latest/magento/images/magento-with-aurora-architecture.png" width="60%" style="background:none; border:none; box-shadow:none;" />

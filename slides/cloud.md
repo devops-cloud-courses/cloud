@@ -12,25 +12,25 @@ Donnez moi des exemples
 
 ### Les mainframes
 
-![Image](https://www.researchgate.net/publication/275405572/figure/fig2/AS:294523784712210@1447231350853/Mainframe-Architecture.png "Mainframe")
+<img src="https://www.researchgate.net/publication/275405572/figure/fig2/AS:294523784712210@1447231350853/Mainframe-Architecture.png" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
 ### Avènement des machines physiques
 
-<img src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/44874a48-43bf-4ae8-8e4f-0bee135aac93.jpg._CB320252724_.jpg" width="55%" />
+<img src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/44874a48-43bf-4ae8-8e4f-0bee135aac93.jpg._CB320252724_.jpg" width="55%" style="background:none; border:none; box-shadow:none;" />
 
 ----
 
 ### Création des machines virtuelles
 
-![Image](https://www.veeam.com/blog/wp-content/uploads/2015/10/2015-Q4-Physical-Servers-vs-VMs.png)
+<img src="https://www.veeam.com/blog/wp-content/uploads/2015/10/2015-Q4-Physical-Servers-vs-VMs.png" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
 ### Le cloud
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Nuage33.png" width="65%" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Nuage33.png" width="65%" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
@@ -49,7 +49,7 @@ Note:
 
 ### Les différents types de service
 
-![Image](https://cdn-images-1.medium.com/max/1200/1*VD9n01kVn4hqOhyzY9X41w.png "Services")
+<img src="https://cdn-images-1.medium.com/max/1200/1*VD9n01kVn4hqOhyzY9X41w.png" style="background:none; border:none; box-shadow:none;"/>
 
 Note:
 * Shared Responsibility Model (SRM) - tout ce qui est en bleu c'est le CSP (Cloud service provider) - le reste le user

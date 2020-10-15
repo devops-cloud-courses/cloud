@@ -35,19 +35,19 @@ La nouvelle coqueluche
 
 ### Architecture traditionnelle
 
-![Image](https://martinfowler.com/articles/serverless/ps.svg)
+<img src="https://martinfowler.com/articles/serverless/ps.svg" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
 ### Séparons l'architecture
 
-<img src="https://martinfowler.com/bliki/images/serverless/sketch.png" width="50%" />
+<img src="https://martinfowler.com/bliki/images/serverless/sketch.png" width="50%" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
 ### Architecture serverless
 
-<img src="https://martinfowler.com/articles/serverless/sps.svg" width="75%" />
+<img src="https://martinfowler.com/articles/serverless/sps.svg" width="75%" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
@@ -55,11 +55,11 @@ La nouvelle coqueluche
 
 Traditionnelle
 
-<img src="https://martinfowler.com/articles/serverless/cp.svg" width="75%" />
+<img src="https://martinfowler.com/articles/serverless/cp.svg" width="75%" style="background:none; border:none; box-shadow:none;"/>
 
 Serverless
 
-<img src="https://martinfowler.com/articles/serverless/scp.svg" width="75%" />
+<img src="https://martinfowler.com/articles/serverless/scp.svg" width="75%" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
@@ -74,7 +74,7 @@ Déployer du code comme plus petite unité de valeur
 
 ### Function-as-a-Service
 
-<img src="img/faas.png" width="50%" />
+<img src="img/faas.png" width="50%" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
@@ -88,7 +88,7 @@ Déployer du code comme plus petite unité de valeur
 
 ### Backend-as-a-Service
 
-<img src="img/baas.png" width="80%" />
+<img src="img/baas.png" width="80%" style="background:none; border:none; box-shadow:none;"/>
 
 ----
 
@@ -142,4 +142,4 @@ Du point de vue de l'utilisateur, s'il n'y a pas d'utilisation de l'environnemen
 
 ### Architecture
 
-<img src="https://d3ansictanv2wj.cloudfront.net/fig_2-51d839a1bfd30c8dd1a9f0e608cacfe9.png" width="80%" />
+<img src="https://d3ansictanv2wj.cloudfront.net/fig_2-51d839a1bfd30c8dd1a9f0e608cacfe9.png" width="80%" style="background:none; border:none; box-shadow:none;"/>
