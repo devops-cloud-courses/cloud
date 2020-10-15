@@ -49,6 +49,10 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 <img src="https://www.agileit.com/wp-content/uploads/2017/11/az-graphic-two.png" width="35%" />
 <img src="https://image.slidesharecdn.com/awsoverviewv4-120611171440-phpapp02/95/overview-of-amazon-web-services-8-728.jpg?cb=1434492790" width="54%" />
 
+Note: 
+C'est quoi le nombre de serveur du plus gros datacenter à dublin
+1M
+
 ----
 
 ### Machines virtuelles
@@ -68,11 +72,24 @@ Créer ou détruire automatiquement des ressources (via portail web ou api) sans
 | m5.4xlarge | 16 | 64 | EBS | 3.5Gbit/s |
 | m5.12xlarge | 48 | 192 | EBS | 7Gbit/s |
 
+Note:
+C"est qoui la plus grosse babass?
+128CPU 12To de RAM
+
+EBS: Elastic Bloc Storage
+C'est du stockage temporaire
+
+Machine optimisée pour chaque usage
+
 ----
 
 ### Pet vs Cattle
 
 ![Image](https://i.stack.imgur.com/Lm3Td.jpg "Pet vs Cattle")
+
+Note:
+* tout faire pour arreter de traiter l'unitaire
+* si un truc va pas tu le bute
 
 ----
 
@@ -134,6 +151,10 @@ Le cloud n'empêche pas de mettre en place un système de backup
 
 C'est à la charge de l'utilisateur de mettre en place un système de backup de données s'il y a un crash du cloud
 
+Note:
+Question: SLA- garantie d'uptime des VMS 
+IL n'y en a pas sur les VMs - C'est au clouder de mettre en place les backups
+
 ----
 
 ### DRP (Disaster Recovery Plan)
@@ -176,6 +197,10 @@ Données qu'un système d'information peut être amené à perdre par suite d'un
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Netflix_simianarmy-768x797.jpg" width="50%" />
 
+Note:
+* inventé par un mec de netflix
+* plutot qu'attendre que les problèmes arrivent, autant les provoquer soit même
+
 ----
 
 ### Simian army
@@ -195,7 +220,7 @@ Données qu'un système d'information peut être amené à perdre par suite d'un
 - Latency Monkey
   - Teste la résistance à la panne d'un composant en introduisant de la latence, ou en simulant une coupure complète d'un système externe dépendant
 - Doctor Monkey
-  - Détection des instances présentant des problèmes de santé (surcharge CPU, ...) en les mettre de coté pour analyse ultérieure
+  - Détection des instances présentant des problèmes de santé (surcharge CPU, ...) en les mettant de coté pour analyse ultérieure
 
 ----
 

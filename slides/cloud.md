@@ -1,5 +1,9 @@
 ## Qu'est ce que le cloud ?
 
+Note:
+Donnez moi des exemples
+* ex sas
+
 ----
 
 ### Petit retour en arrière
@@ -38,8 +42,18 @@
 * Mutualisé
 * Libre-service
 
+Note:
+* Elasticité :si vous avez besoin de plus grand - c'est comme un elastic, vous lachez, ca revient
+
 ----
 
 ### Les différents types de service
 
 ![Image](https://cdn-images-1.medium.com/max/1200/1*VD9n01kVn4hqOhyzY9X41w.png "Services")
+
+Note:
+* Shared Responsibility Model (SRM) - tout ce qui est en bleu c'est le CSP (Cloud service provider) - le reste le user
+* 2 flavor differentes de PaaS
+  * Heroku style - dyno
+  * le reste
+* le paas, c'est pas des vm mais des niveaux de SLA
