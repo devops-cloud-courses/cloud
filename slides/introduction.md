@@ -32,6 +32,13 @@
 
 ----
 
+### Et si on vous donnait un peu d'aide :)
+
+* Rappel: Azure Pipelines
+* YAML: How to start
+
+----
+
 ### Qui connait le Cloud ?
 
 ----
