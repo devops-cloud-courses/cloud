@@ -1,7 +1,7 @@
 # Cloud course
 
 This repo contains a reveal.js presentation about Cloud.
-To visualize this presentation, go here: https://cours-ece.github.io/cloud
+To visualize this presentation, go here: https://devops-cloud-courses.github.io/cloud
 You can also clone this repo and expose static pages through your favorite web server.
 
 > This course is open source. You can use it freely.
@@ -23,7 +23,7 @@ docker stop course
 ```
 
 ## Print this course to pdf (only in chrome and chromium)
-* Click on [this link](https://cours-ece.github.io/cloud/?print-pdf&pdfSeparateFragments=false)
+* Click on [this link](https://devops-cloud-courses.github.io/cloud/?print-pdf&pdfSeparateFragments=false)
 * Then `CTRL+P` on the generated page
 * Change the following settings
 
