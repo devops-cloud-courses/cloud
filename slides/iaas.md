@@ -76,17 +76,6 @@ Note:
 
 ----
 
-### Virtual Machines by Availability Zone
-
-<img src="img/vm-by-az.svg" alt="Comparison of available CPU platforms, machine families, and GPUs across Availability Zones" />
-
-Note:
-* Not all Availability Zones have identical underlying hardware!
-* Newer CPU generations (Sapphire Rapids, AMD Genoa), GPU/TPU accelerators, and UltraMem instances (11.5 TB RAM) are rolled out selectively per zone.
-* Always verify that your required machine SKU is available across at least 2 or 3 AZs before designing a High Availability deployment.
-
-----
-
 ### Virtual Machines
 
 > Decoupling compute (`vCPU`, `RAM`) from persistent network storage and physical hardware
@@ -113,6 +102,17 @@ Note:
 
 ----
 
+### Virtual Machines by Availability Zone
+
+<img src="img/vm-by-az.svg" alt="Comparison of available CPU platforms, machine families, and GPUs across Availability Zones" />
+
+Note:
+* Not all Availability Zones have identical underlying hardware!
+* Newer CPU generations (Sapphire Rapids, AMD Genoa), GPU/TPU accelerators, and UltraMem instances (11.5 TB RAM) are rolled out selectively per zone.
+* Always verify that your required machine SKU is available across at least 2 or 3 AZs before designing a High Availability deployment.
+
+----
+
 ### Cloud Storage Taxonomy: Block, File & Object
 
 <img src="img/cloud-storage-types.svg" alt="Comparison of Cloud Block Storage, File Storage, Object Storage, and Lifecycle Tiers" />
@@ -121,6 +121,14 @@ Note:
 * Block Storage (SAN): Raw volumes attached to a single VM via NVMe/SCSI (< 1 ms latency) — ideal for boot disks and relational databases.
 * File Storage (NAS): Shared POSIX/NFS/SMB file system mounted concurrently across multiple VMs or containers.
 * Object Storage (S3 / GCS / Azure Blob): Flat REST API namespace, virtually infinite scale, 99.999999999% (11 nines) durability, with automated lifecycle policies transitioning aging data from Standard (Hot) to Nearline, Coldline, and Archive tiers.
+
+----
+
+### Software-Defined Networking
+
+* Configure the entire network topology via software and APIs
+* Isolate environments using Virtual Private Clouds (`VPC` / `VNet`) and private subnets
+* Enforce fine-grained security with Stateful Firewalls, Security Groups (`NSG`), and Web Application Firewalls (`WAF`)
 
 ----
 
@@ -154,14 +162,6 @@ Note:
 
 ----
 
-### Software-Defined Networking
-
-* Configure the entire network topology via software and APIs
-* Isolate environments using Virtual Private Clouds (`VPC` / `VNet`) and private subnets
-* Enforce fine-grained security with Stateful Firewalls, Security Groups (`NSG`), and Web Application Firewalls (`WAF`)
-
-----
-
 ### Infrastructure as Code (IaC)
 
 ```hcl
@@ -185,6 +185,54 @@ resource "azurerm_linux_virtual_machine" "web" {
   }
 }
 ```
+
+----
+
+### Zero-Downtime Rolling Deployment
+
+<img src="img/rolling-update.svg" alt="Rolling update replacing instances one by one with zero downtime" />
+
+----
+
+### Blue/Green Deployment
+
+<img src="img/blue-green.svg" alt="Blue/Green deployment switching 100% traffic between two identical environments" />
+
+----
+
+### Canary Release
+
+<img src="img/canary-release.svg" alt="Canary deployment routing 5% of traffic to the new version" />
+
+----
+
+### A/B Testing
+
+<img src="img/ab-testing.svg" alt="A/B testing splitting user cohorts to measure business conversion" />
+
+----
+
+### SLA & "The Table of Nines"
+
+> **Service Level Agreement (SLA)**: Contractual uptime commitment backed by financial credits
+
+| Availability (SLA) | Max Downtime / Year | Max Downtime / Month | Typical Cloud Tier |
+|---|---|---|---|
+| `99%` ("Two Nines") | **3.65 days** | 7h 18m | Non-critical batch / Dev |
+| `99.9%` ("Three Nines") | **8h 45m** | 43m 50s | Single-Instance VM (Premium SSD) |
+| `99.95%` | **4h 22m** | 21m 55s | Multi-AZ Regional Managed DB |
+| `99.99%` ("Four Nines") | **52m 36s** | 4m 23s | Multi-AZ VMs + Load Balancer |
+| `99.999%` ("Five Nines") | **5m 15s** | 26s | Global Multi-Region Active-Active |
+
+----
+
+### Composite SLA Math: Serial vs. Parallel
+
+<img src="img/composite-sla.svg" alt="Composite SLA calculation comparing serial dependencies against parallel Multi-AZ redundancy" />
+
+Note:
+* Serial dependencies multiply down: 99.95% × 99.9% × 99.9% = 99.75% (~22 hours of downtime/year).
+* Parallel Multi-AZ redundancy multiplies the failure probability: two independent zones at 99.9% each have a 0.1% (0.001) failure chance, so the probability both fail simultaneously is 0.001 × 0.001 = 0.000001 → 99.9999% availability!
 
 ----
 
@@ -222,30 +270,6 @@ Note:
 
 ----
 
-### SLA & "The Table of Nines"
-
-> **Service Level Agreement (SLA)**: Contractual uptime commitment backed by financial credits
-
-| Availability (SLA) | Max Downtime / Year | Max Downtime / Month | Typical Cloud Tier |
-|---|---|---|---|
-| `99%` ("Two Nines") | **3.65 days** | 7h 18m | Non-critical batch / Dev |
-| `99.9%` ("Three Nines") | **8h 45m** | 43m 50s | Single-Instance VM (Premium SSD) |
-| `99.95%` | **4h 22m** | 21m 55s | Multi-AZ Regional Managed DB |
-| `99.99%` ("Four Nines") | **52m 36s** | 4m 23s | Multi-AZ VMs + Load Balancer |
-| `99.999%` ("Five Nines") | **5m 15s** | 26s | Global Multi-Region Active-Active |
-
-----
-
-### Composite SLA Math: Serial vs. Parallel
-
-<img src="img/composite-sla.svg" alt="Composite SLA calculation comparing serial dependencies against parallel Multi-AZ redundancy" />
-
-Note:
-* Serial dependencies multiply down: 99.95% × 99.9% × 99.9% = 99.75% (~22 hours of downtime/year).
-* Parallel Multi-AZ redundancy multiplies the failure probability: two independent zones at 99.9% each have a 0.1% (0.001) failure chance, so the probability both fail simultaneously is 0.001 × 0.001 = 0.000001 → 99.9999% availability!
-
-----
-
 ### Chaos Engineering
 
 <img src="img/chaos-engineering.svg" alt="Chaos Engineering blast radius levels: Chaos Monkey, Chaos Gorilla, Chaos Kong" />
@@ -270,30 +294,6 @@ Note:
 * **Doctor Monkey**: Detects unhealthy instances (`CPU` spikes, memory leaks, failing health checks) and removes them for root-cause analysis
 * **Janitor Monkey**: Identifies and deletes unused resources to reduce cloud waste (FinOps)
 * **Security & Conformity Monkeys**: Flag or terminate instances that violate security policies or architectural standards
-
-----
-
-### Blue/Green Deployment
-
-<img src="img/blue-green.svg" alt="Blue/Green deployment switching 100% traffic between two identical environments" />
-
-----
-
-### Canary Release
-
-<img src="img/canary-release.svg" alt="Canary deployment routing 5% of traffic to the new version" />
-
-----
-
-### A/B Testing
-
-<img src="img/ab-testing.svg" alt="A/B testing splitting user cohorts to measure business conversion" />
-
-----
-
-### Zero-Downtime Rolling Deployment
-
-<img src="img/rolling-update.svg" alt="Rolling update replacing instances one by one with zero downtime" />
 
 ----
 

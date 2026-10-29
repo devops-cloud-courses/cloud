@@ -2,9 +2,21 @@
 
 ----
 
+### Remote Access: Point-to-Site VPN
+
+<img src="img/vpn-point-to-site.svg" alt="Point-to-Site VPN connecting individual remote developer machines to a Cloud VNet" />
+
+----
+
 ### Hybrid Connectivity: Site-to-Site VPN
 
 <img src="img/vpn-site-to-site.svg" alt="Site-to-Site IPsec VPN connecting On-Premises Datacenter to Cloud VNet" />
+
+----
+
+### Dedicated Interconnect: ExpressRoute / Direct Connect
+
+<img src="img/expressroute.svg" alt="Dedicated private fiber connection via Azure ExpressRoute or AWS Direct Connect" />
 
 ----
 
@@ -14,15 +26,9 @@
 
 ----
 
-### Remote Access: Point-to-Site VPN
+### Hub & Spoke Network Topology
 
-<img src="img/vpn-point-to-site.svg" alt="Point-to-Site VPN connecting individual remote developer machines to a Cloud VNet" />
-
-----
-
-### Dedicated Interconnect: ExpressRoute / Direct Connect
-
-<img src="img/expressroute.svg" alt="Dedicated private fiber connection via Azure ExpressRoute or AWS Direct Connect" />
+<img src="img/hub-and-spoke.svg" alt="Hub and Spoke network topology centralizing firewall, hybrid connectivity, and shared services" />
 
 ----
 
@@ -37,12 +43,6 @@
 ### Landing Zone Architecture
 
 <img src="img/landing-zone.svg" alt="Enterprise Cloud Landing Zone pillars and workload subscriptions" />
-
-----
-
-### Hub & Spoke Network Topology
-
-<img src="img/hub-and-spoke.svg" alt="Hub and Spoke network topology centralizing firewall, hybrid connectivity, and shared services" />
 
 ----
 
