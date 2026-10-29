@@ -31,7 +31,7 @@
     <strong>Laurent Grangeau</strong><br />
     Cloud Solution Architect @ Google
   </blockquote>
-  <img class="avatar" src="img/avatar.jpg" alt="Laurent Grangeau" />
+  <img class="avatar" src="img/avatar-laurent.jpg" alt="Laurent Grangeau" />
 </div>
 
 <div class="author-card">
