@@ -411,6 +411,14 @@
   margin-bottom: 1.2em;
 }
 
+.hero-links-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
+  margin-bottom: 1.5em;
+}
+
 .hero-links {
   display: inline-flex;
   align-items: center;
@@ -422,6 +430,10 @@
   font-style: normal;
   margin-bottom: 1.5em;
   border: 1px solid var(--border-color);
+}
+
+.hero-links-group .hero-links {
+  margin-bottom: 0;
 }
 
 .hero-links span.sep {
@@ -447,7 +459,7 @@
   box-shadow: 0 12px 24px -4px rgba(37, 99, 235, 0.55);
 }
 
-/* Bio / Author Slide ("Who am I?") */
+/* Bio / Author Slide ("Who are we?") */
 .author-card {
   display: flex;
   align-items: center;
@@ -459,6 +471,11 @@
   padding: 1.6em 2.2em;
   box-shadow: var(--shadow-md);
   margin-top: 0.5em;
+}
+
+.reveal .slides section:has(.author-card + .author-card) .author-card {
+  padding: 1.1em 2em;
+  margin-top: 0.55em;
 }
 
 .reveal .author-card blockquote {
@@ -484,6 +501,11 @@
   border: none;
   box-shadow: var(--shadow-lg);
   margin: 0;
+}
+
+.reveal .slides section:has(.author-card + .author-card) .author-card img.avatar {
+  width: 135px;
+  height: 135px;
 }
 
 /* Subtitle pill */
