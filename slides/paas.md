@@ -38,7 +38,7 @@
 
 > Multi-region data replication and failover are built natively into PaaS offerings
 
-* Replicate databases (`Cloud SQL`, `Cosmos DB`, `Aurora`) or storage across continents with a single configuration setting
+* Replicate databases (`AlloyDB`, `Cloud Spanner`, `Cosmos DB`, `Aurora`) or object storage across continents with a single configuration setting
 
 ----
 

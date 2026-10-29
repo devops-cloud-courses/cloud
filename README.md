@@ -1,6 +1,6 @@
 # Cloud in a Nutshell
 
-This repository contains a **Reveal.js 5** presentation about Cloud Computing (`IaaS`, `PaaS`, `SaaS`, `Serverless`, and `Cloud Architectures`).
+This repository contains a **Reveal.js 6** presentation about Cloud Computing (`IaaS`, `PaaS`, `SaaS`, `Serverless`, and `Cloud Architectures`).
 
 To view this presentation online, visit: **https://devops-cloud-courses.github.io/cloud**
 
@@ -11,13 +11,14 @@ You can also clone this repository and serve it locally using any static web ser
 ## Table of Contents
 
 * **Introduction**
-* **What is the Cloud?** (History from Mainframes to VMs & Cloud, Essential Characteristics, Shared Responsibility Model)
-* **SaaS** (Software-as-a-Service)
-* **IaaS** (Scalability, Elasticity, Regions & AZs, VMs, Pets vs Cattle, Immutable Infra, IaC, DRP, RTO/RPO, Chaos Engineering, Deployment Strategies)
-* **Cloud Architectures** (Hybrid VPNs, ExpressRoute/Direct Connect, Landing Zones, Hub & Spoke, Cloud Services Landscape)
-* **PaaS** (Platform-as-a-Service, Managed Services, Geo-Replication, Private PaaS)
-* **Serverless** (FaaS, BaaS, Scale to Zero, Trade-offs & Reference Architecture)
-* **Conclusion & Further Reading**
+* **What is the Cloud?** (History from Mainframes to VMs & Cloud, NIST Characteristics, CapEx vs OpEx, Shared Responsibility Model)
+* **SaaS** (Software-as-a-Service, Multi-Tenant Economics, Enterprise Integration & Security)
+* **IaaS** (Scalability, Elasticity, Regions & AZs, Global Fiber Backbone, VMs, Block/File/Object Storage, Pets vs Cattle, Immutable Infra, IaC, Deployment Strategies, SLA & Composite SLA Math, DRP, RTO/RPO, Chaos Engineering)
+* **PaaS** (Platform-as-a-Service, Managed Services, Geo-Replication, Private & Hybrid PaaS)
+* **Serverless** (FaaS, BaaS, Event-Driven Triggers, Scale to Zero, Cold Starts & Trade-offs)
+* **Cloud Migration & Strategy** (Cloud Adoption Drivers, The 8 Rs of Cloud Migration, Total Cost of Ownership)
+* **Enterprise Cloud Architecture** (Cloud Services Landscape, Hybrid VPNs, Direct Connect/ExpressRoute, Landing Zones, Hub & Spoke, Cloud IAM & Zero-Trust, Data Sovereignty & Compliance, Well-Architected Framework)
+* **Conclusion & Key Takeaways**
 
 ## Run Locally
 

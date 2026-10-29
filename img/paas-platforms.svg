@@ -41,8 +41,8 @@
     <text x="782" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#065f46">Managed App &amp; Data Platforms</text>
     <rect x="668" y="160" width="228" height="36" rx="8" fill="#ecfdf5"/>
     <text x="782" y="183" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#047857">SLA-driven services</text>
-    <text x="782" y="226" text-anchor="middle" font-size="13" fill="#334155">• Azure App Service / Cloud Run</text>
-    <text x="782" y="252" text-anchor="middle" font-size="13" fill="#334155">• AWS Elastic Beanstalk / App Runner</text>
-    <text x="782" y="278" text-anchor="middle" font-size="13" fill="#334155">• Managed DBs (RDS, Cloud SQL)</text>
+    <text x="782" y="226" text-anchor="middle" font-size="13" fill="#334155">• Cloud Run / Azure App Service</text>
+    <text x="782" y="252" text-anchor="middle" font-size="13" fill="#334155">• AWS App Runner / Container Apps</text>
+    <text x="782" y="278" text-anchor="middle" font-size="13" fill="#334155">• Aurora, AlloyDB, Cosmos DB</text>
   </g>
 </svg>

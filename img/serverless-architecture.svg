@@ -39,7 +39,7 @@
     <!-- FaaS Layer -->
     <rect x="484" y="64" width="200" height="114" rx="14" fill="#2563eb"/>
     <text x="584" y="106" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">FaaS: Order Service</text>
-    <text x="584" y="130" text-anchor="middle" font-size="12" fill="#dbeafe">Lambda / Cloud Functions</text>
+    <text x="584" y="130" text-anchor="middle" font-size="12" fill="#dbeafe">Lambda / Cloud Run Functions</text>
     <text x="584" y="152" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#93c5fd">Auto-scales per req</text>
 
     <rect x="484" y="212" width="200" height="114" rx="14" fill="#4f46e5"/>

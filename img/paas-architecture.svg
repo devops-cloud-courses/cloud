@@ -42,11 +42,11 @@
     <rect x="528" y="66" width="158" height="32" rx="8" fill="#ecfdf5"/>
     <text x="607" y="87" text-anchor="middle" font-size="13.5" font-weight="800" fill="#047857">3. Managed Storage</text>
     <rect x="528" y="116" width="158" height="72" rx="10" fill="#ecfdf5" stroke="#34d399"/>
-    <text x="607" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#047857">Cloud SQL / Cosmos</text>
+    <text x="607" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#047857">AlloyDB / Cosmos</text>
     <text x="607" y="168" text-anchor="middle" font-size="11.5" fill="#059669">Geo-Replicated DB</text>
     <rect x="528" y="206" width="158" height="72" rx="10" fill="#ecfdf5" stroke="#34d399"/>
-    <text x="607" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#047857">BigQuery / Synapse</text>
-    <text x="607" y="258" text-anchor="middle" font-size="11.5" fill="#059669">Data Warehouse</text>
+    <text x="607" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#047857">BigQuery / Fabric</text>
+    <text x="607" y="258" text-anchor="middle" font-size="11.5" fill="#059669">Cloud Data Lakehouse</text>
 
     <!-- Col 4: Insights & AI -->
     <rect x="748" y="48" width="178" height="264" rx="16" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
@@ -54,10 +54,10 @@
     <text x="837" y="87" text-anchor="middle" font-size="13.5" font-weight="800" fill="#6d28d9">4. Serve &amp; AI</text>
     <rect x="766" y="116" width="142" height="72" rx="10" fill="#f5f3ff" stroke="#a78bfa"/>
     <text x="837" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5b21b6">BI Dashboards</text>
-    <text x="837" y="168" text-anchor="middle" font-size="11.5" fill="#7c3aed">Looker / PowerBI</text>
+    <text x="837" y="168" text-anchor="middle" font-size="11.5" fill="#7c3aed">Looker / Power BI</text>
     <rect x="766" y="206" width="142" height="72" rx="10" fill="#f5f3ff" stroke="#a78bfa"/>
-    <text x="837" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5b21b6">Managed AI/ML</text>
-    <text x="837" y="258" text-anchor="middle" font-size="11.5" fill="#7c3aed">Vertex AI / OpenAI</text>
+    <text x="837" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5b21b6">GenAI &amp; ML PaaS</text>
+    <text x="837" y="258" text-anchor="middle" font-size="11.5" fill="#7c3aed">Vertex AI / Bedrock</text>
   </g>
 
   <line x1="228" y1="152" x2="266" y2="152" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>

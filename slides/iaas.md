@@ -80,8 +80,9 @@ Note:
 
 > Decoupling compute (`vCPU`, `RAM`) from persistent network storage and physical hardware
 
-* Powered by modern lightweight hypervisors (`AWS Nitro` / `KVM`, `Azure Hyper-V`, `Google KVM`)
-* Hundreds of specialized machine families (General Purpose, Compute-Optimized, Memory-Optimized, GPU/TPU Accelerated)
+* Powered by hardware-offloaded hypervisors (`AWS Nitro`, `Google Titanium`, `Azure Boost`)
+* Custom hyperscaler ARM silicon (`AWS Graviton4`, `Google Axion`, `Azure Cobalt 100`) alongside `Intel Xeon` & `AMD EPYC`
+* Hundreds of specialized machine families (General Purpose, Compute/Memory-Optimized, `NVIDIA Blackwell` / `TPU` AI Accelerated)
 
 ----
 
@@ -97,8 +98,8 @@ Note:
 
 Note:
 * What is the largest VM available in the cloud today?
-* Up to 448–896 vCPUs and 24–32 TiB of RAM (for in-memory databases like SAP HANA)!
-* Block storage (AWS EBS, Azure Managed Disks, GCP Persistent Disk) is network-attached and persists independently of the VM lifecycle.
+* Up to 896–1,920 vCPUs and 24–32 TiB of RAM (`GCP X4` / `AWS u7i-32tb.224xlarge` for SAP HANA in-memory databases)!
+* Block storage (`AWS EBS`, `Azure Managed Disks`, `GCP Hyperdisk`) is network-attached and persists independently of the VM lifecycle.
 
 ----
 
@@ -107,8 +108,8 @@ Note:
 <img src="img/vm-by-az.svg" alt="Comparison of available CPU platforms, machine families, and GPUs across Availability Zones" />
 
 Note:
-* Not all Availability Zones have identical underlying hardware!
-* Newer CPU generations (Sapphire Rapids, AMD Genoa), GPU/TPU accelerators, and UltraMem instances (11.5 TB RAM) are rolled out selectively per zone.
+* Not all Regions and Availability Zones have identical underlying hardware!
+* Latest CPU generations (`Intel Granite Rapids C4/N4`, `AMD Genoa/Turin C3D/C4D`, `Google Axion ARM C4A`), AI accelerators (`NVIDIA Blackwell B200` / `H200`, `TPU v6e Trillium`), and `32 TB X4 UltraMem` instances roll out selectively per zone.
 * Always verify that your required machine SKU is available across at least 2 or 3 AZs before designing a High Availability deployment.
 
 ----
@@ -169,7 +170,7 @@ resource "azurerm_linux_virtual_machine" "web" {
   name                = "vm-web-prod-01"
   resource_group_name = azurerm_resource_group.main.name
   location            = "West Europe"
-  size                = "Standard_D2s_v5"
+  size                = "Standard_D4s_v6"
   admin_username      = "azureuser"
 
   admin_ssh_key {
@@ -288,12 +289,12 @@ Note:
 
 ----
 
-### The Netflix Simian Army (Cont.)
+### Simian Army & Modern Chaos Tooling
 
-* **Latency Monkey**: Injects artificial network delays or packet loss to test timeout and circuit-breaker resilience
-* **Doctor Monkey**: Detects unhealthy instances (`CPU` spikes, memory leaks, failing health checks) and removes them for root-cause analysis
-* **Janitor Monkey**: Identifies and deletes unused resources to reduce cloud waste (FinOps)
-* **Security & Conformity Monkeys**: Flag or terminate instances that violate security policies or architectural standards
+* **Latency & Doctor Monkeys**: Inject network delays/packet loss to test circuit breakers, and auto-replace unhealthy instances
+* **Janitor & Security Monkeys**: Reclaim unused cloud waste (FinOps) and terminate non-compliant resources (now **CSPM / CNAPP**)
+* **Managed Cloud Chaos Services**: `AWS Fault Injection Service (FIS)`, `Azure Chaos Studio`, `Gremlin`
+* **Cloud-Native Chaos Platforms**: `Chaos Mesh` and `LitmusChaos` (CNCF) for automated fault injection in CI/CD pipelines
 
 ----
 

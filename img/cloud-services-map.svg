@@ -40,10 +40,10 @@
     <rect x="718" y="28" width="208" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
     <rect x="734" y="44" width="176" height="32" rx="8" fill="#059669"/>
     <text x="822" y="65" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Managed Databases</text>
-    <text x="744" y="102" font-size="12.5" font-weight="600" fill="#334155">• Relational (RDS/Cloud SQL)</text>
+    <text x="744" y="102" font-size="12.5" font-weight="600" fill="#334155">• Relational (Aurora/AlloyDB)</text>
     <text x="744" y="126" font-size="12.5" font-weight="600" fill="#334155">• NoSQL (DynamoDB/Cosmos)</text>
-    <text x="744" y="150" font-size="12.5" font-weight="600" fill="#334155">• In-Memory Cache (Redis)</text>
-    <text x="744" y="174" font-size="12.5" font-weight="600" fill="#334155">• Graph &amp; Vector DBs</text>
+    <text x="744" y="150" font-size="12.5" font-weight="600" fill="#334155">• In-Memory (Valkey / Redis)</text>
+    <text x="744" y="174" font-size="12.5" font-weight="600" fill="#334155">• Vector &amp; Graph DBs</text>
 
     <!-- Row 2: Networking, Data & AI, Security & Identity, DevOps & Observability -->
     <rect x="34" y="220" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
@@ -51,16 +51,16 @@
     <text x="140" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Networking &amp; Edge</text>
     <text x="60" y="294" font-size="12.5" font-weight="600" fill="#334155">• VPC / VNet &amp; Subnets</text>
     <text x="60" y="318" font-size="12.5" font-weight="600" fill="#334155">• L4/L7 Load Balancers</text>
-    <text x="60" y="342" font-size="12.5" font-weight="600" fill="#334155">• Global CDN &amp; DNS</text>
+    <text x="60" y="342" font-size="12.5" font-weight="600" fill="#334155">• Global CDN &amp; Cloud DNS</text>
     <text x="60" y="366" font-size="12.5" font-weight="600" fill="#334155">• API Gateway &amp; Service Mesh</text>
 
     <rect x="262" y="220" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
     <rect x="278" y="236" width="180" height="32" rx="8" fill="#7c3aed"/>
     <text x="368" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Data, Analytics &amp; AI</text>
-    <text x="288" y="294" font-size="12.5" font-weight="600" fill="#334155">• Data Warehouses (BigQuery)</text>
+    <text x="288" y="294" font-size="12.5" font-weight="600" fill="#334155">• Lakehouse (BigQuery/Fabric)</text>
     <text x="288" y="318" font-size="12.5" font-weight="600" fill="#334155">• Real-time Streaming (Kafka)</text>
-    <text x="288" y="342" font-size="12.5" font-weight="600" fill="#334155">• GenAI &amp; Foundation Models</text>
-    <text x="288" y="366" font-size="12.5" font-weight="600" fill="#334155">• ETL &amp; BI Dashboards</text>
+    <text x="288" y="342" font-size="12.5" font-weight="600" fill="#334155">• GenAI (Vertex / Bedrock)</text>
+    <text x="288" y="366" font-size="12.5" font-weight="600" fill="#334155">• AI Agents &amp; BI Dashboards</text>
 
     <rect x="490" y="220" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
     <rect x="506" y="236" width="180" height="32" rx="8" fill="#dc2626"/>
@@ -68,14 +68,14 @@
     <text x="516" y="294" font-size="12.5" font-weight="600" fill="#334155">• IAM &amp; Identity Federation</text>
     <text x="516" y="318" font-size="12.5" font-weight="600" fill="#334155">• KMS / HSM &amp; Secrets</text>
     <text x="516" y="342" font-size="12.5" font-weight="600" fill="#334155">• WAF &amp; DDoS Protection</text>
-    <text x="516" y="366" font-size="12.5" font-weight="600" fill="#334155">• CSPM &amp; Threat Detection</text>
+    <text x="516" y="366" font-size="12.5" font-weight="600" fill="#334155">• CNAPP / CSPM &amp; SIEM</text>
 
     <rect x="718" y="220" width="208" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
     <rect x="734" y="236" width="176" height="32" rx="8" fill="#d97706"/>
     <text x="822" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">DevOps &amp; Governance</text>
     <text x="744" y="294" font-size="12.5" font-weight="600" fill="#334155">• CI/CD &amp; Artifact Registries</text>
-    <text x="744" y="318" font-size="12.5" font-weight="600" fill="#334155">• Logs, Metrics &amp; Tracing</text>
-    <text x="744" y="342" font-size="12.5" font-weight="600" fill="#334155">• Infrastructure as Code</text>
-    <text x="744" y="366" font-size="12.5" font-weight="600" fill="#334155">• FinOps &amp; Cost Management</text>
+    <text x="744" y="318" font-size="12.5" font-weight="600" fill="#334155">• OpenTelemetry Observability</text>
+    <text x="744" y="342" font-size="12.5" font-weight="600" fill="#334155">• IaC (Terraform / OpenTofu)</text>
+    <text x="744" y="366" font-size="12.5" font-weight="600" fill="#334155">• FinOps &amp; GreenOps Carbon</text>
   </g>
 </svg>
