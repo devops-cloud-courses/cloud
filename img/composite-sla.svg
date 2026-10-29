@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#e11d48"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="420" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="420" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Top Section: Serial Dependencies (Single Point of Failure Chain) -->
+    <rect x="34" y="22" width="892" height="176" rx="16" fill="#ffffff" stroke="#fda4af" stroke-width="2"/>
+    <rect x="54" y="38" width="380" height="32" rx="8" fill="#ffe4e6"/>
+    <text x="244" y="59" text-anchor="middle" font-size="13.5" font-weight="800" fill="#be123c">Rule 1: Serial Dependencies Reduce Overall SLA</text>
+
+    <!-- Chain boxes -->
+    <rect x="56" y="88" width="160" height="68" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+    <text x="136" y="116" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">API Gateway</text>
+    <text x="136" y="138" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#be123c">SLA = 99.95%</text>
+
+    <line x1="220" y1="122" x2="262" y2="122" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arrRed)"/>
+    <text x="241" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#be123c">×</text>
+
+    <rect x="268" y="88" width="160" height="68" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+    <text x="348" y="116" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Compute VM</text>
+    <text x="348" y="138" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#be123c">SLA = 99.9%</text>
+
+    <line x1="432" y1="122" x2="474" y2="122" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arrRed)"/>
+    <text x="453" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#be123c">×</text>
+
+    <rect x="480" y="88" width="160" height="68" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+    <text x="560" y="116" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">SQL Database</text>
+    <text x="560" y="138" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#be123c">SLA = 99.9%</text>
+
+    <!-- Result Box -->
+    <rect x="668" y="76" width="236" height="92" rx="12" fill="#be123c"/>
+    <text x="786" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#ffe4e6">Composite SLA = A × B × C</text>
+    <text x="786" y="128" text-anchor="middle" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="800" fill="#ffffff">= 99.75%</text>
+    <text x="786" y="150" text-anchor="middle" font-size="11.5" font-weight="600" fill="#fecdd3">(~21.9 hours downtime / year)</text>
+
+    <!-- Bottom Section: Parallel Redundancy (Multi-AZ Active-Active) -->
+    <rect x="34" y="218" width="892" height="180" rx="16" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+    <rect x="54" y="234" width="420" height="32" rx="8" fill="#d1fae5"/>
+    <text x="264" y="255" text-anchor="middle" font-size="13.5" font-weight="800" fill="#047857">Rule 2: Parallel Multi-AZ Redundancy Multiplies Nines</text>
+
+    <!-- Load Balancer -->
+    <rect x="56" y="290" width="144" height="68" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="128" y="318" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">Load Balancer</text>
+    <text x="128" y="338" text-anchor="middle" font-size="11.5" font-weight="600" fill="#047857">Multi-AZ Routing</text>
+
+    <!-- Split Arrows -->
+    <path d="M 200 312 L 266 292" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+    <path d="M 200 336 L 266 356" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+
+    <!-- Parallel AZ 1 & AZ 2 -->
+    <rect x="274" y="270" width="184" height="50" rx="8" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="366" y="292" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">VM in Zone A (99.9%)</text>
+    <text x="366" y="310" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#047857">Failure prob = 0.1%</text>
+
+    <rect x="274" y="332" width="184" height="50" rx="8" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="366" y="354" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">VM in Zone B (99.9%)</text>
+    <text x="366" y="372" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#047857">Failure prob = 0.1%</text>
+
+    <!-- Formula -->
+    <rect x="480" y="286" width="168" height="76" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="564" y="314" text-anchor="middle" font-size="11.5" font-weight="700" fill="#334155">1 − (1 − 0.999)²</text>
+    <text x="564" y="336" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#047857">= 1 − (0.001 × 0.001)</text>
+    <text x="564" y="352" text-anchor="middle" font-size="10.5" fill="#64748b">Both zones must fail</text>
+
+    <!-- Parallel Result Box -->
+    <rect x="668" y="278" width="236" height="92" rx="12" fill="#047857"/>
+    <text x="786" y="305" text-anchor="middle" font-size="12" font-weight="700" fill="#d1fae5">Combined 2-AZ Availability</text>
+    <text x="786" y="330" text-anchor="middle" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="800" fill="#ffffff">= 99.9999%</text>
+    <text x="786" y="352" text-anchor="middle" font-size="11.5" font-weight="600" fill="#a7f3d0">(&lt; 32 seconds downtime / year!)</text>
+  </g>
+</svg>

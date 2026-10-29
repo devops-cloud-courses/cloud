@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gBlock" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="gFile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="gObject" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrSlate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="440" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="440" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- 1. Block Storage -->
+    <rect x="34" y="24" width="282" height="292" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="52" y="42" width="246" height="38" rx="10" fill="url(#gBlock)"/>
+    <text x="175" y="66" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">1. Block Storage (SAN)</text>
+
+    <rect x="54" y="94" width="242" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+    <text x="175" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Raw Fixed-Size Blocks (NVMe/SSD)</text>
+    <text x="175" y="132" text-anchor="middle" font-size="11" fill="#334155">Mounted to a single VM as a local disk</text>
+
+    <text x="58" y="166" font-size="12" font-weight="700" fill="#0f172a">• Access: <tspan font-weight="500" fill="#475569">OS Kernel / SCSI / NVMe</tspan></text>
+    <text x="58" y="188" font-size="12" font-weight="700" fill="#0f172a">• Latency: <tspan font-weight="700" fill="#15803d">&lt; 1 ms (Ultra-Low)</tspan></text>
+    <text x="58" y="210" font-size="12" font-weight="700" fill="#0f172a">• Scope: <tspan font-weight="500" fill="#475569">Zonal (or Regional HA)</tspan></text>
+    <text x="58" y="232" font-size="12" font-weight="700" fill="#0f172a">• Use Cases: <tspan font-weight="500" fill="#475569">Boot OS, RDBMS (Postgres)</tspan></text>
+
+    <rect x="54" y="252" width="242" height="46" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="175" y="272" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1e40af">AWS EBS • Azure Managed Disks</text>
+    <text x="175" y="289" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1e40af">GCP Persistent Disk / Hyperdisk</text>
+
+    <!-- 2. File Storage -->
+    <rect x="339" y="24" width="282" height="292" rx="16" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+    <rect x="357" y="42" width="246" height="38" rx="10" fill="url(#gFile)"/>
+    <text x="480" y="66" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">2. File Storage (NAS)</text>
+
+    <rect x="359" y="94" width="242" height="48" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+    <text x="480" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#0f766e">Shared Hierarchical Folders &amp; Files</text>
+    <text x="480" y="132" text-anchor="middle" font-size="11" fill="#334155">Mounted concurrently by N VMs/Pods</text>
+
+    <text x="363" y="166" font-size="12" font-weight="700" fill="#0f172a">• Access: <tspan font-weight="500" fill="#475569">NFSv4 / SMB (POSIX)</tspan></text>
+    <text x="363" y="188" font-size="12" font-weight="700" fill="#0f172a">• Latency: <tspan font-weight="700" fill="#0f766e">1–5 ms (Low)</tspan></text>
+    <text x="363" y="210" font-size="12" font-weight="700" fill="#0f172a">• Scope: <tspan font-weight="500" fill="#475569">Multi-AZ Regional</tspan></text>
+    <text x="363" y="232" font-size="12" font-weight="700" fill="#0f172a">• Use Cases: <tspan font-weight="500" fill="#475569">Shared CMS, Legacy Lift</tspan></text>
+
+    <rect x="359" y="252" width="242" height="46" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="480" y="272" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#0f766e">AWS EFS / FSx • Azure Files</text>
+    <text x="480" y="289" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#0f766e">Google Cloud Filestore</text>
+
+    <!-- 3. Object Storage -->
+    <rect x="644" y="24" width="282" height="292" rx="16" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+    <rect x="662" y="42" width="246" height="38" rx="10" fill="url(#gObject)"/>
+    <text x="785" y="66" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">3. Object Storage</text>
+
+    <rect x="664" y="94" width="242" height="48" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+    <text x="785" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">Flat Namespace (Key + Blob + Meta)</text>
+    <text x="785" y="132" text-anchor="middle" font-size="11" fill="#334155">Infinite scale • 11 Nines Durability</text>
+
+    <text x="668" y="166" font-size="12" font-weight="700" fill="#0f172a">• Access: <tspan font-weight="500" fill="#475569">HTTPS REST API (GET/PUT)</tspan></text>
+    <text x="668" y="188" font-size="12" font-weight="700" fill="#0f172a">• Latency: <tspan font-weight="700" fill="#6d28d9">10–50 ms (Throughput)</tspan></text>
+    <text x="668" y="210" font-size="12" font-weight="700" fill="#0f172a">• Scope: <tspan font-weight="500" fill="#475569">Regional or Multi-Region</tspan></text>
+    <text x="668" y="232" font-size="12" font-weight="700" fill="#0f172a">• Use Cases: <tspan font-weight="500" fill="#475569">Media, Backups, Data Lake</tspan></text>
+
+    <rect x="664" y="252" width="242" height="46" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="785" y="272" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#6d28d9">AWS S3 • Azure Blob Storage</text>
+    <text x="785" y="289" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#6d28d9">Google Cloud Storage (GCS)</text>
+
+    <!-- Bottom Banner: Object Storage Lifecycle Tiers -->
+    <rect x="34" y="334" width="892" height="84" rx="14" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.8"/>
+    <text x="480" y="356" text-anchor="middle" font-size="13" font-weight="800" fill="#5b21b6">Automated Object Storage Lifecycle Tiers (Storage Cost ↓ vs. Retrieval Fee ↑)</text>
+
+    <!-- Tier 1: Hot -->
+    <rect x="56" y="368" width="184" height="36" rx="8" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.2"/>
+    <text x="148" y="384" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">Standard / Hot</text>
+    <text x="148" y="398" text-anchor="middle" font-size="10" fill="#7f1d1d">Frequent access (Active data)</text>
+
+    <line x1="244" y1="386" x2="274" y2="386" stroke="#64748b" stroke-width="2" marker-end="url(#arrSlate)"/>
+
+    <!-- Tier 2: Warm / Nearline -->
+    <rect x="280" y="368" width="184" height="36" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.2"/>
+    <text x="372" y="384" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b45309">Nearline / Standard-IA</text>
+    <text x="372" y="398" text-anchor="middle" font-size="10" fill="#78350f">&lt; 1x / month (30-day min)</text>
+
+    <line x1="468" y1="386" x2="498" y2="386" stroke="#64748b" stroke-width="2" marker-end="url(#arrSlate)"/>
+
+    <!-- Tier 3: Coldline -->
+    <rect x="504" y="368" width="184" height="36" rx="8" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.2"/>
+    <text x="596" y="384" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0369a1">Coldline / Glacier Instant</text>
+    <text x="596" y="398" text-anchor="middle" font-size="10" fill="#0c4a6e">&lt; 1x / quarter (90-day min)</text>
+
+    <line x1="692" y1="386" x2="722" y2="386" stroke="#64748b" stroke-width="2" marker-end="url(#arrSlate)"/>
+
+    <!-- Tier 4: Archive -->
+    <rect x="728" y="368" width="176" height="36" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="816" y="384" text-anchor="middle" font-size="11.5" font-weight="800" fill="#334155">Archive / Deep Glacier</text>
+    <text x="816" y="398" text-anchor="middle" font-size="10" fill="#475569">&lt; 1x / year (~$1 / TB / mo)</text>
+  </g>
+</svg>

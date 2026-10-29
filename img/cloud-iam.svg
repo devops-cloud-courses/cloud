@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gWho" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="gWhat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="gWhere" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0d9488"/>
+    </marker>
+    <marker id="arrPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="430" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="430" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- 1. WHO (Principal / Identity) -->
+    <rect x="34" y="26" width="268" height="292" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="52" y="44" width="232" height="38" rx="10" fill="url(#gWho)"/>
+    <text x="168" y="68" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">1. WHO (Principal)</text>
+
+    <rect x="54" y="96" width="228" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+    <text x="168" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Human Users &amp; Groups</text>
+    <text x="168" y="134" text-anchor="middle" font-size="11" fill="#334155">SSO / SAML / OIDC + Hardware MFA</text>
+
+    <rect x="54" y="156" width="228" height="54" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+    <text x="168" y="176" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Service Accounts / Roles</text>
+    <text x="168" y="194" text-anchor="middle" font-size="11" fill="#334155">Non-human identity for VMs, Pods,</text>
+    <text x="168" y="206" text-anchor="middle" font-size="10.5" fill="#475569">Functions &amp; CI/CD Pipelines</text>
+
+    <rect x="54" y="222" width="228" height="78" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.2"/>
+    <text x="168" y="242" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">✗ Never Commit Static Keys!</text>
+    <text x="168" y="260" text-anchor="middle" font-size="10.5" fill="#7f1d1d">Use short-lived OIDC tokens &amp;</text>
+    <text x="168" y="276" text-anchor="middle" font-size="10.5" font-weight="700" fill="#15803d">✓ Workload Identity Federation</text>
+    <text x="168" y="291" text-anchor="middle" font-size="10" fill="#475569">(e.g. GitHub Actions → Cloud IAM)</text>
+
+    <!-- Arrow WHO -> WHAT -->
+    <line x1="306" y1="172" x2="340" y2="172" stroke="#2563eb" stroke-width="3" marker-end="url(#arrBlue)"/>
+
+    <!-- 2. WHAT (Role / Permissions) -->
+    <rect x="346" y="26" width="268" height="292" rx="16" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+    <rect x="364" y="44" width="232" height="38" rx="10" fill="url(#gWhat)"/>
+    <text x="480" y="68" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">2. WHAT (Role)</text>
+
+    <rect x="366" y="96" width="228" height="52" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+    <text x="480" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="#0f766e">Bundle of API Permissions</text>
+    <text x="480" y="135" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#0f172a">storage.objects.get / list</text>
+
+    <text x="370" y="172" font-size="12" font-weight="800" fill="#0f172a">Role Granularity:</text>
+    <text x="378" y="194" font-size="11.5" fill="#b91c1c">• Basic Roles: <tspan font-weight="500" fill="#475569">Owner / Editor (Too broad!)</tspan></text>
+    <text x="378" y="216" font-size="11.5" font-weight="700" fill="#0f766e">• Predefined Roles: <tspan font-weight="500" fill="#334155">Storage Object Viewer</tspan></text>
+    <text x="378" y="238" font-size="11.5" font-weight="700" fill="#0f766e">• Custom Roles: <tspan font-weight="500" fill="#334155">Tailored permissions</tspan></text>
+
+    <rect x="366" y="254" width="228" height="46" rx="8" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.2"/>
+    <text x="480" y="273" text-anchor="middle" font-size="11.5" font-weight="800" fill="#047857">Context-Aware Conditions</text>
+    <text x="480" y="290" text-anchor="middle" font-size="10.5" fill="#334155">Time of day, Corp IP, Resource Tag</text>
+
+    <!-- Arrow WHAT -> WHERE -->
+    <line x1="618" y1="172" x2="652" y2="172" stroke="#0d9488" stroke-width="3" marker-end="url(#arrTeal)"/>
+
+    <!-- 3. WHERE (Resource Hierarchy & Inheritance) -->
+    <rect x="658" y="26" width="268" height="292" rx="16" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+    <rect x="676" y="44" width="232" height="38" rx="10" fill="url(#gWhere)"/>
+    <text x="792" y="68" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">3. WHERE (Hierarchy)</text>
+
+    <!-- Hierarchy Tree -->
+    <rect x="688" y="96" width="208" height="34" rx="7" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+    <text x="792" y="118" text-anchor="middle" font-size="12" font-weight="800" fill="#5b21b6">Organization (company.com)</text>
+
+    <line x1="792" y1="130" x2="792" y2="146" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrPurple)"/>
+
+    <rect x="702" y="150" width="180" height="34" rx="7" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+    <text x="792" y="172" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">Folders (Prod / Non-Prod)</text>
+
+    <line x1="792" y1="184" x2="792" y2="200" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrPurple)"/>
+
+    <rect x="716" y="204" width="152" height="34" rx="7" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+    <text x="792" y="226" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">Project / Account / Sub</text>
+
+    <line x1="792" y1="238" x2="792" y2="254" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrPurple)"/>
+
+    <rect x="730" y="258" width="124" height="36" rx="7" fill="#ede9fe" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="792" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#4c1d95">Resource (Bucket/VM)</text>
+
+    <!-- Bottom Banner: Principle of Least Privilege -->
+    <rect x="34" y="336" width="892" height="72" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="480" y="363" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a">Zero-Trust Golden Rule: Principle of Least Privilege (PoLP)</text>
+    <text x="480" y="385" text-anchor="middle" font-size="12" fill="#334155">Policies inherit downward across the Resource Hierarchy • Grant the narrowest Role at the lowest possible Resource scope</text>
+  </g>
+</svg>

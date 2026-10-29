@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gRoof" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="430" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="430" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Top Roof Banner -->
+    <rect x="34" y="20" width="892" height="48" rx="12" fill="url(#gRoof)"/>
+    <text x="480" y="50" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">The 6 Pillars of the Cloud Well-Architected Framework (AWS • Azure • Google Cloud)</text>
+
+    <!-- Row 1: 3 Pillars -->
+    <!-- Pillar 1: Operational Excellence -->
+    <rect x="34" y="84" width="284" height="150" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="50" y="100" width="252" height="32" rx="8" fill="#dbeafe"/>
+    <text x="176" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#1e40af">1. Operational Excellence</text>
+    <text x="54" y="154" font-size="11.5" fill="#334155">• Infrastructure as Code (Terraform)</text>
+    <text x="54" y="174" font-size="11.5" fill="#334155">• Automated CI/CD &amp; Canary deploys</text>
+    <text x="54" y="194" font-size="11.5" fill="#334155">• Observability (Metrics, Logs, Traces)</text>
+    <text x="54" y="214" font-size="11.5" fill="#334155">• Blameless Post-Mortems &amp; Runbooks</text>
+
+    <!-- Pillar 2: Security, Identity & Sovereignty -->
+    <rect x="338" y="84" width="284" height="150" rx="14" fill="#ffffff" stroke="#fda4af" stroke-width="2"/>
+    <rect x="354" y="100" width="252" height="32" rx="8" fill="#ffe4e6"/>
+    <text x="480" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#be123c">2. Security &amp; Sovereignty</text>
+    <text x="358" y="154" font-size="11.5" fill="#334155">• Zero-Trust IAM &amp; Least Privilege</text>
+    <text x="358" y="174" font-size="11.5" fill="#334155">• Encryption in transit (TLS) &amp; at rest (KMS)</text>
+    <text x="358" y="194" font-size="11.5" fill="#334155">• Data Residency &amp; GDPR / SecNumCloud</text>
+    <text x="358" y="214" font-size="11.5" fill="#334155">• Defense-in-depth (WAF, DDoS, VPC)</text>
+
+    <!-- Pillar 3: Reliability -->
+    <rect x="642" y="84" width="284" height="150" rx="14" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+    <rect x="658" y="100" width="252" height="32" rx="8" fill="#d1fae5"/>
+    <text x="784" y="121" text-anchor="middle" font-size="13" font-weight="800" fill="#047857">3. Reliability &amp; Resilience</text>
+    <text x="662" y="154" font-size="11.5" fill="#334155">• Multi-AZ &amp; Multi-Region architectures</text>
+    <text x="662" y="174" font-size="11.5" fill="#334155">• Auto-Healing &amp; Horizontal Auto-Scaling</text>
+    <text x="662" y="194" font-size="11.5" fill="#334155">• Tested Backups, DRP, RTO &amp; RPO</text>
+    <text x="662" y="214" font-size="11.5" fill="#334155">• Chaos Engineering &amp; Circuit Breakers</text>
+
+    <!-- Row 2: 3 Pillars -->
+    <!-- Pillar 4: Performance Efficiency -->
+    <rect x="34" y="252" width="284" height="150" rx="14" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+    <rect x="50" y="268" width="252" height="32" rx="8" fill="#ede9fe"/>
+    <text x="176" y="289" text-anchor="middle" font-size="13" font-weight="800" fill="#6d28d9">4. Performance Efficiency</text>
+    <text x="54" y="322" font-size="11.5" fill="#334155">• Right-sizing Compute &amp; Accelerators</text>
+    <text x="54" y="342" font-size="11.5" fill="#334155">• Edge Caching (CDN) &amp; In-Memory Cache</text>
+    <text x="54" y="362" font-size="11.5" fill="#334155">• Managed PaaS &amp; Event-Driven Serverless</text>
+    <text x="54" y="382" font-size="11.5" fill="#334155">• Database Read Replicas &amp; Sharding</text>
+
+    <!-- Pillar 5: Cost Optimization -->
+    <rect x="338" y="252" width="284" height="150" rx="14" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+    <rect x="354" y="268" width="252" height="32" rx="8" fill="#fef3c7"/>
+    <text x="480" y="289" text-anchor="middle" font-size="13" font-weight="800" fill="#b45309">5. Cost Optimization (FinOps)</text>
+    <text x="358" y="322" font-size="11.5" fill="#334155">• Pay-as-you-go &amp; Scale-to-Zero</text>
+    <text x="358" y="342" font-size="11.5" fill="#334155">• Spot / Preemptible &amp; Committed Use</text>
+    <text x="358" y="362" font-size="11.5" fill="#334155">• Storage Lifecycle Tiering (Hot → Archive)</text>
+    <text x="358" y="382" font-size="11.5" fill="#334155">• Budget Alerts &amp; Idle Resource Cleanup</text>
+
+    <!-- Pillar 6: Sustainability (GreenOps) -->
+    <rect x="642" y="252" width="284" height="150" rx="14" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+    <rect x="658" y="268" width="252" height="32" rx="8" fill="#ccfbf1"/>
+    <text x="784" y="289" text-anchor="middle" font-size="13" font-weight="800" fill="#0f766e">6. Sustainability (GreenOps)</text>
+    <text x="662" y="322" font-size="11.5" fill="#334155">• Select Low-Carbon / CFE Cloud Regions</text>
+    <text x="662" y="342" font-size="11.5" fill="#334155">• High-efficiency ARM CPUs (Graviton/Axion)</text>
+    <text x="662" y="362" font-size="11.5" fill="#334155">• Maximize utilization via Serverless/PaaS</text>
+    <text x="662" y="382" font-size="11.5" fill="#334155">• Track Carbon Footprint per workload</text>
+  </g>
+</svg>

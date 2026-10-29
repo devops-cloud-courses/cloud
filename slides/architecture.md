@@ -46,6 +46,27 @@
 
 ----
 
+### Cloud IAM & Zero-Trust Security
+
+<img src="img/cloud-iam.svg" alt="Cloud Identity and Access Management (IAM): Who, What, and Where across the Resource Hierarchy" />
+
+Note:
+* In the Cloud, Identity is the new security perimeter.
+* Every API call is authenticated and authorized using WHO (Principal) + WHAT (Role/Permissions) + WHERE (Resource Hierarchy).
+* Never hardcode or commit static Service Account JSON keys or AWS Access Keys in Git! Use Workload Identity Federation / OIDC short-lived tokens.
+
+----
+
+### Data Sovereignty, Encryption & Compliance
+
+> Controlling **where** your data lives, **who** holds the encryption keys, and **which jurisdiction** applies
+
+* **Encryption Everywhere**: TLS 1.3 in transit + `AES-256` at rest by default (`Cloud KMS`, `Customer-Managed Encryption Keys — CMEK`, or Hardware Security Modules `Cloud HSM` / `BYOK`)
+* **Regulatory Frameworks**: `GDPR` (EU data protection), `HIPAA` (Healthcare), `PCI-DSS` (Payments), `ISO 27001` & `SOC 2`
+* **Sovereign Cloud & Extraterritorial Laws**: Addressing `US CLOUD Act` exposure via EU Data Boundary, `ANSSI SecNumCloud` (e.g., *S3NS*, *Bleu*), and Sovereign Controls
+
+----
+
 ### Cloud Services Landscape
 
 <img src="img/cloud-services-map.svg" alt="Overview of Cloud Services across Compute, Containers, Storage, Databases, Networking, AI, Security, and DevOps" />

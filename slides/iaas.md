@@ -113,6 +113,17 @@ Note:
 
 ----
 
+### Cloud Storage Taxonomy: Block, File & Object
+
+<img src="img/cloud-storage-types.svg" alt="Comparison of Cloud Block Storage, File Storage, Object Storage, and Lifecycle Tiers" />
+
+Note:
+* Block Storage (SAN): Raw volumes attached to a single VM via NVMe/SCSI (< 1 ms latency) — ideal for boot disks and relational databases.
+* File Storage (NAS): Shared POSIX/NFS/SMB file system mounted concurrently across multiple VMs or containers.
+* Object Storage (S3 / GCS / Azure Blob): Flat REST API namespace, virtually infinite scale, 99.999999999% (11 nines) durability, with automated lifecycle policies transitioning aging data from Standard (Hot) to Nearline, Coldline, and Archive tiers.
+
+----
+
 ### Pets vs Cattle
 
 <img src="img/pets-vs-cattle.svg" alt="Comparison between Pets (manually managed servers) and Cattle (automated fleet)" />
@@ -208,6 +219,30 @@ Note:
 ### RTO / RPO Timeline
 
 <img src="img/rto-rpo.svg" alt="RPO and RTO timeline diagram around an outage" />
+
+----
+
+### SLA & "The Table of Nines"
+
+> **Service Level Agreement (SLA)**: Contractual uptime commitment backed by financial credits
+
+| Availability (SLA) | Max Downtime / Year | Max Downtime / Month | Typical Cloud Tier |
+|---|---|---|---|
+| `99%` ("Two Nines") | **3.65 days** | 7h 18m | Non-critical batch / Dev |
+| `99.9%` ("Three Nines") | **8h 45m** | 43m 50s | Single-Instance VM (Premium SSD) |
+| `99.95%` | **4h 22m** | 21m 55s | Multi-AZ Regional Managed DB |
+| `99.99%` ("Four Nines") | **52m 36s** | 4m 23s | Multi-AZ VMs + Load Balancer |
+| `99.999%` ("Five Nines") | **5m 15s** | 26s | Global Multi-Region Active-Active |
+
+----
+
+### Composite SLA Math: Serial vs. Parallel
+
+<img src="img/composite-sla.svg" alt="Composite SLA calculation comparing serial dependencies against parallel Multi-AZ redundancy" />
+
+Note:
+* Serial dependencies multiply down: 99.95% × 99.9% × 99.9% = 99.75% (~22 hours of downtime/year).
+* Parallel Multi-AZ redundancy multiplies the failure probability: two independent zones at 99.9% each have a 0.1% (0.001) failure chance, so the probability both fail simultaneously is 0.001 × 0.001 = 0.000001 → 99.9999% availability!
 
 ----
 
