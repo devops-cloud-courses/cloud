@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" width="960" height="430" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gZoneA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="gZoneB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="430" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="430" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Left Card: europe-west4-c (Flagship Zone) -->
+    <rect x="38" y="24" width="428" height="304" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="58" y="42" width="388" height="40" rx="10" fill="url(#gZoneA)"/>
+    <text x="252" y="67" text-anchor="middle" font-size="15" font-family="'JetBrains Mono', monospace" font-weight="800" fill="#ffffff">europe-west4-c (Tier-1 Hub Zone)</text>
+
+    <!-- CPU Platforms -->
+    <text x="64" y="108" font-size="12.5" font-weight="800" fill="#1e40af">Available CPU Platforms:</text>
+    <text x="76" y="128" font-size="12" fill="#334155">• Intel Xeon (Broadwell, Skylake, Cascade Lake, Sapphire Rapids)</text>
+    <text x="76" y="148" font-size="12" fill="#334155">• AMD EPYC Rome / Milan / Genoa (N2D / C2D / C3D)</text>
+
+    <!-- Machine Series -->
+    <text x="64" y="178" font-size="12.5" font-weight="800" fill="#1e40af">Machine Families &amp; Capacities:</text>
+    <text x="76" y="198" font-size="12" fill="#334155">• General Purpose: E2, N2, N2D (up to 224 vCPUs, 896 GB RAM)</text>
+    <text x="76" y="218" font-size="12" fill="#334155">• Compute-Optimized: C2 / C3 (up to 176 vCPUs)</text>
+    <text x="76" y="238" font-size="12" fill="#334155">• Memory-Optimized: M2 Ultramem (up to 416 vCPUs &amp; 11.5 TB RAM)</text>
+
+    <!-- Specialized Hardware Badges -->
+    <rect x="64" y="260" width="114" height="30" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+    <text x="121" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#15803d">✓ GPUs &amp; TPUs</text>
+
+    <rect x="190" y="260" width="118" height="30" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+    <text x="249" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#15803d">✓ Local NVMe</text>
+
+    <rect x="320" y="260" width="126" height="30" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+    <text x="383" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#15803d">✓ 11.5 TB UltraMem</text>
+
+    <!-- Right Card: southamerica-east1-b (Smaller Regional Zone) -->
+    <rect x="494" y="24" width="428" height="304" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="514" y="42" width="388" height="40" rx="10" fill="url(#gZoneB)"/>
+    <text x="708" y="67" text-anchor="middle" font-size="15" font-family="'JetBrains Mono', monospace" font-weight="800" fill="#ffffff">southamerica-east1-b (Regional Zone)</text>
+
+    <!-- CPU Platforms -->
+    <text x="520" y="108" font-size="12.5" font-weight="800" fill="#334155">Available CPU Platforms:</text>
+    <text x="532" y="128" font-size="12" fill="#475569">• Intel Xeon E5 v4 (Broadwell — default)</text>
+    <text x="532" y="148" font-size="12" fill="#475569">• Intel Xeon (Skylake) platform</text>
+
+    <!-- Machine Series -->
+    <text x="520" y="178" font-size="12.5" font-weight="800" fill="#334155">Machine Families &amp; Capacities:</text>
+    <text x="532" y="198" font-size="12" fill="#475569">• General Purpose: E2 (16 vCPUs) &amp; N1 (96 vCPUs)</text>
+    <text x="532" y="218" font-size="12" fill="#94a3b8">• Compute-Optimized (C2) / AMD (N2D): Not available in zone</text>
+    <text x="532" y="238" font-size="12" fill="#475569">• Memory-Optimized: M1 only (up to 160 vCPUs &amp; 3.75 TB RAM)</text>
+
+    <!-- Specialized Hardware Badges -->
+    <rect x="520" y="260" width="114" height="30" rx="8" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.2"/>
+    <text x="577" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">✗ No GPUs</text>
+
+    <rect x="646" y="260" width="118" height="30" rx="8" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+    <text x="705" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#15803d">✓ Local SSDs</text>
+
+    <rect x="776" y="260" width="126" height="30" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.2"/>
+    <text x="839" y="280" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b45309">! Max 3.75 TB RAM</text>
+
+    <!-- Bottom Takeaway Banner -->
+    <rect x="38" y="344" width="884" height="68" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="480" y="371" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a">Not All Availability Zones Are Identical in Hardware!</text>
+    <text x="480" y="393" text-anchor="middle" font-size="12" fill="#334155">CPU generations, GPU accelerators, and UltraMem SKUs vary by zone • Always verify SKU availability across 2+ AZs for High Availability</text>
+  </g>
+</svg>

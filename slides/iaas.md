@@ -55,6 +55,16 @@
 
 ----
 
+### Global Backbone Network & Edge CDN
+
+<img src="img/cloud-global-network.svg" alt="Hyperscaler Global Fiber Network and Edge CDN Points of Presence" />
+
+Note:
+* Hyperscalers invest billions in private transoceanic subsea fiber cables and 200+ Edge PoPs worldwide.
+* With Cold-Potato Routing, user traffic enters the provider's private fiber backbone at the nearest city Edge PoP (< 10 ms) rather than bouncing across congested public internet hops.
+
+----
+
 ### Availability Zones (AZ)
 
 <img src="img/availability-zones.svg" alt="Cloud Region composed of 3 isolated Availability Zones" />
@@ -63,6 +73,17 @@ Note:
 * Question for the audience: How many servers are inside a hyperscale datacenter complex (like Dublin or Virginia)?
 * Hundreds of thousands to over 1 million servers across a region.
 * Each Availability Zone is one or more discrete datacenters with redundant power, cooling, and networking, isolated from disasters in other AZs.
+
+----
+
+### Virtual Machines by Availability Zone
+
+<img src="img/vm-by-az.svg" alt="Comparison of available CPU platforms, machine families, and GPUs across Availability Zones" />
+
+Note:
+* Not all Availability Zones have identical underlying hardware!
+* Newer CPU generations (Sapphire Rapids, AMD Genoa), GPU/TPU accelerators, and UltraMem instances (11.5 TB RAM) are rolled out selectively per zone.
+* Always verify that your required machine SKU is available across at least 2 or 3 AZs before designing a High Availability deployment.
 
 ----
 

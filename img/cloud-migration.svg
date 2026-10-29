@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 490" width="1040" height="490" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gPillar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="axisArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e40af"/>
+    </marker>
+  </defs>
+
+  <rect width="1040" height="490" rx="18" fill="#f8fafc"/>
+  <rect width="1040" height="490" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- Top Matrix Area -->
+  <rect x="28" y="18" width="984" height="246" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Left Pillar: Apps & Infra Assessment -->
+  <g filter="url(#shadow)">
+    <rect x="46" y="34" width="84" height="214" rx="10" fill="url(#gPillar)"/>
+    <polygon points="130,122 152,141 130,160" fill="#0284c7"/>
+    <text x="88" y="141" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff" transform="rotate(-90 88 141)">Apps &amp; Infra Assessment</text>
+  </g>
+
+  <!-- Y-Axis Label -->
+  <text x="195" y="128" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Business</text>
+  <text x="195" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Agility &amp;</text>
+  <text x="195" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Value</text>
+
+  <!-- Axes -->
+  <line x1="238" y1="224" x2="238" y2="38" stroke="#1e40af" stroke-width="2.5" marker-end="url(#axisArrow)"/>
+  <line x1="238" y1="224" x2="848" y2="224" stroke="#1e40af" stroke-width="2.5" marker-end="url(#axisArrow)"/>
+  <text x="543" y="248" text-anchor="middle" font-size="12.5" font-weight="800" fill="#1e3a8a">Transformation Effort →</text>
+
+  <!-- Guide gridlines inside plot -->
+  <line x1="238" y1="178" x2="840" y2="178" stroke="#f1f5f9" stroke-width="1.5"/>
+  <line x1="238" y1="132" x2="840" y2="132" stroke="#f1f5f9" stroke-width="1.5"/>
+  <line x1="238" y1="86" x2="840" y2="86" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- Staircase Steps on Matrix -->
+  <g filter="url(#shadow)">
+    <!-- Retain & Retire -->
+    <rect x="248" y="192" width="84" height="24" rx="5" fill="#94a3b8"/>
+    <text x="290" y="208" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">Retain</text>
+
+    <rect x="248" y="165" width="84" height="24" rx="5" fill="#64748b"/>
+    <text x="290" y="181" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">Retire</text>
+
+    <!-- Rehost -->
+    <rect x="336" y="140" width="90" height="26" rx="6" fill="#0ea5e9"/>
+    <text x="381" y="157" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Rehost</text>
+
+    <!-- Redeploy -->
+    <rect x="412" y="112" width="94" height="26" rx="6" fill="#0284c7"/>
+    <text x="459" y="129" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Redeploy</text>
+
+    <!-- Replatform -->
+    <rect x="518" y="82" width="104" height="28" rx="6" fill="#f43f5e"/>
+    <text x="570" y="100" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Replatform</text>
+
+    <!-- Refactor & Rebuild -->
+    <rect x="636" y="54" width="96" height="28" rx="6" fill="#10b981"/>
+    <text x="684" y="72" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Refactor</text>
+
+    <rect x="738" y="34" width="94" height="28" rx="6" fill="#0d9488"/>
+    <text x="785" y="52" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Rebuild</text>
+
+    <!-- Repurchase badge -->
+    <rect x="526" y="36" width="100" height="26" rx="13" fill="#9333ea"/>
+    <text x="576" y="53" text-anchor="middle" font-size="11.5" font-weight="800" fill="#ffffff">Repurchase</text>
+  </g>
+
+  <!-- Right Pillar: Operate & Optimize Services -->
+  <g filter="url(#shadow)">
+    <rect x="886" y="34" width="84" height="214" rx="10" fill="url(#gPillar)"/>
+    <polygon points="970,122 992,141 970,160" fill="#0284c7"/>
+    <text x="928" y="141" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff" transform="rotate(-90 928 141)">Operate &amp; Optimize</text>
+  </g>
+
+  <!-- Cloud Model Category Headers (IaaS / PaaS / SaaS) -->
+  <!-- Keep the lights on -->
+  <text x="145" y="298" text-anchor="middle" font-size="11.5" font-weight="800" fill="#475569">Keep the Lights On</text>
+  <line x1="28" y1="306" x2="262" y2="306" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- IaaS Bracket -->
+  <rect x="358" y="271" width="66" height="20" rx="10" fill="#e0f2fe"/>
+  <text x="391" y="285" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0369a1">IaaS</text>
+  <text x="391" y="301" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Lift &amp; Shift Migration</text>
+  <line x1="274" y1="306" x2="508" y2="306" stroke="#0284c7" stroke-width="2"/>
+
+  <!-- PaaS Bracket -->
+  <rect x="660" y="271" width="66" height="20" rx="10" fill="#d1fae5"/>
+  <text x="693" y="285" text-anchor="middle" font-size="11.5" font-weight="800" fill="#047857">PaaS</text>
+  <text x="693" y="301" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">App Modernization &amp; Cloud-Native</text>
+  <line x1="520" y1="306" x2="878" y2="306" stroke="#10b981" stroke-width="2"/>
+
+  <!-- SaaS Bracket -->
+  <rect x="918" y="271" width="66" height="20" rx="10" fill="#f3e8ff"/>
+  <text x="951" y="285" text-anchor="middle" font-size="11.5" font-weight="800" fill="#7e22ce">SaaS</text>
+  <text x="951" y="301" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Packaged SW</text>
+  <line x1="890" y1="306" x2="1012" y2="306" stroke="#9333ea" stroke-width="2"/>
+
+  <!-- 8 Pathway Cards -->
+  <g filter="url(#shadow)">
+    <!-- 1. Retire -->
+    <rect x="28" y="316" width="112" height="156" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="28" y="316" width="112" height="28" rx="8" fill="#64748b"/>
+    <text x="84" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">1. Retire</text>
+    <text x="84" y="376" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Decommission</text>
+    <text x="84" y="392" text-anchor="middle" font-size="10.5" fill="#475569">unused or</text>
+    <text x="84" y="408" text-anchor="middle" font-size="10.5" fill="#475569">redundant</text>
+    <text x="84" y="424" text-anchor="middle" font-size="10.5" fill="#475569">applications</text>
+
+    <!-- 2. Retain -->
+    <rect x="150" y="316" width="112" height="156" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="150" y="316" width="112" height="28" rx="8" fill="#94a3b8"/>
+    <text x="206" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">2. Retain</text>
+    <text x="206" y="376" text-anchor="middle" font-size="10.5" font-weight="600" fill="#334155">Keep as-is</text>
+    <text x="206" y="392" text-anchor="middle" font-size="10.5" fill="#475569">on current</text>
+    <text x="206" y="408" text-anchor="middle" font-size="10.5" fill="#475569">on-premises</text>
+    <text x="206" y="424" text-anchor="middle" font-size="10.5" fill="#475569">infrastructure</text>
+
+    <!-- 3. Rehost -->
+    <rect x="274" y="316" width="112" height="156" rx="8" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5"/>
+    <rect x="274" y="316" width="112" height="28" rx="8" fill="#0ea5e9"/>
+    <text x="330" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">3. Rehost</text>
+    <text x="330" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#0369a1">Lift &amp; Shift</text>
+    <text x="330" y="386" text-anchor="middle" font-size="10.5" fill="#475569">Move VM/server</text>
+    <text x="330" y="402" text-anchor="middle" font-size="10.5" fill="#475569">as-is to Cloud</text>
+    <text x="330" y="418" text-anchor="middle" font-size="10.5" fill="#475569">IaaS with zero</text>
+    <text x="330" y="434" text-anchor="middle" font-size="10.5" fill="#475569">code changes</text>
+
+    <!-- 4. Redeploy -->
+    <rect x="396" y="316" width="112" height="156" rx="8" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5"/>
+    <rect x="396" y="316" width="112" height="28" rx="8" fill="#0284c7"/>
+    <text x="452" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">4. Redeploy</text>
+    <text x="452" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#0369a1">Automated IaaS</text>
+    <text x="452" y="386" text-anchor="middle" font-size="10.5" fill="#475569">Reinstall app on</text>
+    <text x="452" y="402" text-anchor="middle" font-size="10.5" fill="#475569">cloud compute</text>
+    <text x="452" y="418" text-anchor="middle" font-size="10.5" fill="#475569">with minor OS or</text>
+    <text x="452" y="434" text-anchor="middle" font-size="10.5" fill="#475569">MW upgrades</text>
+
+    <!-- 5. Replatform -->
+    <rect x="520" y="316" width="112" height="156" rx="8" fill="#ffffff" stroke="#fda4af" stroke-width="1.5"/>
+    <rect x="520" y="316" width="112" height="28" rx="8" fill="#f43f5e"/>
+    <text x="576" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">5. Replatform</text>
+    <text x="576" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#be123c">Lift &amp; Reshape</text>
+    <text x="576" y="386" text-anchor="middle" font-size="10.5" fill="#475569">Adopt managed</text>
+    <text x="576" y="402" text-anchor="middle" font-size="10.5" fill="#475569">PaaS DBs or</text>
+    <text x="576" y="418" text-anchor="middle" font-size="10.5" fill="#475569">containers with</text>
+    <text x="576" y="434" text-anchor="middle" font-size="10.5" fill="#475569">minimal code change</text>
+
+    <!-- 6. Refactor -->
+    <rect x="642" y="316" width="112" height="156" rx="8" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.5"/>
+    <rect x="642" y="316" width="112" height="28" rx="8" fill="#10b981"/>
+    <text x="698" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">6. Refactor</text>
+    <text x="698" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#047857">Re-Architect</text>
+    <text x="698" y="386" text-anchor="middle" font-size="10.5" fill="#475569">Modify code &amp;</text>
+    <text x="698" y="402" text-anchor="middle" font-size="10.5" fill="#475569">architecture to</text>
+    <text x="698" y="418" text-anchor="middle" font-size="10.5" fill="#475569">leverage cloud-</text>
+    <text x="698" y="434" text-anchor="middle" font-size="10.5" fill="#475569">native services</text>
+
+    <!-- 7. Rebuild -->
+    <rect x="764" y="316" width="114" height="156" rx="8" fill="#ffffff" stroke="#5eead4" stroke-width="1.5"/>
+    <rect x="764" y="316" width="114" height="28" rx="8" fill="#0d9488"/>
+    <text x="821" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">7. Rebuild</text>
+    <text x="821" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#0f766e">Cloud-Native</text>
+    <text x="821" y="386" text-anchor="middle" font-size="10.5" fill="#475569">Redesign and</text>
+    <text x="821" y="402" text-anchor="middle" font-size="10.5" fill="#475569">rewrite from</text>
+    <text x="821" y="418" text-anchor="middle" font-size="10.5" fill="#475569">scratch (Serverless,</text>
+    <text x="821" y="434" text-anchor="middle" font-size="10.5" fill="#475569">Microservices)</text>
+
+    <!-- 8. Repurchase -->
+    <rect x="890" y="316" width="122" height="156" rx="8" fill="#ffffff" stroke="#d8b4fe" stroke-width="1.5"/>
+    <rect x="890" y="316" width="122" height="28" rx="8" fill="#9333ea"/>
+    <text x="951" y="335" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">8. Repurchase</text>
+    <text x="951" y="368" text-anchor="middle" font-size="10.5" font-weight="600" fill="#7e22ce">Drop &amp; Shop</text>
+    <text x="951" y="386" text-anchor="middle" font-size="10.5" fill="#475569">Replace custom</text>
+    <text x="951" y="402" text-anchor="middle" font-size="10.5" fill="#475569">or legacy COTS</text>
+    <text x="951" y="418" text-anchor="middle" font-size="10.5" fill="#475569">software with a</text>
+    <text x="951" y="434" text-anchor="middle" font-size="10.5" fill="#475569">turnkey SaaS</text>
+  </g>
+</svg>
