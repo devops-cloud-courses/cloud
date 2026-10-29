@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="420" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="420" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- VPC Outer Container -->
+  <rect x="230" y="24" width="696" height="372" rx="20" fill="#eff6ff" fill-opacity="0.5" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="254" y="52" font-size="14" font-weight="800" fill="#1d4ed8">Virtual Private Cloud (VPC) — Multi-AZ High Availability</text>
+
+  <!-- AZ-A & AZ-B Containers -->
+  <rect x="424" y="66" width="480" height="148" rx="14" fill="#ffffff" fill-opacity="0.85" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="442" y="90" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#2563eb">Availability Zone A</text>
+
+  <rect x="424" y="230" width="480" height="148" rx="14" fill="#ffffff" fill-opacity="0.85" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="442" y="254" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#2563eb">Availability Zone B</text>
+
+  <g filter="url(#shadow)">
+    <!-- Entry: DNS + CDN + WAF -->
+    <rect x="34" y="156" width="166" height="108" rx="14" fill="#1e293b"/>
+    <text x="117" y="196" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">DNS + CDN</text>
+    <text x="117" y="218" text-anchor="middle" font-size="12" fill="#38bdf8">Route 53 / CloudFront</text>
+    <text x="117" y="238" text-anchor="middle" font-size="11.5" fill="#94a3b8">WAF &amp; DDoS Shield</text>
+
+    <!-- Public Load Balancer -->
+    <rect x="252" y="156" width="142" height="108" rx="14" fill="#2563eb"/>
+    <text x="323" y="198" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">Load Balancer</text>
+    <text x="323" y="220" text-anchor="middle" font-size="11.5" fill="#dbeafe">Multi-AZ ALB</text>
+    <text x="323" y="238" text-anchor="middle" font-size="11.5" fill="#dbeafe">Health Checks</text>
+
+    <!-- Web / App Tier (Auto Scaling Group) -->
+    <rect x="448" y="102" width="196" height="94" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="546" y="136" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">App Instance (AZ-A)</text>
+    <text x="546" y="158" text-anchor="middle" font-size="12" fill="#3b82f6">Auto-Scaling Group</text>
+    <text x="546" y="178" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#64748b">Private Subnet</text>
+
+    <rect x="448" y="266" width="196" height="94" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="546" y="300" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">App Instance (AZ-B)</text>
+    <text x="546" y="322" text-anchor="middle" font-size="12" fill="#3b82f6">Auto-Scaling Group</text>
+    <text x="546" y="342" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#64748b">Private Subnet</text>
+
+    <!-- Database Tier (Primary + Standby) -->
+    <rect x="692" y="102" width="190" height="94" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+    <text x="787" y="136" text-anchor="middle" font-size="14" font-weight="800" fill="#047857">Primary DB (AZ-A)</text>
+    <text x="787" y="158" text-anchor="middle" font-size="12" fill="#059669">Read / Write Master</text>
+    <text x="787" y="178" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#64748b">Isolated Data Subnet</text>
+
+    <rect x="692" y="266" width="190" height="94" rx="12" fill="#f0fdf4" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text x="787" y="300" text-anchor="middle" font-size="14" font-weight="800" fill="#065f46">Standby DB (AZ-B)</text>
+    <text x="787" y="322" text-anchor="middle" font-size="12" fill="#059669">Sync Replication</text>
+    <text x="787" y="342" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#64748b">Auto-Failover</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="200" y1="210" x2="244" y2="210" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="394" y1="190" x2="440" y2="152" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="394" y1="230" x2="440" y2="308" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="644" y1="149" x2="684" y2="149" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="644" y1="305" x2="686" y2="168" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <line x1="787" y1="198" x2="787" y2="258" stroke="#059669" stroke-width="2.5" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Remote Workers -->
+    <rect x="36" y="48" width="244" height="112" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="158" y="84" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Remote Developer</text>
+    <text x="158" y="108" text-anchor="middle" font-size="12.5" fill="#64748b">Home / Coffee Shop</text>
+    <rect x="56" y="120" width="204" height="26" rx="6" fill="#eff6ff"/>
+    <text x="158" y="137" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#2563eb">OpenVPN / WireGuard Client</text>
+
+    <rect x="36" y="200" width="244" height="112" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="158" y="236" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">SysAdmin Laptop</text>
+    <text x="158" y="260" text-anchor="middle" font-size="12.5" fill="#64748b">On-the-go Admin Access</text>
+    <rect x="56" y="272" width="204" height="26" rx="6" fill="#eff6ff"/>
+    <text x="158" y="289" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#2563eb">Certificate / Entra ID SSO</text>
+
+    <!-- P2S Tunnel -->
+    <rect x="348" y="126" width="244" height="108" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <rect x="368" y="110" width="204" height="28" rx="14" fill="#2563eb"/>
+    <text x="470" y="129" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Point-to-Site (P2S) VPN</text>
+    <text x="470" y="170" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d4ed8">Encrypted Client Tunnels</text>
+    <text x="470" y="192" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#3b82f6">SSL/TLS (443) or IPsec</text>
+    <text x="470" y="214" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#64748b">Client Pool: 172.16.200.0/24</text>
+
+    <!-- Cloud VNet -->
+    <rect x="652" y="42" width="272" height="276" rx="16" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+    <text x="788" y="78" text-anchor="middle" font-size="17" font-weight="800" fill="#1e40af">Cloud VNet / VPC</text>
+    <text x="788" y="100" text-anchor="middle" font-size="12.5" font-family="'JetBrains Mono', monospace" fill="#2563eb">Private Endpoints Only</text>
+    <rect x="678" y="118" width="220" height="58" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="788" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Private VMs &amp; Databases</text>
+    <rect x="678" y="218" width="220" height="68" rx="10" fill="#2563eb"/>
+    <text x="788" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">VPN Gateway / Bastion</text>
+    <text x="788" y="268" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Terminates P2S Sessions</text>
+  </g>
+
+  <!-- Flow Arrows -->
+  <!-- Remote Developer <-> P2S Tunnel -->
+  <path d="M 286 104 L 342 156" fill="none" stroke="#2563eb" stroke-width="3" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+
+  <!-- SysAdmin Laptop <-> P2S Tunnel -->
+  <path d="M 286 256 L 342 204" fill="none" stroke="#2563eb" stroke-width="3" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+
+  <!-- P2S Tunnel <-> Cloud VPN Gateway -->
+  <path d="M 598 190 L 672 246" fill="none" stroke="#2563eb" stroke-width="3.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+
+  <!-- Cloud VPN Gateway <-> Private VMs & Databases -->
+  <line x1="788" y1="182" x2="788" y2="212" stroke="#2563eb" stroke-width="2.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+</svg>

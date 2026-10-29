@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowSlate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- On-Premises Datacenter -->
+    <rect x="36" y="42" width="276" height="276" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="174" y="78" text-anchor="middle" font-size="17" font-weight="800" fill="#0f172a">On-Premises Datacenter</text>
+    <text x="174" y="100" text-anchor="middle" font-size="12.5" font-family="'JetBrains Mono', monospace" fill="#64748b">10.0.0.0/16</text>
+    <rect x="64" y="118" width="220" height="58" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="174" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">Internal Servers &amp; DBs</text>
+    <rect x="64" y="218" width="220" height="68" rx="10" fill="#1e293b"/>
+    <text x="174" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">On-Prem VPN Device</text>
+    <text x="174" y="268" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#94a3b8">Public IP + Route Table</text>
+
+    <!-- Encrypted Tunnel -->
+    <rect x="352" y="198" width="256" height="108" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <rect x="380" y="182" width="200" height="28" rx="14" fill="#2563eb"/>
+    <text x="480" y="201" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">IPsec / IKEv2 Tunnel</text>
+    <text x="480" y="242" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1e40af">Encrypted Traffic Flow</text>
+    <text x="480" y="264" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#3b82f6">Over Public Internet</text>
+    <text x="480" y="286" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#64748b">BGP / Static Routing</text>
+
+    <!-- Cloud VNet / VPC -->
+    <rect x="648" y="42" width="276" height="276" rx="16" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+    <text x="786" y="78" text-anchor="middle" font-size="17" font-weight="800" fill="#1e40af">Cloud VNet / VPC</text>
+    <text x="786" y="100" text-anchor="middle" font-size="12.5" font-family="'JetBrains Mono', monospace" fill="#2563eb">172.16.0.0/16</text>
+    <rect x="676" y="118" width="220" height="58" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="786" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Cloud Workloads (VMs)</text>
+    <rect x="676" y="218" width="220" height="68" rx="10" fill="#2563eb"/>
+    <text x="786" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Cloud VPN Gateway</text>
+    <text x="786" y="268" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Gateway Subnet</text>
+  </g>
+
+  <!-- Internal & Tunnel Flow Arrows -->
+  <!-- On-Prem Internal Servers <-> On-Prem VPN Device -->
+  <line x1="174" y1="182" x2="174" y2="212" stroke="#475569" stroke-width="2.5" marker-start="url(#arrowSlate)" marker-end="url(#arrowSlate)"/>
+
+  <!-- Cloud Workloads <-> Cloud VPN Gateway -->
+  <line x1="786" y1="182" x2="786" y2="212" stroke="#2563eb" stroke-width="2.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+
+  <!-- On-Prem VPN Device <-> IPsec Tunnel <-> Cloud VPN Gateway -->
+  <line x1="290" y1="252" x2="346" y2="252" stroke="#2563eb" stroke-width="3.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <line x1="614" y1="252" x2="670" y2="252" stroke="#2563eb" stroke-width="3.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+
+  <!-- End-to-End Logical Private Routing Path -->
+  <path d="M 290 147 C 420 110, 540 110, 670 147" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <rect x="375" y="104" width="210" height="26" rx="13" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="480" y="121" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1d4ed8">Private IP Routing (RFC 1918)</text>
+</svg>

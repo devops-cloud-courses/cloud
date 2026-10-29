@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="400" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="400" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Row 1: Traditional 3-Tier Architecture -->
+    <rect x="28" y="24" width="904" height="162" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="48" y="44" width="164" height="122" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="130" y="96" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Traditional</text>
+    <text x="130" y="118" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#64748b">Always-On Server</text>
+
+    <rect x="242" y="64" width="150" height="82" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="317" y="102" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Client Browser</text>
+    <text x="317" y="122" text-anchor="middle" font-size="11.5" fill="#64748b">HTML / JS UI</text>
+
+    <rect x="442" y="50" width="248" height="110" rx="12" fill="#1e293b"/>
+    <text x="566" y="82" text-anchor="middle" font-size="14.5" font-weight="800" fill="#ffffff">24/7 Backend Server</text>
+    <text x="566" y="106" text-anchor="middle" font-size="12" fill="#94a3b8">Auth + API Routing + Business Logic</text>
+    <text x="566" y="128" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#f87171">Paid 24/7 even when idle</text>
+
+    <rect x="740" y="64" width="164" height="82" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="822" y="102" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Central Database</text>
+    <text x="822" y="122" text-anchor="middle" font-size="11.5" fill="#64748b">Monolithic RDBMS</text>
+
+    <!-- Row 2: Serverless Architecture -->
+    <rect x="28" y="210" width="904" height="166" rx="16" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="48" y="230" width="164" height="126" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="130" y="284" text-anchor="middle" font-size="16" font-weight="800" fill="#1d4ed8">Serverless</text>
+    <text x="130" y="306" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#2563eb">FaaS + BaaS</text>
+
+    <rect x="242" y="246" width="150" height="94" rx="10" fill="#eff6ff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="317" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Rich SPA / Mobile</text>
+    <text x="317" y="302" text-anchor="middle" font-size="11.5" fill="#3b82f6">Hosted on CDN</text>
+    <text x="317" y="320" text-anchor="middle" font-size="11" fill="#64748b">(S3 / Cloud Storage)</text>
+
+    <rect x="442" y="226" width="224" height="60" rx="10" fill="#ecfdf5" stroke="#34d399" stroke-width="1.5"/>
+    <text x="554" y="253" text-anchor="middle" font-size="13.5" font-weight="800" fill="#047857">BaaS (Auth0 / Cognito)</text>
+    <text x="554" y="272" text-anchor="middle" font-size="11.5" fill="#059669">Direct managed authentication</text>
+
+    <rect x="442" y="298" width="224" height="62" rx="10" fill="#2563eb"/>
+    <text x="554" y="325" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">API GW + FaaS Functions</text>
+    <text x="554" y="344" text-anchor="middle" font-size="11.5" fill="#dbeafe">Ephemeral • Pay-per-invocation</text>
+
+    <rect x="716" y="246" width="188" height="94" rx="10" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="810" y="282" text-anchor="middle" font-size="14" font-weight="800" fill="#5b21b6">Serverless DBs</text>
+    <text x="810" y="302" text-anchor="middle" font-size="12" fill="#6d28d9">DynamoDB / Firestore</text>
+    <text x="810" y="322" text-anchor="middle" font-size="11" font-family="'JetBrains Mono', monospace" fill="#7c3aed">Auto-scales to zero</text>
+  </g>
+
+  <line x1="394" y1="105" x2="434" y2="105" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="692" y1="105" x2="732" y2="105" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <line x1="394" y1="276" x2="434" y2="256" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+  <line x1="394" y1="308" x2="434" y2="326" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+  <line x1="668" y1="328" x2="708" y2="302" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrowBlue)"/>
+</svg>

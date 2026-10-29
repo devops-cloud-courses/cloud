@@ -1,145 +1,123 @@
-## Le Serverless
-
-La nouvelle coqueluche
+## Serverless
 
 ----
 
-### Définition
+### What is Serverless?
 
-- Ce n'est pas une nouvelle offre cloud, mais un concept d'architecture
-- Délivrer de la valeur pour le métier rapidement et régulièrement
+> An architectural model where servers are completely abstracted away and billing is strictly tied to execution
 
-----
-
-### Propriétés désirables
-
-- Ephémère
-  - La plateforme attends les requêtes et n’instancie que les fonctions a la demande, qui ne ”vivent” le temps délivrer le résultat
-- Scalabilité dynamique
-  - Résilience supportée nativement par la plateforme
-- Gestion fine
-  - Pay-per-use sur le cloud
-- Piloté par événements
+* Not just a single product, but a **cloud-native architectural paradigm**
+* Maximize focus on delivering business value rapidly and continuously
 
 ----
 
-### Propriétés désirables
+### Core Characteristics
 
-- Attention aux contraintes
-  - Pas d'état
-  - Vendor lock-in
-  - Cold start
-  - Pas de service long
-
-----
-
-### Architecture traditionnelle
-
-<img src="https://martinfowler.com/articles/serverless/ps.svg" style="background:none; border:none; box-shadow:none;"/>
+* **Ephemeral Compute**: Functions spin up on demand when triggered and exist only for the duration of the request
+* **Dynamic Auto-Scaling**: Instantaneous scaling from zero to thousands of concurrent executions, with built-in resilience
+* **Fine-Grained Billing**: True **pay-per-invocation** (billed per millisecond of compute and request count)
+* **Event-Driven**: Reacts natively to HTTP requests, queue messages, file uploads, database changes, or schedules
 
 ----
 
-### Séparons l'architecture
+### Architectural Trade-offs
 
-<img src="https://martinfowler.com/bliki/images/serverless/sketch.png" width="50%" style="background:none; border:none; box-shadow:none;"/>
+> Key constraints to keep in mind when designing Serverless systems
 
-----
-
-### Architecture serverless
-
-<img src="https://martinfowler.com/articles/serverless/sps.svg" width="75%" style="background:none; border:none; box-shadow:none;"/>
-
-----
-
-### Architecture
-
-Traditionnelle
-
-<img src="https://martinfowler.com/articles/serverless/cp.svg" width="75%" style="background:none; border:none; box-shadow:none;"/>
-
-Serverless
-
-<img src="https://martinfowler.com/articles/serverless/scp.svg" width="75%" style="background:none; border:none; box-shadow:none;"/>
+* **Stateless Execution**: No local state persists between invocations; state must live in external managed stores
+* **Cold Starts**: Initial latency spike when spinning up a new execution environment from zero
+* **Execution Limits**: Bounded execution duration (e.g., up to 15 minutes on `AWS Lambda`)
+* **Vendor Lock-in**: Tight coupling with provider-specific triggers, IAM, and BaaS ecosystems
 
 ----
 
-### Function-as-a-Service
+### Traditional vs Serverless Architecture
 
-Déployer du code comme plus petite unité de valeur
-- Ephémère : durée de vie de l'ordre de la requête
-- Dynamique : scalabilité et résilience supportés par la plateforme
-- Fine grained : modèle de coût par appel
+<img src="img/serverless-vs-traditional.svg" alt="Comparison between Traditional Always-On 3-Tier Architecture and Serverless Architecture" />
 
 ----
 
-### Function-as-a-Service
+### Function-as-a-Service (FaaS)
 
-<img src="img/faas.png" width="50%" style="background:none; border:none; box-shadow:none;"/>
+> Deploying individual functions as the smallest unit of compute and business value
 
-----
-
-### Backend-as-a-Service
-
-- APIs pour délivrer des applications rapidement sans se soucier de la scalabilité et de la résilience
-- Basé principalement sur les offres PaaS des CSP
-- Peut être des bases de données (DynamoDB), de l'authentification (auth0.io), du stockage objet (blob storage)
+* **Ephemeral**: Lifecycle scoped to the request or event
+* **Elastic**: Concurrency and fault tolerance handled transparently by the platform
+* **Fine-Grained**: Pay only for actual compute time consumed (`AWS Lambda`, `Cloud Run Functions`, `Azure Functions`)
 
 ----
 
-### Backend-as-a-Service
+### Function-as-a-Service (FaaS)
 
-<img src="img/baas.png" width="80%" style="background:none; border:none; box-shadow:none;"/>
-
-----
-
-### Autoscaling
-
-Contrairement au PaaS ou au IaaS, la scalabilité est automatique et basé sur des métriques techniques et fonctionnelles
+<img src="img/faas.svg" alt="Function-as-a-Service platform routing requests from API Gateway to ephemeral function instances" />
 
 ----
 
-### Scale to zero
+### Backend-as-a-Service (BaaS)
 
-Du point de vue de l'utilisateur, s'il n'y a pas d'utilisation de l'environnement, il n'y a pas de coût associé
+> Turnkey managed APIs and cloud services that replace custom backend components
 
-----
-
-### Du IaaS au FaaS
-
-- Le IaaS apporte plus de flexibilité, plus de maitrise, permet de faire du "lift-and-shift", mais il faut s'occuper de la plomberie
-- Le FaaS se focuse sur la valeur ajoutée et le Time-to-Market, mais apporte son lot de contraintes
+* Consume authentication (`Auth0`, `Cognito`, `Firebase Auth`), databases (`DynamoDB`, `Firestore`), and object storage (`S3`) directly via SDKs
+* Built-in scalability, global replication, and managed security out of the box
 
 ----
 
-### Agilité et DevOps
+### Backend-as-a-Service (BaaS)
 
-- Le Severless tire partie au maximum du DevOps et de l'Agilité
-- Tire parti au maximum des capacités du cloud : auto-scaling, elasticité, fine grained, pay-per-call model...
-- Support les architectures d'aujourd'hui : Cloud-native applications, 12 factors
+<img src="img/baas.svg" alt="Backend-as-a-Service connecting client applications to managed Authentication, Object Storage, and Databases" />
 
 ----
 
-### Contraintes
+### Event-Driven Auto-Scaling
 
-- Impacte les architectures : pas de gestion de données (stateless)
-- La sécurité doit être embarquée dans les applications : shift de la sécurité périmétrique
-- Test du code compliqué : déploiement du code sur la plateforme à chaque changement, mettre en place des techniques types TDD ou BDD
-- Métrologie et monitoring complexe
-- Attention au vendor lock-in
-- Estimation du coût compliqué
+> Unlike IaaS or traditional PaaS, scaling is instantaneous and driven directly by incoming events
+
+* No need to pre-warm VM pools or tune CPU threshold rules — each event automatically triggers the required compute capacity
 
 ----
 
-### Cas d'usage
+### Scale to Zero
 
-- Microservices
-- Stream processing
-- IoT / Event-driven-programming
-- Batch / Taches planifiées
-- Grid computing
+> When there is no traffic, resource consumption drops to zero — and **so does your bill**
+
+* Ideal for spiky workloads, dev/test environments, and new products finding product-market fit
 
 ----
 
-### Architecture
+### From IaaS to FaaS
 
-<img src="https://d3ansictanv2wj.cloudfront.net/fig_2-51d839a1bfd30c8dd1a9f0e608cacfe9.png" width="80%" style="background:none; border:none; box-shadow:none;"/>
+* **IaaS** gives maximum control and flexibility (ideal for Lift-and-Shift or custom kernels), but requires managing all the infrastructure plumbing
+* **FaaS / Serverless** maximizes developer velocity and **Time-to-Market**, trading low-level control for operational simplicity
+
+----
+
+### Agility & DevOps Synergy
+
+* Serverless unlocks the full potential of **DevOps** and **Agile** delivery
+* Leverages native cloud superpowers: event-driven auto-scaling, elasticity, and fine-grained pay-per-use cost models
+* Naturally aligns with modern software engineering practices (`12-Factor App`, microservices, CI/CD)
+
+----
+
+### Operational Challenges
+
+* **Stateless Design**: Requires rethinking data access, caching, and connection pooling
+* **Application-Level Security**: Shift from perimeter firewall security to fine-grained zero-trust IAM per function
+* **Testing Strategy**: Local emulation is harder; relies heavily on unit testing (`TDD`/`BDD`) and ephemeral cloud test environments
+* **Distributed Observability**: Requires distributed tracing, structured logging, and FinOps cost monitoring
+
+----
+
+### Common Use Cases
+
+* **REST / GraphQL APIs & Microservices**
+* **Real-Time Stream & Event Processing**
+* **IoT Ingestion & Event-Driven Workflows**
+* **Scheduled Cron Jobs & Batch Tasks**
+* **Burst Parallel Compute (Image/Video/Document Processing)**
+
+----
+
+### Serverless Reference Architecture
+
+<img src="img/serverless-architecture.svg" alt="Event-Driven Serverless Reference Architecture" />

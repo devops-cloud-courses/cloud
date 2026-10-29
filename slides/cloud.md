@@ -1,59 +1,60 @@
-## Qu'est ce que le cloud ?
+## What is the Cloud?
 
 Note:
-Donnez moi des exemples
-* ex sas
+Ask the audience for everyday examples of Cloud services they use (e.g., SaaS apps like Gmail, Google Drive, Netflix, Spotify).
 
 ----
 
-### Petit retour en arrière
+### A quick look back in time
 
 ----
 
-### Les mainframes
+### The Mainframe Era
 
-<img src="https://www.researchgate.net/publication/275405572/figure/fig2/AS:294523784712210@1447231350853/Mainframe-Architecture.png" style="background:none; border:none; box-shadow:none;"/>
-
-----
-
-### Avènement des machines physiques
-
-<img src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/44874a48-43bf-4ae8-8e4f-0bee135aac93.jpg._CB320252724_.jpg" width="55%" style="background:none; border:none; box-shadow:none;" />
+<img src="img/history-mainframe.svg" alt="Mainframe Architecture with Dumb Terminals" />
 
 ----
 
-### Création des machines virtuelles
+### Rise of Physical Servers
 
-<img src="https://www.veeam.com/blog/wp-content/uploads/2015/10/2015-Q4-Physical-Servers-vs-VMs.png" style="background:none; border:none; box-shadow:none;"/>
-
-----
-
-### Le cloud
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Nuage33.png" width="65%" style="background:none; border:none; box-shadow:none;"/>
+<img src="img/history-physical.svg" alt="Physical Servers Architecture and Limitations" />
 
 ----
 
-### Propriétés désirables du cloud
+### Birth of Virtual Machines
 
-* Paiement à l'usage
-* Elastique
-* Ouvert
-* Mutualisé
-* Libre-service
+<img src="img/history-vms.svg" alt="Physical Servers vs Virtual Machines with a Hypervisor" />
+
+----
+
+### The Cloud
+
+<img src="img/cloud-overview.svg" alt="Cloud Computing Overview" />
+
+----
+
+### Essential Cloud Characteristics
+
+> Defined by NIST — the 5 core properties of Cloud Computing
+
+* **Pay-as-you-go**: Metered billing based on actual consumption (OpEx vs CapEx)
+* **Rapid Elasticity**: Scale resources out and back in dynamically as demand changes
+* **Broad Network Access**: Open and accessible from anywhere via standard protocols and APIs
+* **Resource Pooling**: Multi-tenant hardware shared securely across customers
+* **On-Demand Self-Service**: Provision resources instantaneously without human intervention
 
 Note:
-* Elasticité :si vous avez besoin de plus grand - c'est comme un elastic, vous lachez, ca revient
+* Elasticity: Think of it like a rubber band — when traffic spikes, you stretch it out; when you let go, it shrinks back automatically so you only pay for what you need.
 
 ----
 
-### Les différents types de service
+### Cloud Service Models
 
-<img src="https://cdn-images-1.medium.com/max/1200/1*VD9n01kVn4hqOhyzY9X41w.png" style="background:none; border:none; box-shadow:none;"/>
+<img src="img/shared-responsibility.svg" alt="Shared Responsibility Model across On-Premises, IaaS, PaaS, FaaS, and SaaS" />
 
 Note:
-* Shared Responsibility Model (SRM) - tout ce qui est en bleu c'est le CSP (Cloud service provider) - le reste le user
-* 2 flavor differentes de PaaS
-  * Heroku style - dyno
-  * le reste
-* le paas, c'est pas des vm mais des niveaux de SLA
+* Shared Responsibility Model (SRM): Everything in blue is managed by the CSP (Cloud Service Provider); everything in dark slate is the customer's responsibility.
+* Two flavors of PaaS:
+  * Application PaaS (Heroku / Cloud Run / App Engine style)
+  * Managed infrastructure/data PaaS (Managed Databases, Queues, etc.)
+* In PaaS, you don't manage VMs — you consume capability and SLA levels.

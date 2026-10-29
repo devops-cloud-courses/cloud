@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="420" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="420" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Row 1: Compute, Containers & Serverless, Storage, Databases -->
+    <rect x="34" y="28" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="50" y="44" width="180" height="32" rx="8" fill="#2563eb"/>
+    <text x="140" y="65" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Compute (IaaS / PaaS)</text>
+    <text x="60" y="102" font-size="12.5" font-weight="600" fill="#334155">• Virtual Machines (EC2)</text>
+    <text x="60" y="126" font-size="12.5" font-weight="600" fill="#334155">• Auto Scaling Groups</text>
+    <text x="60" y="150" font-size="12.5" font-weight="600" fill="#334155">• App Service / Beanstalk</text>
+    <text x="60" y="174" font-size="12.5" font-weight="600" fill="#334155">• Batch &amp; HPC Compute</text>
+
+    <rect x="262" y="28" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="278" y="44" width="180" height="32" rx="8" fill="#4f46e5"/>
+    <text x="368" y="65" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Containers &amp; FaaS</text>
+    <text x="288" y="102" font-size="12.5" font-weight="600" fill="#334155">• Managed K8s (EKS/AKS/GKE)</text>
+    <text x="288" y="126" font-size="12.5" font-weight="600" fill="#334155">• Serverless Containers</text>
+    <text x="288" y="150" font-size="12.5" font-weight="600" fill="#334155">• Functions (Lambda / Run)</text>
+    <text x="288" y="174" font-size="12.5" font-weight="600" fill="#334155">• Event Bus &amp; Workflows</text>
+
+    <rect x="490" y="28" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="506" y="44" width="180" height="32" rx="8" fill="#0284c7"/>
+    <text x="596" y="65" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Storage</text>
+    <text x="516" y="102" font-size="12.5" font-weight="600" fill="#334155">• Object Storage (S3/Blob)</text>
+    <text x="516" y="126" font-size="12.5" font-weight="600" fill="#334155">• Block Disks (EBS/Managed)</text>
+    <text x="516" y="150" font-size="12.5" font-weight="600" fill="#334155">• Shared File Systems (NFS)</text>
+    <text x="516" y="174" font-size="12.5" font-weight="600" fill="#334155">• Cold Archive / Backup</text>
+
+    <rect x="718" y="28" width="208" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="734" y="44" width="176" height="32" rx="8" fill="#059669"/>
+    <text x="822" y="65" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Managed Databases</text>
+    <text x="744" y="102" font-size="12.5" font-weight="600" fill="#334155">• Relational (RDS/Cloud SQL)</text>
+    <text x="744" y="126" font-size="12.5" font-weight="600" fill="#334155">• NoSQL (DynamoDB/Cosmos)</text>
+    <text x="744" y="150" font-size="12.5" font-weight="600" fill="#334155">• In-Memory Cache (Redis)</text>
+    <text x="744" y="174" font-size="12.5" font-weight="600" fill="#334155">• Graph &amp; Vector DBs</text>
+
+    <!-- Row 2: Networking, Data & AI, Security & Identity, DevOps & Observability -->
+    <rect x="34" y="220" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="50" y="236" width="180" height="32" rx="8" fill="#0f172a"/>
+    <text x="140" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Networking &amp; Edge</text>
+    <text x="60" y="294" font-size="12.5" font-weight="600" fill="#334155">• VPC / VNet &amp; Subnets</text>
+    <text x="60" y="318" font-size="12.5" font-weight="600" fill="#334155">• L4/L7 Load Balancers</text>
+    <text x="60" y="342" font-size="12.5" font-weight="600" fill="#334155">• Global CDN &amp; DNS</text>
+    <text x="60" y="366" font-size="12.5" font-weight="600" fill="#334155">• API Gateway &amp; Service Mesh</text>
+
+    <rect x="262" y="220" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="278" y="236" width="180" height="32" rx="8" fill="#7c3aed"/>
+    <text x="368" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Data, Analytics &amp; AI</text>
+    <text x="288" y="294" font-size="12.5" font-weight="600" fill="#334155">• Data Warehouses (BigQuery)</text>
+    <text x="288" y="318" font-size="12.5" font-weight="600" fill="#334155">• Real-time Streaming (Kafka)</text>
+    <text x="288" y="342" font-size="12.5" font-weight="600" fill="#334155">• GenAI &amp; Foundation Models</text>
+    <text x="288" y="366" font-size="12.5" font-weight="600" fill="#334155">• ETL &amp; BI Dashboards</text>
+
+    <rect x="490" y="220" width="212" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="506" y="236" width="180" height="32" rx="8" fill="#dc2626"/>
+    <text x="596" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">Security &amp; Identity</text>
+    <text x="516" y="294" font-size="12.5" font-weight="600" fill="#334155">• IAM &amp; Identity Federation</text>
+    <text x="516" y="318" font-size="12.5" font-weight="600" fill="#334155">• KMS / HSM &amp; Secrets</text>
+    <text x="516" y="342" font-size="12.5" font-weight="600" fill="#334155">• WAF &amp; DDoS Protection</text>
+    <text x="516" y="366" font-size="12.5" font-weight="600" fill="#334155">• CSPM &amp; Threat Detection</text>
+
+    <rect x="718" y="220" width="208" height="172" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="734" y="236" width="176" height="32" rx="8" fill="#d97706"/>
+    <text x="822" y="257" text-anchor="middle" font-size="13.5" font-weight="800" fill="#ffffff">DevOps &amp; Governance</text>
+    <text x="744" y="294" font-size="12.5" font-weight="600" fill="#334155">• CI/CD &amp; Artifact Registries</text>
+    <text x="744" y="318" font-size="12.5" font-weight="600" fill="#334155">• Logs, Metrics &amp; Tracing</text>
+    <text x="744" y="342" font-size="12.5" font-weight="600" fill="#334155">• Infrastructure as Code</text>
+    <text x="744" y="366" font-size="12.5" font-weight="600" fill="#334155">• FinOps &amp; Cost Management</text>
+  </g>
+</svg>

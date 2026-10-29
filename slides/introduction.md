@@ -2,13 +2,16 @@
 
 ----
 
-### Qui connait le cloud ?
+### Who is already familiar with the Cloud?
 
 ----
 
 ## How to explore this doc
 
-* This presentation use [Reveal.js framework](https://revealjs.com/#/)
-* Press **Esc** to zoom out to all slides or zoom in
-* Press **?** on your keyboard to get navigation help
-* <a href="#/" style="font-size: 22px; background: #4141d8; text-decoration: none; padding: 20px; padding-top: 12px; padding-bottom: 12px; color: white; border-radius: 7px;">Go back to first slide</a>
+* This presentation uses [Reveal.js framework](https://revealjs.com/#/)
+* Press <kbd>Esc</kbd> to zoom out to all slides or zoom in
+* Press <kbd>?</kbd> on your keyboard to get navigation help
+
+<div style="margin-top: 1.2em;">
+  <a href="#/" class="btn-primary">Go back to first slide</a>
+</div>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="960" height="380" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="380" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="380" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Card 1: Google Workspace / Gmail -->
+    <rect x="40" y="36" width="276" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="64" y="60" width="48" height="48" rx="12" fill="#fee2e2"/>
+    <text x="88" y="92" text-anchor="middle" font-size="22" font-weight="800" fill="#dc2626">M</text>
+    <text x="128" y="78" font-size="17" font-weight="800" fill="#0f172a">Gmail &amp; Workspace</text>
+    <text x="128" y="100" font-size="13" fill="#64748b">Email, Docs &amp; Collaboration</text>
+    <text x="64" y="148" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">Zero mail server ops</text>
+
+    <!-- Card 2: Dropbox / Google Drive -->
+    <rect x="342" y="36" width="276" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="366" y="60" width="48" height="48" rx="12" fill="#dbeafe"/>
+    <text x="390" y="92" text-anchor="middle" font-size="22" font-weight="800" fill="#2563eb">D</text>
+    <text x="430" y="78" font-size="17" font-weight="800" fill="#0f172a">Dropbox / Drive</text>
+    <text x="430" y="100" font-size="13" fill="#64748b">Cloud File Sync &amp; Sharing</text>
+    <text x="366" y="148" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">Instant storage scaling</text>
+
+    <!-- Card 3: Salesforce / SAP -->
+    <rect x="644" y="36" width="276" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="668" y="60" width="48" height="48" rx="12" fill="#e0f2fe"/>
+    <text x="692" y="92" text-anchor="middle" font-size="20" font-weight="800" fill="#0284c7">CRM</text>
+    <text x="732" y="78" font-size="17" font-weight="800" fill="#0f172a">Salesforce &amp; SAP</text>
+    <text x="732" y="100" font-size="13" fill="#64748b">Enterprise ERP &amp; CRM</text>
+    <text x="668" y="148" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">Subscription per seat</text>
+
+    <!-- Card 4: Microsoft 365 -->
+    <rect x="40" y="202" width="276" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="64" y="226" width="48" height="48" rx="12" fill="#ede9fe"/>
+    <text x="88" y="258" text-anchor="middle" font-size="20" font-weight="800" fill="#4f46e5">365</text>
+    <text x="128" y="244" font-size="17" font-weight="800" fill="#0f172a">Microsoft 365</text>
+    <text x="128" y="266" font-size="13" fill="#64748b">Office Suite, Teams &amp; SharePoint</text>
+    <text x="64" y="314" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">Always on latest version</text>
+
+    <!-- Card 5: Slack / Zoom -->
+    <rect x="342" y="202" width="276" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="366" y="226" width="48" height="48" rx="12" fill="#fae8ff"/>
+    <text x="390" y="258" text-anchor="middle" font-size="22" font-weight="800" fill="#9333ea">#</text>
+    <text x="430" y="244" font-size="17" font-weight="800" fill="#0f172a">Slack &amp; Zoom</text>
+    <text x="430" y="266" font-size="13" fill="#64748b">Real-time Messaging &amp; Video</text>
+    <text x="366" y="314" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">Accessible on any device</text>
+
+    <!-- Card 6: GitHub / Datadog -->
+    <rect x="644" y="202" width="276" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="668" y="226" width="48" height="48" rx="12" fill="#d1fae5"/>
+    <text x="692" y="258" text-anchor="middle" font-size="20" font-weight="800" fill="#059669">Git</text>
+    <text x="732" y="244" font-size="17" font-weight="800" fill="#0f172a">GitHub &amp; Datadog</text>
+    <text x="732" y="266" font-size="13" fill="#64748b">DevSecOps &amp; Observability</text>
+    <text x="668" y="314" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">Turnkey platform</text>
+  </g>
+</svg>

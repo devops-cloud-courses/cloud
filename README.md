@@ -1,44 +1,48 @@
-# Cloud course
+# Cloud in a Nutshell
 
-This repo contains a reveal.js presentation about Cloud.
-To visualize this presentation, go here: https://devops-cloud-courses.github.io/cloud
-You can also clone this repo and expose static pages through your favorite web server.
+This repository contains a **Reveal.js 5** presentation about Cloud Computing (`IaaS`, `PaaS`, `SaaS`, `Serverless`, and `Cloud Architectures`).
 
-> This course is open source. You can use it freely.
+To view this presentation online, visit: **https://devops-cloud-courses.github.io/cloud**
 
-## Table of content
+You can also clone this repository and serve it locally using any static web server.
 
-* Introduction
-* Chapter one
+> This course is open source. Feel free to use and share it!
 
-## See this course locally with docker
+## Table of Contents
+
+* **Introduction**
+* **What is the Cloud?** (History from Mainframes to VMs & Cloud, Essential Characteristics, Shared Responsibility Model)
+* **SaaS** (Software-as-a-Service)
+* **IaaS** (Scalability, Elasticity, Regions & AZs, VMs, Pets vs Cattle, Immutable Infra, IaC, DRP, RTO/RPO, Chaos Engineering, Deployment Strategies)
+* **Cloud Architectures** (Hybrid VPNs, ExpressRoute/Direct Connect, Landing Zones, Hub & Spoke, Cloud Services Landscape)
+* **PaaS** (Platform-as-a-Service, Managed Services, Geo-Replication, Private PaaS)
+* **Serverless** (FaaS, BaaS, Scale to Zero, Trade-offs & Reference Architecture)
+* **Conclusion & Further Reading**
+
+## Run Locally
+
+Using Python's built-in HTTP server:
+
 ```bash
-docker build -t course .
-docker run -d --rm -p 80:8080 --name=course course
-```
-* After a few seconds, you can see the slides on http://localhost
-* When you want to stop the instance, run:
-```bash
-docker stop course
+python3 -m http.server 8000
 ```
 
-## Print this course to pdf (only in chrome and chromium)
-* Click on [this link](https://devops-cloud-courses.github.io/cloud/?print-pdf&pdfSeparateFragments=false)
-* Then `CTRL+P` on the generated page
-* Change the following settings
+Then open **http://localhost:8000** in your browser.
 
-Setting | Value
---- | ---
-Destination | Save as PDF
-Pages | All
-Pages per sheet | 1
-Margins | Default
-Options | Background graphics
+## Export to PDF (Chrome / Chromium)
 
-* Click on save
+1. Open [https://devops-cloud-courses.github.io/cloud/?print-pdf&pdfSeparateFragments=false](https://devops-cloud-courses.github.io/cloud/?print-pdf&pdfSeparateFragments=false) (or `http://localhost:8000/?print-pdf&pdfSeparateFragments=false` locally)
+2. Press `Cmd+P` / `Ctrl+P`
+3. Use the following print settings:
 
-## Edit this course
-> For any question about Reveal.js usage, read [Reveal Documentation](reveal-documentation.md)
+| Setting | Value |
+| --- | --- |
+| Destination | Save as PDF |
+| Pages | All |
+| Pages per sheet | 1 |
+| Margins | Default |
+| Options | Background graphics |
 
-Feel free to submit as many pull request as you wish !
+## Contributing
 
+Feel free to submit pull requests or open issues!

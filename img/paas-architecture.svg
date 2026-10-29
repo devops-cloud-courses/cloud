@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Col 1: Ingestion -->
+    <rect x="34" y="48" width="194" height="264" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="52" y="66" width="158" height="32" rx="8" fill="#eff6ff"/>
+    <text x="131" y="87" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e40af">1. Edge &amp; Ingest</text>
+    <rect x="52" y="116" width="158" height="72" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="131" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Managed API GW</text>
+    <text x="131" y="168" text-anchor="middle" font-size="11.5" fill="#64748b">Auth, Rate Limiting</text>
+    <rect x="52" y="206" width="158" height="72" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="131" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Event Hub / Kafka</text>
+    <text x="131" y="258" text-anchor="middle" font-size="11.5" fill="#64748b">Streaming Ingest</text>
+
+    <!-- Col 2: Compute PaaS -->
+    <rect x="272" y="48" width="194" height="264" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="290" y="66" width="158" height="32" rx="8" fill="#eff6ff"/>
+    <text x="369" y="87" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e40af">2. App &amp; Compute</text>
+    <rect x="290" y="116" width="158" height="72" rx="10" fill="#eff6ff" stroke="#60a5fa"/>
+    <text x="369" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d4ed8">App Service / Run</text>
+    <text x="369" y="168" text-anchor="middle" font-size="11.5" fill="#3b82f6">Web &amp; Microservices</text>
+    <rect x="290" y="206" width="158" height="72" rx="10" fill="#eff6ff" stroke="#60a5fa"/>
+    <text x="369" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d4ed8">Dataflow / Spark</text>
+    <text x="369" y="258" text-anchor="middle" font-size="11.5" fill="#3b82f6">Stream Processing</text>
+
+    <!-- Col 3: Data PaaS -->
+    <rect x="510" y="48" width="194" height="264" rx="16" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.5"/>
+    <rect x="528" y="66" width="158" height="32" rx="8" fill="#ecfdf5"/>
+    <text x="607" y="87" text-anchor="middle" font-size="13.5" font-weight="800" fill="#047857">3. Managed Storage</text>
+    <rect x="528" y="116" width="158" height="72" rx="10" fill="#ecfdf5" stroke="#34d399"/>
+    <text x="607" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#047857">Cloud SQL / Cosmos</text>
+    <text x="607" y="168" text-anchor="middle" font-size="11.5" fill="#059669">Geo-Replicated DB</text>
+    <rect x="528" y="206" width="158" height="72" rx="10" fill="#ecfdf5" stroke="#34d399"/>
+    <text x="607" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#047857">BigQuery / Synapse</text>
+    <text x="607" y="258" text-anchor="middle" font-size="11.5" fill="#059669">Data Warehouse</text>
+
+    <!-- Col 4: Insights & AI -->
+    <rect x="748" y="48" width="178" height="264" rx="16" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
+    <rect x="766" y="66" width="142" height="32" rx="8" fill="#f5f3ff"/>
+    <text x="837" y="87" text-anchor="middle" font-size="13.5" font-weight="800" fill="#6d28d9">4. Serve &amp; AI</text>
+    <rect x="766" y="116" width="142" height="72" rx="10" fill="#f5f3ff" stroke="#a78bfa"/>
+    <text x="837" y="148" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5b21b6">BI Dashboards</text>
+    <text x="837" y="168" text-anchor="middle" font-size="11.5" fill="#7c3aed">Looker / PowerBI</text>
+    <rect x="766" y="206" width="142" height="72" rx="10" fill="#f5f3ff" stroke="#a78bfa"/>
+    <text x="837" y="238" text-anchor="middle" font-size="13.5" font-weight="700" fill="#5b21b6">Managed AI/ML</text>
+    <text x="837" y="258" text-anchor="middle" font-size="11.5" fill="#7c3aed">Vertex AI / OpenAI</text>
+  </g>
+
+  <line x1="228" y1="152" x2="266" y2="152" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="228" y1="242" x2="266" y2="242" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="466" y1="152" x2="504" y2="152" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="466" y1="242" x2="504" y2="242" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="704" y1="152" x2="742" y2="152" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="704" y1="242" x2="742" y2="242" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+</svg>

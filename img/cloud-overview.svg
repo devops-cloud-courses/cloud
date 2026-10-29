@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gCloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="gAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="400" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="400" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- Central Cloud Platform -->
+  <g filter="url(#shadow)">
+    <rect x="210" y="34" width="540" height="236" rx="28" fill="url(#gCloud)" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="330" y="18" width="300" height="40" rx="20" fill="url(#gAccent)"/>
+    <text x="480" y="44" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">The Cloud (On-Demand APIs)</text>
+
+    <!-- Inside Cloud Service Blocks -->
+    <rect x="240" y="76" width="150" height="76" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="315" y="108" text-anchor="middle" font-size="15" font-weight="800" fill="#1e40af">Compute</text>
+    <text x="315" y="130" text-anchor="middle" font-size="12" fill="#64748b">VMs, Containers, FaaS</text>
+
+    <rect x="405" y="76" width="150" height="76" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="480" y="108" text-anchor="middle" font-size="15" font-weight="800" fill="#1e40af">Storage &amp; DB</text>
+    <text x="480" y="130" text-anchor="middle" font-size="12" fill="#64748b">Object, Block, SQL/NoSQL</text>
+
+    <rect x="570" y="76" width="150" height="76" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="645" y="108" text-anchor="middle" font-size="15" font-weight="800" fill="#1e40af">Networking</text>
+    <text x="645" y="130" text-anchor="middle" font-size="12" fill="#64748b">VPC, CDN, Load Balancers</text>
+
+    <rect x="240" y="168" width="232" height="76" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="356" y="200" text-anchor="middle" font-size="15" font-weight="800" fill="#1e40af">Managed Services &amp; AI</text>
+    <text x="356" y="222" text-anchor="middle" font-size="12" fill="#64748b">Analytics, Queues, ML, Auth</text>
+
+    <rect x="488" y="168" width="232" height="76" rx="12" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="604" y="200" text-anchor="middle" font-size="15" font-weight="800" fill="#1e40af">Security &amp; Governance</text>
+    <text x="604" y="222" text-anchor="middle" font-size="12" fill="#64748b">IAM, KMS, Monitoring, Billing</text>
+  </g>
+
+  <!-- Bottom Consumers -->
+  <line x1="200" y1="316" x2="320" y2="270" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="480" y1="316" x2="480" y2="270" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="760" y1="316" x2="640" y2="270" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="316" width="240" height="58" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="200" y="344" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Web &amp; Mobile Clients</text>
+    <text x="200" y="362" text-anchor="middle" font-size="11.5" fill="#64748b">Global end-users anywhere</text>
+
+    <rect x="360" y="316" width="240" height="58" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="480" y="344" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Developers &amp; CI/CD</text>
+    <text x="480" y="362" text-anchor="middle" font-size="11.5" fill="#64748b">Self-service CLI, IaC &amp; APIs</text>
+
+    <rect x="640" y="316" width="240" height="58" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="760" y="344" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">IoT &amp; Enterprise Systems</text>
+    <text x="760" y="362" text-anchor="middle" font-size="11.5" fill="#64748b">Connected devices &amp; datacenters</text>
+  </g>
+</svg>

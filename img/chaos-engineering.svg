@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="960" height="390" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="390" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="390" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Header Banner -->
+    <rect x="40" y="28" width="880" height="60" rx="14" fill="#1e293b"/>
+    <text x="480" y="65" text-anchor="middle" font-size="18" font-weight="800" fill="#f8fafc">Chaos Engineering: Proactively Injecting Failures to Build Confidence</text>
+
+    <!-- 3 Blast Radius Levels -->
+    <!-- Level 1: Chaos Monkey -->
+    <rect x="40" y="110" width="276" height="176" rx="16" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+    <rect x="64" y="130" width="228" height="34" rx="8" fill="#fef3c7"/>
+    <text x="178" y="152" text-anchor="middle" font-size="15" font-weight="800" fill="#b45309">Chaos Monkey</text>
+    <text x="178" y="186" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Instance-Level Failure</text>
+    <text x="178" y="212" text-anchor="middle" font-size="12.5" fill="#64748b">Randomly terminates production</text>
+    <text x="178" y="232" text-anchor="middle" font-size="12.5" fill="#64748b">VMs or containers during</text>
+    <text x="178" y="252" text-anchor="middle" font-size="12.5" fill="#64748b">business hours</text>
+
+    <!-- Level 2: Chaos Gorilla -->
+    <rect x="342" y="110" width="276" height="176" rx="16" fill="#ffffff" stroke="#fb923c" stroke-width="2"/>
+    <rect x="366" y="130" width="228" height="34" rx="8" fill="#ffedd5"/>
+    <text x="480" y="152" text-anchor="middle" font-size="15" font-weight="800" fill="#c2410c">Chaos Gorilla</text>
+    <text x="480" y="186" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Availability Zone Outage</text>
+    <text x="480" y="212" text-anchor="middle" font-size="12.5" fill="#64748b">Simulates the loss of an entire</text>
+    <text x="480" y="232" text-anchor="middle" font-size="12.5" fill="#64748b">Availability Zone to verify</text>
+    <text x="480" y="252" text-anchor="middle" font-size="12.5" fill="#64748b">multi-AZ auto-failover</text>
+
+    <!-- Level 3: Chaos Kong -->
+    <rect x="644" y="110" width="276" height="176" rx="16" fill="#ffffff" stroke="#f43f5e" stroke-width="2"/>
+    <rect x="668" y="130" width="228" height="34" rx="8" fill="#ffe4e6"/>
+    <text x="782" y="152" text-anchor="middle" font-size="15" font-weight="800" fill="#be123c">Chaos Kong</text>
+    <text x="782" y="186" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Full Region Outage</text>
+    <text x="782" y="212" text-anchor="middle" font-size="12.5" fill="#64748b">Simulates catastrophic loss of</text>
+    <text x="782" y="232" text-anchor="middle" font-size="12.5" fill="#64748b">a cloud region and reroutes</text>
+    <text x="782" y="252" text-anchor="middle" font-size="12.5" fill="#64748b">traffic globally</text>
+
+    <!-- Bottom Loop -->
+    <rect x="40" y="306" width="880" height="56" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="480" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Steady State Hypothesis → Inject Real-World Fault → Observe Metrics &amp; Auto-Healing → Fix Weaknesses</text>
+  </g>
+</svg>

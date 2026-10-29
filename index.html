@@ -1,26 +1,26 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>Cloud in a nutshell</title>
 
-    <link rel="stylesheet" href="revealjs/dist/reset.css">
-    <link rel="stylesheet" href="revealjs/dist/reveal.css" id="theme">
-    <link rel="stylesheet" href="revealjs/dist/theme/white.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Reveal.js 5.1.0 Core & Theme Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="theme">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
+    <!-- Custom Modern Light Theme -->
+    <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
     <div class="reveal">
@@ -37,20 +37,25 @@
       </div>
     </div>
 
-    <script src="revealjs/dist/reveal.js"></script>
-    <script src="revealjs/plugin/markdown/markdown.js"></script>
-    <script src="revealjs/plugin/highlight/highlight.js"></script>
-    <script src="revealjs/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
 
     <script>
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-        });
+      Reveal.initialize({
+        width: 1200,
+        height: 700,
+        margin: 0.06,
+        controls: true,
+        progress: true,
+        history: true,
+        hash: true,
+        center: true,
+        slideNumber: 'c/t',
+        transition: 'slide',
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
     </script>
-</body>
+  </body>
 </html>

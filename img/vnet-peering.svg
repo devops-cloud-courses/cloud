@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- VNet A -->
+    <rect x="36" y="42" width="276" height="276" rx="16" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+    <text x="174" y="78" text-anchor="middle" font-size="16.5" font-weight="800" fill="#1e40af">VNet / VPC A (West Europe)</text>
+    <text x="174" y="100" text-anchor="middle" font-size="12.5" font-family="'JetBrains Mono', monospace" fill="#2563eb">10.1.0.0/16</text>
+    <rect x="64" y="118" width="220" height="58" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="174" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Frontend &amp; API Tier</text>
+    <rect x="64" y="218" width="220" height="68" rx="10" fill="#2563eb"/>
+    <text x="174" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">VNet / VPC Peering Link</text>
+    <text x="174" y="268" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Route: 10.2.0.0/16 → Peering</text>
+
+    <!-- Cloud Private Backbone -->
+    <rect x="352" y="198" width="256" height="108" rx="14" fill="#ecfdf5" stroke="#10b981" stroke-width="2.5"/>
+    <rect x="372" y="182" width="216" height="28" rx="14" fill="#059669"/>
+    <text x="480" y="201" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">Cloud Provider Backbone</text>
+    <text x="480" y="242" text-anchor="middle" font-size="13.5" font-weight="700" fill="#065f46">100% Private Fiber Network</text>
+    <text x="480" y="264" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#059669">Never traverses Public Internet</text>
+    <text x="480" y="286" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#047857">Low-Latency • High-Bandwidth</text>
+
+    <!-- VNet B -->
+    <rect x="648" y="42" width="276" height="276" rx="16" fill="#ffffff" stroke="#60a5fa" stroke-width="2"/>
+    <text x="786" y="78" text-anchor="middle" font-size="16.5" font-weight="800" fill="#1e40af">VNet / VPC B (North Europe)</text>
+    <text x="786" y="100" text-anchor="middle" font-size="12.5" font-family="'JetBrains Mono', monospace" fill="#2563eb">10.2.0.0/16</text>
+    <rect x="676" y="118" width="220" height="58" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="786" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#1e40af">Data &amp; Core Services</text>
+    <rect x="676" y="218" width="220" height="68" rx="10" fill="#2563eb"/>
+    <text x="786" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">VNet / VPC Peering Link</text>
+    <text x="786" y="268" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Route: 10.1.0.0/16 → Peering</text>
+  </g>
+
+  <!-- Internal & Peering Flow Arrows -->
+  <line x1="174" y1="182" x2="174" y2="212" stroke="#2563eb" stroke-width="2.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+  <line x1="786" y1="182" x2="786" y2="212" stroke="#2563eb" stroke-width="2.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)"/>
+
+  <!-- Peering Link A <-> Cloud Backbone <-> Peering Link B -->
+  <line x1="290" y1="252" x2="346" y2="252" stroke="#059669" stroke-width="3.5" marker-start="url(#arrowGreen)" marker-end="url(#arrowGreen)"/>
+  <line x1="614" y1="252" x2="670" y2="252" stroke="#059669" stroke-width="3.5" marker-start="url(#arrowGreen)" marker-end="url(#arrowGreen)"/>
+
+  <!-- Direct Private IP Flow Curve -->
+  <path d="M 290 147 C 420 110, 540 110, 670 147" fill="none" stroke="#059669" stroke-width="2.2" stroke-dasharray="6 4" marker-start="url(#arrowGreen)" marker-end="url(#arrowGreen)"/>
+  <rect x="366" y="104" width="228" height="26" rx="13" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="480" y="121" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#047857">Non-Transitive Private Peering</text>
+</svg>

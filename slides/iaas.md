@@ -1,266 +1,246 @@
-## Le IaaS
-
-Infrastructure-as-a-Service
+## IaaS
 
 ----
 
-### Scalabilité
+### Infrastructure-as-a-Service
 
-- Verticale
- - Ajouter plus de puissance (cpu, ram, stockage)
-- Horizontale
- - Ajouter plus de serveurs
- - Par ex. sharding, microservices ou partitions
+> On-demand virtualized compute, storage, and networking building blocks
 
-----
-
-### Elasticité
-
-Capacité de faire grossir ou réduire l'infrastructure dynamiquement, et de manière automatisée
+* Direct replacement for physical datacenters with full OS-level control
+* Enables rapid provisioning and **Lift-and-Shift** migrations
+* You manage the OS, middleware, runtime, data, and applications
 
 ----
 
-### Auto-scaling
+### Scalability
 
-Capacité à maintenir (à la hausse ou à la baisse) la capacité souhaitée d'instances par rapport à l'état de ces instances (santé, cpu, ram, ...)
-
-----
-
-### Self service
-
-Créer ou détruire automatiquement des ressources (via portail web ou api) sans passer par un utilisateur tiers ou un service de ticket
-
-----
-
-### Regions : AWS
-
-<img src="https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2018/10/28/aws_global_infra_map_featured_image.png" style="background:none; border:none; box-shadow:none;" />
+* **Vertical Scaling (Scale Up / Down)**
+  * Increase the size of an existing machine (`CPU`, `RAM`, `Storage`)
+  * Simple, but hits hardware limits and often requires a reboot
+* **Horizontal Scaling (Scale Out / In)**
+  * Add or remove server instances working in parallel behind a load balancer
+  * Enabled by stateless design, sharding, microservices, or partitioning
 
 ----
 
-### Regions : Azure
+### Elasticity
 
-<img src="https://www.geeek.org/content/images/2019/06/azure-regions.png" style="background:none; border:none; box-shadow:none;" />
+> The ability to dynamically and automatically grow or shrink infrastructure resources to match real-time demand
 
-----
-
-### Availability zones
-
-<img src="https://www.agileit.com/wp-content/uploads/2017/11/az-graphic-two.png" width="35%" style="background:none; border:none; box-shadow:none;" />
-<img src="https://image.slidesharecdn.com/awsoverviewv4-120611171440-phpapp02/95/overview-of-amazon-web-services-8-728.jpg?cb=1434492790" width="54%" style="background:none; border:none; box-shadow:none;" />
-
-Note: 
-C'est quoi le nombre de serveur du plus gros datacenter à dublin
-1M
+* Avoids both **over-provisioning** (wasted money during off-peak hours) and **under-provisioning** (outages during traffic spikes)
 
 ----
 
-### Machines virtuelles
+### Auto-Scaling
 
-- Découplage entre cpu, ram et stockage
-- Tourne sur un hyperviseur (Xen pour AWS, HyperV pour Microsoft)
+> Automatically maintaining the desired fleet capacity and availability based on real-time signals
+
+* Continuously monitors health checks, `CPU`, `RAM`, queue depth, or custom request metrics
+* Automatically replaces unhealthy instances and scales the fleet up or down
 
 ----
 
-### Template de machine
+### On-Demand Self-Service
 
-| Modèle | vCPU | Mémoire | Stockage | Réseau |
+> Provision or destroy cloud resources in seconds via Web Console, CLI, or API
+
+* No procurement delays, hardware shipping, or manual IT tickets required
+* Empowers engineering teams to iterate and experiment rapidly
+
+----
+
+### Global Cloud Regions
+
+<img src="img/cloud-regions.svg" alt="Global Cloud Regions across Americas, EMEA, and Asia-Pacific" />
+
+----
+
+### Availability Zones (AZ)
+
+<img src="img/availability-zones.svg" alt="Cloud Region composed of 3 isolated Availability Zones" />
+
+Note:
+* Question for the audience: How many servers are inside a hyperscale datacenter complex (like Dublin or Virginia)?
+* Hundreds of thousands to over 1 million servers across a region.
+* Each Availability Zone is one or more discrete datacenters with redundant power, cooling, and networking, isolated from disasters in other AZs.
+
+----
+
+### Virtual Machines
+
+> Decoupling compute (`vCPU`, `RAM`) from persistent network storage and physical hardware
+
+* Powered by modern lightweight hypervisors (`AWS Nitro` / `KVM`, `Azure Hyper-V`, `Google KVM`)
+* Hundreds of specialized machine families (General Purpose, Compute-Optimized, Memory-Optimized, GPU/TPU Accelerated)
+
+----
+
+### Instance Sizing Templates
+
+| Instance Type | vCPU | Memory (GiB) | Storage | Network Bandwidth |
 |---|---|---|---|---|
-| m5.large | 2 | 8 | EBS | 3.5Gbit/s |
-| m5.xlarge | 4 | 16 | EBS | 3.5Gbit/s |
-| m5.2xlarge | 8 | 32 | EBS | 3.5Gbit/s |
-| m5.4xlarge | 16 | 64 | EBS | 3.5Gbit/s |
-| m5.12xlarge | 48 | 192 | EBS | 7Gbit/s |
+| `m7i.large` | 2 | 8 GiB | EBS (NVMe) | Up to 12.5 Gbps |
+| `m7i.xlarge` | 4 | 16 GiB | EBS (NVMe) | Up to 12.5 Gbps |
+| `m7i.2xlarge` | 8 | 32 GiB | EBS (NVMe) | Up to 15 Gbps |
+| `m7i.4xlarge` | 16 | 64 GiB | EBS (NVMe) | Up to 20 Gbps |
+| `m7i.12xlarge` | 48 | 192 GiB | EBS (NVMe) | 22.5 Gbps |
 
 Note:
-C"est qoui la plus grosse babass?
-128CPU 12To de RAM
-
-EBS: Elastic Bloc Storage
-C'est du stockage temporaire
-
-Machine optimisée pour chaque usage
+* What is the largest VM available in the cloud today?
+* Up to 448–896 vCPUs and 24–32 TiB of RAM (for in-memory databases like SAP HANA)!
+* Block storage (AWS EBS, Azure Managed Disks, GCP Persistent Disk) is network-attached and persists independently of the VM lifecycle.
 
 ----
 
-### Pet vs Cattle
+### Pets vs Cattle
 
-<img src="https://i.stack.imgur.com/Lm3Td.jpg" style="background:none; border:none; box-shadow:none;" />
+<img src="img/pets-vs-cattle.svg" alt="Comparison between Pets (manually managed servers) and Cattle (automated fleet)" />
 
 Note:
-* tout faire pour arreter de traiter l'unitaire
-* si un truc va pas tu le bute
+* Stop treating servers as unique, irreplaceable individuals.
+* If an instance acts up, don't spend days debugging it via SSH — terminate it and let the Auto Scaling Group spin up a fresh replacement.
 
 ----
 
-### Immutable infrastructure : problème
+### Immutable Infrastructure: The Problem
 
-<img src="https://martinfowler.com/bliki/images/immutableServer/PhoenixServerLifecycle.png" style="background:none; border:none; box-shadow:none;" />
-
-----
-
-### Immutable infrastructure : solution
-
-<img src="https://martinfowler.com/bliki/images/immutableServer/ImmutableServerLifecycle.png" style="background:none; border:none; box-shadow:none;" />
+<img src="img/mutable-infra.svg" alt="Configuration drift on mutable Phoenix servers" />
 
 ----
 
-### Immutable infrastructure : outils
+### Immutable Infrastructure: The Solution
 
-- Création d'images contenant les patchs et l'OS
-- Création d'images contenant l'applicatif
-- Upgrade des images via Git et reconstruction de l'image
-
-<img src="https://i0.wp.com/codeblog.dotsandbrackets.com/wp-content/uploads/2017/05/packer-logo.jpg?resize=192%2C254" width="100px" style="background:none; border:none; box-shadow:none;" />
+<img src="img/immutable-infra.svg" alt="Immutable infrastructure lifecycle replacing servers with new versioned images" />
 
 ----
 
-### Network
+### Immutable Infrastructure: Tools
 
-- Permet de paramétrer toute la stack réseau
-- Défini des réseaux virtuels isolés entre eux
-- Sécurisation par firewall
+* Bake golden images containing OS hardening, security patches, and dependencies
+* Package application releases into versioned machine or container images (`Packer`, `Docker`)
+* Trigger image rebuilds automatically via `Git` and CI/CD pipelines
 
 ----
 
-### Infra as Code
+### Software-Defined Networking
 
-```json
-resource "azure_instance" "web" {
-  name                 = "terraform-test"
-  image                = "Ubuntu Server 14.04 LTS"
-  size                 = "Basic_A1"
-  location             = "West US"
-  username             = "terraform"
-  password             = "Pass!admin123"
+* Configure the entire network topology via software and APIs
+* Isolate environments using Virtual Private Clouds (`VPC` / `VNet`) and private subnets
+* Enforce fine-grained security with Stateful Firewalls, Security Groups (`NSG`), and Web Application Firewalls (`WAF`)
 
-  endpoint {
-    name         = "SSH"
-    protocol     = "tcp"
-    public_port  = 22
-    private_port = 22
+----
+
+### Infrastructure as Code (IaC)
+
+```hcl
+resource "azurerm_linux_virtual_machine" "web" {
+  name                = "vm-web-prod-01"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = "West Europe"
+  size                = "Standard_D2s_v5"
+  admin_username      = "azureuser"
+
+  admin_ssh_key {
+    username   = "azureuser"
+    public_key = file("~/.ssh/id_ed25519.pub")
+  }
+
+  source_image_reference {
+    publisher = "Canonical"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
+    version   = "latest"
   }
 }
 ```
 
 ----
 
-### Backup / Restore
+### Backup & Restore
 
-Le cloud n'empêche pas de mettre en place un système de backup
+> Moving to IaaS does **not** eliminate the need for backups
 
-C'est à la charge de l'utilisateur de mettre en place un système de backup de données s'il y a un crash du cloud
+* Under the Shared Responsibility Model, **protecting your data is your responsibility**
+* Always configure automated snapshots, cross-region replication, and regular restore tests
 
 Note:
-Question: SLA- garantie d'uptime des VMS 
-IL n'y en a pas sur les VMs - C'est au clouder de mettre en place les backups
+* Question: What is the uptime SLA of a single standalone VM without redundant disks or availability zones?
+* Often limited or requires multi-AZ deployment — it is up to the cloud architect to design for resilience and automated backups.
 
 ----
 
 ### DRP (Disaster Recovery Plan)
 
-Ensemble de procédures qui permet à une entreprise de prévoir par anticipation les mécanismes pour reconstruire et remettre en route un système d'information en cas de sinistre important ou d'incident critique
+> A documented, tested set of automated procedures to recover and restore IT infrastructure after a major outage or disaster
+
+* Moving to the cloud does not replace a DRP — it makes executing and testing your DRP faster, cheaper, and programmable
 
 ----
 
-### DRP (Disaster Recovery Plan)
+### RTO & RPO Objectives
 
-Le cloud n'empêche pas les entreprise de mettre en place un DRP
-
-----
-
-### RTO (Recovery Time Objective)
-
-Expression de besoin de disponibilité des différents métiers ou services
+* **RTO (Recovery Time Objective)**: Maximum acceptable duration of service downtime after an incident before business impact becomes critical
+* **RPO (Recovery Point Objective)**: Maximum acceptable age of data that can be lost due to an incident (determines backup/replication frequency)
 
 ----
 
-### RPO (Recovery Point Objective)
+### RTO / RPO Timeline
 
-Données qu'un système d'information peut être amené à perdre par suite d'un incident
-
-----
-
-### RTO/RPO
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/RTO_RPO.gif" style="background:none; border:none; box-shadow:none;" />
+<img src="img/rto-rpo.svg" alt="RPO and RTO timeline diagram around an outage" />
 
 ----
 
-### Architecture
+### Chaos Engineering
 
-<img src="https://blog.cds-global.com/hs-fs/hubfs/Imported_Blog_Media/eHub-AWS-Architecture.png?t=1538073581004&width=858&height=942&name=eHub-AWS-Architecture.png" width="50%" style="background:none; border:none; box-shadow:none;" />
-
-----
-
-### Chaos engineering
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Netflix_simianarmy-768x797.jpg" width="50%" style="background:none; border:none; box-shadow:none;" />
+<img src="img/chaos-engineering.svg" alt="Chaos Engineering blast radius levels: Chaos Monkey, Chaos Gorilla, Chaos Kong" />
 
 Note:
-* inventé par un mec de netflix
-* plutot qu'attendre que les problèmes arrivent, autant les provoquer soit même
+* Pioneered by Netflix during their migration to AWS.
+* Instead of waiting for failures to happen at 3 AM on a Sunday, proactively inject controlled failures during business hours to verify that systems auto-heal.
 
 ----
 
-### Simian army
+### The Netflix Simian Army
 
-- Composé de 9 outils
-- Chaos Monkey
-  - Mets hors service une instance de production aléatoirement
-- Chaos Gorilla
-  - Mets hors service une AZ aléatoirement
-- Chaos Kong
-  - Mets hors service une région aléatoirement
+* **Chaos Monkey**: Randomly terminates production instances to ensure services survive server failures
+* **Chaos Gorilla**: Simulates an entire Availability Zone outage to verify multi-AZ failover
+* **Chaos Kong**: Simulates a complete Cloud Region outage to validate cross-region resilience
 
 ----
 
-### Simian army
+### The Netflix Simian Army (Cont.)
 
-- Latency Monkey
-  - Teste la résistance à la panne d'un composant en introduisant de la latence, ou en simulant une coupure complète d'un système externe dépendant
-- Doctor Monkey
-  - Détection des instances présentant des problèmes de santé (surcharge CPU, ...) en les mettant de coté pour analyse ultérieure
-
-----
-
-### Simian army
-
-- Janitor Monkey
-  - Détruit toutes les instances non utilisées pour faire des économies
-- Conformity Monkey
-  - Mets hors service toute instance non conforme
-- Security Monkey
-  - Mets hors service toute instance qui présente des vulnérabilités
-- 10-18 Monkey
-  - Détection de problème de localisation sur les instances
+* **Latency Monkey**: Injects artificial network delays or packet loss to test timeout and circuit-breaker resilience
+* **Doctor Monkey**: Detects unhealthy instances (`CPU` spikes, memory leaks, failing health checks) and removes them for root-cause analysis
+* **Janitor Monkey**: Identifies and deletes unused resources to reduce cloud waste (FinOps)
+* **Security & Conformity Monkeys**: Flag or terminate instances that violate security policies or architectural standards
 
 ----
 
-### Blue/green deployment
+### Blue/Green Deployment
 
-<img src="https://martinfowler.com/bliki/images/blueGreenDeployment/blue_green_deployments.png" width="75%" style="background:none; border:none; box-shadow:none;" />
-
-----
-
-### Canary release
-
-<img src="https://akiselev87.files.wordpress.com/2018/02/2018-02-08_8-46-21.jpg" style="background:none; border:none; box-shadow:none;" />
+<img src="img/blue-green.svg" alt="Blue/Green deployment switching 100% traffic between two identical environments" />
 
 ----
 
-### A/B testing
+### Canary Release
 
-<img src="https://splitmetrics.com/wp-content/uploads/2016/07/v5.png" width="70%" style="background:none; border:none; box-shadow:none;" />
-
-----
-
-### Zero downtime deployment
-
-<img src="https://kubernetes.io/images/blog/2018-04-30-zero-downtime-deployment-kubernetes-jenkins/deployment-process.png" width="70%" style="background:none; border:none; box-shadow:none;" />
+<img src="img/canary-release.svg" alt="Canary deployment routing 5% of traffic to the new version" />
 
 ----
 
-### Exemple d'architecture
+### A/B Testing
 
-<img src="https://docs.aws.amazon.com/quickstart/latest/magento/images/magento-with-aurora-architecture.png" width="60%" style="background:none; border:none; box-shadow:none;" />
+<img src="img/ab-testing.svg" alt="A/B testing splitting user cohorts to measure business conversion" />
+
+----
+
+### Zero-Downtime Rolling Deployment
+
+<img src="img/rolling-update.svg" alt="Rolling update replacing instances one by one with zero downtime" />
+
+----
+
+### IaaS Reference Architecture
+
+<img src="img/iaas-architecture.svg" alt="Multi-AZ High Availability IaaS Architecture in a VPC" />

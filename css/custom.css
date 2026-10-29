@@ -1,0 +1,531 @@
+/* ==========================================================================
+   Modern Light Theme for "Cloud in a nutshell" (Reveal.js 5.x)
+   Google Cloud / Modern Tech Inspired Palette
+   ========================================================================== */
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-gradient: radial-gradient(circle at 15% 15%, #eff6ff 0%, #f8fafc 45%, #f1f5f9 100%);
+  --surface-card: #ffffff;
+  --surface-subtle: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --accent-primary: #2563eb;
+  --accent-secondary: #4f46e5;
+  --accent-light: #dbeafe;
+  --accent-subtle: #eff6ff;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 12px 32px -8px rgba(15, 23, 42, 0.09), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 40px -12px rgba(37, 99, 235, 0.15);
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+/* Base Reveal overrides */
+.reveal-viewport {
+  background: var(--bg-primary);
+  background-image: var(--bg-gradient);
+}
+
+.reveal {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* Headings */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-transform: none;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+
+.reveal h1 {
+  font-size: 3.2em;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 60%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.15em;
+}
+
+.reveal h2 {
+  font-size: 2.1em;
+  color: var(--text-primary);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.7em;
+}
+
+.reveal h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 5px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.reveal h3,
+.reveal .slides section > h4 {
+  font-size: 1.55em;
+  color: var(--text-primary);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.65em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.reveal .slides section > h4 {
+  font-size: 1.4em;
+}
+
+.reveal h3::before,
+.reveal .slides section > h4::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 28px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  flex-shrink: 0;
+}
+
+.reveal h4 {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Section Cover Slides (only h2 on the slide) */
+.reveal .slides section:has(> h2:only-child) {
+  text-align: center;
+}
+
+.reveal .slides section:has(> h2:only-child) h2 {
+  font-size: 2.8em;
+  padding: 0.9em 1.8em;
+  background: var(--surface-card);
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.reveal .slides section:has(> h2:only-child) h2::after {
+  margin: 16px auto 0 auto;
+  width: 80px;
+  height: 6px;
+}
+
+/* Discussion / Question Slide (only h3 on the slide) */
+.reveal .slides section:has(> h3:only-child) {
+  text-align: center;
+}
+
+.reveal .slides section:has(> h3:only-child) h3 {
+  display: inline-flex;
+  font-size: 2.2em;
+  padding: 1em 1.8em;
+  background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+  border: 1px solid #bfdbfe;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.reveal .slides section:has(> h3:only-child) h3::before {
+  display: none;
+}
+
+/* Paragraphs & Subtitles */
+.reveal p {
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0 0 0.6em 0;
+}
+
+.reveal .slides section > p {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Blockquote Callout Cards */
+.reveal .slides section > blockquote {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 0.7em 0;
+  padding: 0.95em 1.4em;
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+  border: 1px solid #bfdbfe;
+  border-left: 5px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  font-style: normal;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.reveal .slides section > blockquote p {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Links */
+.reveal a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.reveal a:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+/* Lists inside Cards */
+.reveal .slides section > ul {
+  display: block;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.1em 1.5em 1.1em 2.2em;
+  margin: 0 0 0.7em 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul li {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.45em;
+  font-size: 0.92em;
+}
+
+.reveal ul li:last-child {
+  margin-bottom: 0;
+}
+
+.reveal ul li::marker {
+  color: var(--accent-primary);
+}
+
+.reveal ul ul {
+  margin-top: 0.35em;
+  margin-bottom: 0.25em;
+  padding-left: 1.2em;
+  list-style-type: circle;
+}
+
+.reveal ul ul li {
+  font-size: 0.94em;
+  color: var(--text-muted);
+  margin-bottom: 0.25em;
+}
+
+/* Inline Code / Badges & Keyboard Shortcuts */
+.reveal :not(pre) > code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.84em;
+  font-weight: 600;
+  background: var(--accent-subtle);
+  color: #1d4ed8;
+  padding: 0.15em 0.5em;
+  border-radius: 6px;
+  border: 1px solid #bfdbfe;
+  vertical-align: baseline;
+}
+
+/* Code Blocks */
+.reveal pre {
+  width: 100%;
+  font-size: 0.68em;
+  margin: 0.4em 0;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #1e293b;
+}
+
+.reveal pre code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 1em;
+  line-height: 1.4;
+  padding: 0.9em 1.3em;
+  max-height: 560px;
+  border-radius: var(--radius-lg);
+}
+
+.reveal kbd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82em;
+  font-weight: 700;
+  background: #f8fafc;
+  color: var(--text-primary);
+  padding: 0.15em 0.55em;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 0 #cbd5e1;
+}
+
+/* Modern Tables */
+.reveal table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  font-size: 0.82em;
+  margin: 0.4em 0;
+}
+
+.reveal table thead th {
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+  padding: 0.85em 1.1em;
+  border-bottom: none;
+}
+
+.reveal table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.reveal table tbody tr:hover {
+  background-color: #eff6ff;
+}
+
+.reveal table tbody td {
+  padding: 0.75em 1.1em;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  vertical-align: middle;
+  line-height: 1.45;
+}
+
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Images & Diagrams */
+.reveal .slides section p:has(> img) {
+  margin: 0;
+}
+
+.reveal .slides section img:not(.avatar) {
+  display: block;
+  margin: 0.35em auto 0 auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: 520px;
+  height: auto;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 14px;
+  box-sizing: border-box;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+/* Slides that combine a list and a diagram (only target leaf <section> slides) */
+.reveal .slides section:not(:has(> section)):has(> ul):has(img:not(.avatar)) > h3 {
+  margin-bottom: 0.35em;
+}
+
+.reveal .slides section:not(:has(> section)):has(> ul):has(img:not(.avatar)) > ul {
+  padding: 0.55em 1.25em 0.55em 1.9em;
+  margin-bottom: 0.4em;
+}
+
+.reveal .slides section:not(:has(> section)):has(> ul):has(img:not(.avatar)) > ul li {
+  font-size: 0.86em;
+  margin-bottom: 0.22em;
+  line-height: 1.38;
+}
+
+.reveal .slides section:not(:has(> section)):has(> ul) img:not(.avatar) {
+  width: 100%;
+  max-width: 100%;
+  max-height: 390px;
+  padding: 12px;
+}
+
+/* Title Slide & Hero Styling */
+.hero-slide {
+  text-align: center;
+  padding: 2.2em 2em;
+  background: var(--surface-card);
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-slide h4 {
+  font-size: 1.35em;
+  font-weight: 600;
+  color: var(--accent-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+.hero-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface-subtle);
+  padding: 0.45em 1.1em;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-style: normal;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--border-color);
+}
+
+.hero-links span.sep {
+  color: #cbd5e1;
+}
+
+/* Modern CTA Button */
+.reveal a.btn-primary {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 14px 28px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reveal a.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(37, 99, 235, 0.55);
+}
+
+/* Bio / Author Slide ("Who am I?") */
+.author-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.6em 2.2em;
+  box-shadow: var(--shadow-md);
+  margin-top: 0.5em;
+}
+
+.reveal .author-card blockquote {
+  margin: 0;
+  padding: 0.4em 0 0.4em 1em;
+  border-left: 5px solid var(--accent-primary);
+  background: transparent;
+  box-shadow: none;
+  font-style: normal;
+  font-size: 1.15em;
+  line-height: 1.6;
+  color: var(--text-primary);
+  width: auto;
+}
+
+.reveal .author-card img.avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border: none;
+  box-shadow: var(--shadow-lg);
+  margin: 0;
+}
+
+/* Subtitle pill */
+.cidr-subtitle {
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: var(--accent-subtle);
+  border: 1px solid #bfdbfe;
+  padding: 0.25em 0.85em;
+  border-radius: 999px;
+  margin-bottom: 0.7em !important;
+}
+
+/* Reference link pill */
+.ref-link {
+  font-size: 0.78em;
+  margin-top: 0.5em !important;
+  text-align: right;
+}
+
+/* Controls & Progress Bar */
+.reveal .progress {
+  height: 5px;
+  color: var(--accent-primary);
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.reveal .controls {
+  color: var(--accent-primary);
+}
+
+.reveal .slide-number {
+  background: var(--surface-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}

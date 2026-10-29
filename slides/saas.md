@@ -1,11 +1,18 @@
-## Le SaaS
-
-Software-as-a-Service
+## SaaS
 
 ----
 
-### Dropbox / Gmail / SAP
+### Software-as-a-Service
 
-<img src="https://a.slack-edge.com/ca1d0/img/services/dropbox_512.png" width="20%" style="background:none; border:none; box-shadow:none;"/>
-<img src="https://img.bfmtv.com/c/630/420/111/b9e073987bb92bd6246b9ebbd3a15.jpg" width="30%" style="background:none; border:none; box-shadow:none;"/>
+> Turnkey applications hosted, operated, and maintained entirely by the provider
 
+* Consumed directly by end-users over the web or mobile apps
+* **Zero infrastructure or code management** for the customer
+* Subscription-based pricing (per user / per month or usage tier)
+* Continuous, transparent updates and built-in high availability
+
+----
+
+### Popular SaaS Examples
+
+<img src="img/saas-examples.svg" alt="Examples of SaaS applications: Gmail, Dropbox, Salesforce, Microsoft 365, Slack, GitHub" />

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Git + CI/CD Image Builder -->
+    <rect x="40" y="54" width="210" height="164" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="145" y="90" text-anchor="middle" font-size="16" font-weight="800" fill="#1e40af">1. Git + Image Build</text>
+    <text x="145" y="114" text-anchor="middle" font-size="12.5" fill="#64748b">Packer / Docker / CI</text>
+    <rect x="64" y="132" width="162" height="32" rx="6" fill="#eff6ff"/>
+    <text x="145" y="153" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#2563eb">AMI / Image v1.0</text>
+    <rect x="64" y="172" width="162" height="32" rx="6" fill="#ecfdf5"/>
+    <text x="145" y="193" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600" fill="#059669">AMI / Image v2.0</text>
+
+    <line x1="254" y1="136" x2="314" y2="136" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- v1.0 Instance (Replaced) -->
+    <rect x="320" y="54" width="260" height="164" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="450" y="90" text-anchor="middle" font-size="16" font-weight="800" fill="#64748b">2. Old Server (v1.0)</text>
+    <text x="450" y="116" text-anchor="middle" font-size="12.5" fill="#64748b">Never modified in-place</text>
+    <rect x="350" y="140" width="200" height="44" rx="8" fill="#fee2e2"/>
+    <text x="450" y="167" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#dc2626">Terminated after switch</text>
+
+    <line x1="584" y1="136" x2="644" y2="136" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- v2.0 Instance (Active) -->
+    <rect x="650" y="54" width="270" height="164" rx="16" fill="#ffffff" stroke="#34d399" stroke-width="2"/>
+    <text x="785" y="90" text-anchor="middle" font-size="16" font-weight="800" fill="#047857">3. New Server (v2.0)</text>
+    <text x="785" y="116" text-anchor="middle" font-size="12.5" fill="#64748b">Fresh instance from Image v2.0</text>
+    <rect x="680" y="140" width="210" height="44" rx="8" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="785" y="167" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#059669">SSH Disabled • 100% Tested</text>
+
+    <!-- Bottom Callout -->
+    <rect x="40" y="246" width="880" height="76" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+    <text x="480" y="278" text-anchor="middle" font-size="15" font-weight="800" fill="#065f46">Immutable Infrastructure Principle</text>
+    <text x="480" y="302" text-anchor="middle" font-size="13.5" fill="#334155">Servers are never modified after deployment. Any change builds a new versioned image, spins up new instances, and destroys old ones.</text>
+  </g>
+</svg>

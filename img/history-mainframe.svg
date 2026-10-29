@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gMainframe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="400" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="400" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- Left: Dumb Terminals -->
+  <g filter="url(#shadow)">
+    <rect x="44" y="42" width="250" height="92" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="62" y="60" width="52" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="88" y="85" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1d4ed8">&gt;_</text>
+    <rect x="74" y="104" width="28" height="6" rx="2" fill="#94a3b8"/>
+    <text x="132" y="78" font-size="16" font-weight="700" fill="#0f172a">Terminal #1</text>
+    <text x="132" y="100" font-size="12.5" fill="#64748b">Display &amp; Keyboard only</text>
+
+    <rect x="44" y="154" width="250" height="92" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="62" y="172" width="52" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="88" y="197" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1d4ed8">&gt;_</text>
+    <rect x="74" y="216" width="28" height="6" rx="2" fill="#94a3b8"/>
+    <text x="132" y="190" font-size="16" font-weight="700" fill="#0f172a">Terminal #2</text>
+    <text x="132" y="212" font-size="12.5" fill="#64748b">No local processing</text>
+
+    <rect x="44" y="266" width="250" height="92" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="62" y="284" width="52" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="88" y="309" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1d4ed8">&gt;_</text>
+    <rect x="74" y="328" width="28" height="6" rx="2" fill="#94a3b8"/>
+    <text x="132" y="302" font-size="16" font-weight="700" fill="#0f172a">Terminal #3</text>
+    <text x="132" y="324" font-size="12.5" fill="#64748b">Time-sharing session</text>
+  </g>
+
+  <!-- Connection Lines -->
+  <line x1="296" y1="88" x2="462" y2="165" stroke="#64748b" stroke-width="2.2" stroke-dasharray="5 4" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <line x1="296" y1="200" x2="462" y2="200" stroke="#64748b" stroke-width="2.2" stroke-dasharray="5 4" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <line x1="296" y1="312" x2="462" y2="235" stroke="#64748b" stroke-width="2.2" stroke-dasharray="5 4" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+
+  <!-- Right: Central Mainframe -->
+  <g filter="url(#shadow)">
+    <rect x="474" y="38" width="438" height="324" rx="18" fill="url(#gMainframe)"/>
+    <rect x="502" y="64" width="382" height="52" rx="10" fill="url(#gBlue)"/>
+    <text x="693" y="96" text-anchor="middle" font-size="19" font-weight="800" fill="#ffffff">Centralized Mainframe (1960s–1980s)</text>
+
+    <rect x="502" y="134" width="182" height="94" rx="12" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="593" y="172" text-anchor="middle" font-size="15" font-weight="700" fill="#f8fafc">Central CPU &amp; Memory</text>
+    <text x="593" y="196" text-anchor="middle" font-size="12" fill="#94a3b8">100% of compute power</text>
+
+    <rect x="702" y="134" width="182" height="94" rx="12" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="793" y="172" text-anchor="middle" font-size="15" font-weight="700" fill="#f8fafc">Central Storage</text>
+    <text x="793" y="196" text-anchor="middle" font-size="12" fill="#94a3b8">Tape &amp; Disk Arrays</text>
+
+    <rect x="502" y="244" width="382" height="90" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <text x="693" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#38bdf8">Characteristics</text>
+    <text x="693" y="302" text-anchor="middle" font-size="13" fill="#cbd5e1">Shared compute • Extremely expensive • Single vendor lock-in</text>
+  </g>
+</svg>

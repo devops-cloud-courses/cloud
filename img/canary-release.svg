@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Users -->
+    <rect x="44" y="132" width="150" height="96" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="119" y="175" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Users</text>
+    <text x="119" y="198" text-anchor="middle" font-size="12.5" fill="#64748b">100% Live Traffic</text>
+
+    <!-- Weighted Router -->
+    <rect x="266" y="120" width="180" height="120" rx="16" fill="#1e293b"/>
+    <text x="356" y="168" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">Load Balancer</text>
+    <text x="356" y="192" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#38bdf8">Weighted Routing</text>
+    <text x="356" y="212" text-anchor="middle" font-size="11.5" fill="#94a3b8">95% / 5% Split</text>
+
+    <!-- Stable Fleet (95%) -->
+    <rect x="556" y="34" width="358" height="130" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="580" y="52" width="136" height="30" rx="6" fill="#2563eb"/>
+    <text x="648" y="72" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">STABLE (v1.0)</text>
+    <text x="732" y="72" font-size="14" font-family="'JetBrains Mono', monospace" font-weight="800" fill="#1d4ed8">95% of Traffic</text>
+    <rect x="580" y="96" width="96" height="46" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="628" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Node 1</text>
+    <rect x="688" y="96" width="96" height="46" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="736" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Node 2</text>
+    <rect x="796" y="96" width="96" height="46" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="844" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Node 3</text>
+
+    <!-- Canary Fleet (5%) -->
+    <rect x="556" y="196" width="358" height="130" rx="16" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="580" y="214" width="136" height="30" rx="6" fill="#d97706"/>
+    <text x="648" y="234" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">CANARY (v2.0)</text>
+    <text x="732" y="234" font-size="14" font-family="'JetBrains Mono', monospace" font-weight="800" fill="#b45309">5% → 25% → 100%</text>
+    <rect x="580" y="258" width="140" height="46" rx="8" fill="#ffffff" stroke="#fcd34d"/>
+    <text x="650" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">Canary Node</text>
+    <rect x="736" y="258" width="156" height="46" rx="8" fill="#fef3c7"/>
+    <text x="814" y="285" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Monitor Error Rate</text>
+  </g>
+
+  <line x1="196" y1="180" x2="258" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <line x1="448" y1="156" x2="548" y2="102" stroke="#2563eb" stroke-width="3.5" marker-end="url(#arrowBlue)"/>
+  <line x1="448" y1="204" x2="548" y2="258" stroke="#d97706" stroke-width="2.5" stroke-dasharray="5 3" marker-end="url(#arrowAmber)"/>
+</svg>

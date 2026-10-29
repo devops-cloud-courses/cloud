@@ -1,17 +1,28 @@
-# Cloud
-#### In a nutshell
+<div class="hero-slide">
 
-<br />
+<h1>Cloud</h1>
+<h4>In a nutshell</h4>
 
-<i><a target="_new" href="http://twitter.com/laurentgrangeau">@laurentgrangeau</a> | <a target="_new" href="http://github.com/laurentgrangeau">github.com/laurentgrangeau</a></i>
+<div class="hero-links">
+  <a target="_new" href="https://twitter.com/laurentgrangeau">@laurentgrangeau</a>
+  <span class="sep">|</span>
+  <a target="_new" href="https://github.com/laurentgrangeau">github.com/laurentgrangeau</a>
+</div>
 
-<a href="#/2/3" style="font-size: 22px; background: #4141d8; text-decoration: none; padding: 20px; color: white; border-radius: 7px;">How to explore this doc</a>
+<div>
+  <a href="#/2/2" class="btn-primary">How to explore this doc</a>
+</div>
+
+</div>
 
 ---
 
 ### Who am I?
 
-> Laurent Grangeau<br />
-> Cloud Solution Architect @ Sogeti
-
-<img src="https://pbs.twimg.com/profile_images/1007639151812988929/ln3iUxxF_400x400.jpg" width="200px" />
+<div class="author-card">
+  <blockquote>
+    <strong>Laurent Grangeau</strong><br />
+    Cloud Solution Architect @ Google
+  </blockquote>
+  <img class="avatar" src="img/avatar.jpg" alt="Laurent Grangeau" />
+</div>

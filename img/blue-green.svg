@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Users -->
+    <rect x="44" y="132" width="150" height="96" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="119" y="175" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Users</text>
+    <text x="119" y="198" text-anchor="middle" font-size="12.5" fill="#64748b">100% Live Traffic</text>
+
+    <!-- Router / Load Balancer -->
+    <rect x="266" y="120" width="180" height="120" rx="16" fill="#1e293b"/>
+    <text x="356" y="168" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">Router / LB</text>
+    <text x="356" y="192" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#38bdf8">Instant Cutover</text>
+    <text x="356" y="212" text-anchor="middle" font-size="11.5" fill="#94a3b8">&amp; Instant Rollback</text>
+
+    <!-- Blue Environment (Standby / Previous) -->
+    <rect x="546" y="34" width="368" height="130" rx="16" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="570" y="52" width="120" height="30" rx="6" fill="#2563eb"/>
+    <text x="630" y="72" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">BLUE (v1.0)</text>
+    <text x="710" y="72" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#64748b">Idle / Standby (Rollback ready)</text>
+    <rect x="570" y="96" width="100" height="46" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="620" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Instance 1</text>
+    <rect x="680" y="96" width="100" height="46" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="730" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Instance 2</text>
+    <rect x="790" y="96" width="100" height="46" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="840" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#1e40af">Instance 3</text>
+
+    <!-- Green Environment (Live / Active) -->
+    <rect x="546" y="196" width="368" height="130" rx="16" fill="#ecfdf5" stroke="#10b981" stroke-width="2.5"/>
+    <rect x="570" y="214" width="120" height="30" rx="6" fill="#059669"/>
+    <text x="630" y="234" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">GREEN (v2.0)</text>
+    <text x="710" y="234" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#047857">100% Production Traffic</text>
+    <rect x="570" y="258" width="100" height="46" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+    <text x="620" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">Instance 1</text>
+    <rect x="680" y="258" width="100" height="46" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+    <text x="730" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">Instance 2</text>
+    <rect x="790" y="258" width="100" height="46" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+    <text x="840" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">Instance 3</text>
+  </g>
+
+  <!-- Connections -->
+  <line x1="196" y1="180" x2="258" y2="180" stroke="#059669" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="448" y1="156" x2="538" y2="102" stroke="#94a3b8" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#arrowBlue)"/>
+  <line x1="448" y1="204" x2="538" y2="258" stroke="#059669" stroke-width="3.5" marker-end="url(#arrowGreen)"/>
+</svg>

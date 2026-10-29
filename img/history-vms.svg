@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gHyper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="gHw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="420" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="420" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- Left: Traditional Physical Architecture -->
+  <g filter="url(#shadow)">
+    <rect x="44" y="28" width="380" height="364" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="234" y="64" text-anchor="middle" font-size="18" font-weight="800" fill="#0f172a">Physical Server</text>
+    <text x="234" y="84" text-anchor="middle" font-size="12" fill="#64748b">1 Operating System per Machine</text>
+
+    <rect x="74" y="104" width="320" height="90" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="234" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">Application + Binaries / Libs</text>
+    <text x="234" y="168" text-anchor="middle" font-size="13" fill="#64748b">Large unused resources</text>
+
+    <rect x="74" y="208" width="320" height="62" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="234" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Host Operating System</text>
+
+    <rect x="74" y="284" width="320" height="82" rx="12" fill="url(#gHw)"/>
+    <text x="234" y="322" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Physical Hardware</text>
+    <text x="234" y="345" text-anchor="middle" font-size="12.5" fill="#94a3b8">CPU • RAM • Storage • Network</text>
+  </g>
+
+  <!-- Right: Virtualized Architecture -->
+  <g filter="url(#shadow)">
+    <rect x="466" y="28" width="450" height="364" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="691" y="64" text-anchor="middle" font-size="18" font-weight="800" fill="#1d4ed8">Virtual Machines (VMs)</text>
+    <text x="691" y="84" text-anchor="middle" font-size="12" fill="#2563eb">Hardware Resource Pooling &amp; Isolation</text>
+
+    <!-- VM 1 -->
+    <rect x="492" y="102" width="122" height="118" rx="10" fill="#eff6ff" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="553" y="125" text-anchor="middle" font-size="13" font-weight="800" fill="#1e40af">VM #1</text>
+    <rect x="504" y="135" width="98" height="34" rx="6" fill="#dbeafe"/>
+    <text x="553" y="157" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">App A</text>
+    <rect x="504" y="175" width="98" height="34" rx="6" fill="#bfdbfe"/>
+    <text x="553" y="197" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">Guest OS</text>
+
+    <!-- VM 2 -->
+    <rect x="630" y="102" width="122" height="118" rx="10" fill="#ecfdf5" stroke="#34d399" stroke-width="1.5"/>
+    <text x="691" y="125" text-anchor="middle" font-size="13" font-weight="800" fill="#065f46">VM #2</text>
+    <rect x="642" y="135" width="98" height="34" rx="6" fill="#d1fae5"/>
+    <text x="691" y="157" text-anchor="middle" font-size="12" font-weight="700" fill="#047857">App B</text>
+    <rect x="642" y="175" width="98" height="34" rx="6" fill="#a7f3d0"/>
+    <text x="691" y="197" text-anchor="middle" font-size="12" font-weight="700" fill="#064e3b">Guest OS</text>
+
+    <!-- VM 3 -->
+    <rect x="768" y="102" width="122" height="118" rx="10" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="829" y="125" text-anchor="middle" font-size="13" font-weight="800" fill="#5b21b6">VM #3</text>
+    <rect x="780" y="135" width="98" height="34" rx="6" fill="#ede9fe"/>
+    <text x="829" y="157" text-anchor="middle" font-size="12" font-weight="700" fill="#6d28d9">App C</text>
+    <rect x="780" y="175" width="98" height="34" rx="6" fill="#ddd6fe"/>
+    <text x="829" y="197" text-anchor="middle" font-size="12" font-weight="700" fill="#4c1d95">Guest OS</text>
+
+    <!-- Hypervisor -->
+    <rect x="492" y="232" width="398" height="44" rx="10" fill="url(#gHyper)"/>
+    <text x="691" y="259" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Hypervisor (VMware ESXi, KVM, Nitro, Hyper-V)</text>
+
+    <!-- Hardware -->
+    <rect x="492" y="286" width="398" height="80" rx="12" fill="url(#gHw)"/>
+    <text x="691" y="322" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Shared Physical Hardware</text>
+    <text x="691" y="345" text-anchor="middle" font-size="12.5" fill="#94a3b8">High Utilization • Rapid Provisioning • Snapshots</text>
+  </g>
+</svg>

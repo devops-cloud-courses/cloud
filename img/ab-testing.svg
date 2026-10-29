@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- User Segments -->
+    <rect x="44" y="120" width="180" height="120" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="134" y="164" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">User Segments</text>
+    <text x="134" y="188" text-anchor="middle" font-size="12" fill="#64748b">Header / Cookie / Geo</text>
+    <text x="134" y="208" text-anchor="middle" font-size="12" fill="#64748b">Feature Flag Rule</text>
+
+    <!-- Feature Flag / Router -->
+    <rect x="284" y="120" width="176" height="120" rx="16" fill="#1e293b"/>
+    <text x="372" y="168" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">Experiment Router</text>
+    <text x="372" y="192" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#a78bfa">50% Cohort A</text>
+    <text x="372" y="212" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#38bdf8">50% Cohort B</text>
+
+    <!-- Variant A -->
+    <rect x="530" y="38" width="386" height="124" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="554" y="58" width="124" height="30" rx="6" fill="#2563eb"/>
+    <text x="616" y="78" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">VARIANT A</text>
+    <text x="694" y="78" font-size="14" font-weight="700" fill="#1e3a8a">Control UI / Algorithm</text>
+    <rect x="554" y="102" width="338" height="42" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="723" y="128" text-anchor="middle" font-size="13.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1d4ed8">Conversion Rate: 3.2%</text>
+
+    <!-- Variant B -->
+    <rect x="530" y="198" width="386" height="124" rx="16" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+    <rect x="554" y="218" width="124" height="30" rx="6" fill="#7c3aed"/>
+    <text x="616" y="238" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">VARIANT B</text>
+    <text x="694" y="238" font-size="14" font-weight="700" fill="#4c1d95">New Feature / Checkout</text>
+    <rect x="554" y="262" width="338" height="42" rx="8" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="723" y="288" text-anchor="middle" font-size="13.5" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#059669">Conversion Rate: 4.8% (Winner!)</text>
+  </g>
+
+  <line x1="226" y1="180" x2="276" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <line x1="462" y1="156" x2="522" y2="104" stroke="#2563eb" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <line x1="462" y1="204" x2="522" y2="256" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrowPurple)"/>
+</svg>

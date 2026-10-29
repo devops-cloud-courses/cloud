@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="360" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="360" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Frontend App -->
+    <rect x="64" y="106" width="240" height="148" rx="22" fill="#0f172a"/>
+    <text x="184" y="172" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">Client App</text>
+    <text x="184" y="200" text-anchor="middle" font-size="13" fill="#38bdf8">Web SPA / Mobile App</text>
+    <text x="184" y="222" text-anchor="middle" font-size="11.5" font-family="'JetBrains Mono', monospace" fill="#94a3b8">Direct SDK / API calls</text>
+
+    <!-- BaaS 1: Authentication -->
+    <rect x="464" y="28" width="432" height="88" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="486" y="46" width="52" height="52" rx="12" fill="#eff6ff"/>
+    <text x="512" y="79" text-anchor="middle" font-size="18" font-weight="800" fill="#2563eb">IAM</text>
+    <text x="558" y="66" font-size="17" font-weight="800" fill="#0f172a">Managed Authentication</text>
+    <text x="558" y="90" font-size="13" font-family="'JetBrains Mono', monospace" fill="#64748b">Auth0 • AWS Cognito • Firebase Auth</text>
+
+    <!-- BaaS 2: Object Storage -->
+    <rect x="464" y="136" width="432" height="88" rx="14" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+    <rect x="486" y="154" width="52" height="52" rx="12" fill="#ecfdf5"/>
+    <text x="512" y="187" text-anchor="middle" font-size="18" font-weight="800" fill="#059669">S3</text>
+    <text x="558" y="174" font-size="17" font-weight="800" fill="#0f172a">Managed Object Storage</text>
+    <text x="558" y="198" font-size="13" font-family="'JetBrains Mono', monospace" fill="#64748b">Amazon S3 • Azure Blob • Cloud Storage</text>
+
+    <!-- BaaS 3: Serverless Databases -->
+    <rect x="464" y="244" width="432" height="88" rx="14" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+    <rect x="486" y="262" width="52" height="52" rx="12" fill="#f5f3ff"/>
+    <text x="512" y="295" text-anchor="middle" font-size="18" font-weight="800" fill="#7c3aed">DB</text>
+    <text x="558" y="282" font-size="17" font-weight="800" fill="#0f172a">Serverless Databases &amp; APIs</text>
+    <text x="558" y="306" font-size="13" font-family="'JetBrains Mono', monospace" fill="#64748b">DynamoDB • Firestore • Supabase</text>
+  </g>
+
+  <line x1="308" y1="154" x2="454" y2="76" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="308" y1="180" x2="454" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="308" y1="206" x2="454" y2="284" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

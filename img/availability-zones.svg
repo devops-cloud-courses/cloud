@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" width="960" height="410" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gAz" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="410" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="410" rx="18" fill="url(#dotGrid)"/>
+
+  <!-- Outer Region Box -->
+  <rect x="34" y="26" width="892" height="358" rx="22" fill="#eff6ff" fill-opacity="0.6" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8 5"/>
+  <rect x="340" y="10" width="280" height="34" rx="17" fill="url(#gAz)"/>
+  <text x="480" y="32" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">Cloud Region (e.g. eu-west-1)</text>
+
+  <!-- Fiber Mesh Lines between AZs -->
+  <line x1="310" y1="190" x2="360" y2="190" stroke="#2563eb" stroke-width="3"/>
+  <line x1="600" y1="190" x2="650" y2="190" stroke="#2563eb" stroke-width="3"/>
+  <path d="M 190 294 Q 480 355 770 294" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+
+  <g filter="url(#shadow)">
+    <!-- AZ 1 -->
+    <rect x="66" y="72" width="244" height="222" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="86" y="90" width="204" height="34" rx="8" fill="#dbeafe"/>
+    <text x="188" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">Availability Zone A</text>
+    <rect x="86" y="138" width="96" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="134" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Datacenter 1</text>
+    <text x="134" y="188" text-anchor="middle" font-size="11" fill="#64748b">Isolated grid</text>
+    <rect x="194" y="138" width="96" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="242" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Datacenter 2</text>
+    <text x="242" y="188" text-anchor="middle" font-size="11" fill="#64748b">Backup UPS</text>
+    <text x="188" y="238" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Independent Power, Cooling</text>
+    <text x="188" y="258" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">&amp; Physical Security</text>
+
+    <!-- AZ 2 -->
+    <rect x="358" y="72" width="244" height="222" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="378" y="90" width="204" height="34" rx="8" fill="#dbeafe"/>
+    <text x="480" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">Availability Zone B</text>
+    <rect x="378" y="138" width="96" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="426" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Datacenter 3</text>
+    <text x="426" y="188" text-anchor="middle" font-size="11" fill="#64748b">Isolated grid</text>
+    <rect x="486" y="138" width="96" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="534" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Datacenter 4</text>
+    <text x="534" y="188" text-anchor="middle" font-size="11" fill="#64748b">Backup UPS</text>
+    <text x="480" y="238" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Separated by several km</text>
+    <text x="480" y="258" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">(Flood / Fire / Power isolation)</text>
+
+    <!-- AZ 3 -->
+    <rect x="650" y="72" width="244" height="222" rx="16" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="670" y="90" width="204" height="34" rx="8" fill="#dbeafe"/>
+    <text x="772" y="112" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">Availability Zone C</text>
+    <rect x="670" y="138" width="96" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="718" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Datacenter 5</text>
+    <text x="718" y="188" text-anchor="middle" font-size="11" fill="#64748b">Isolated grid</text>
+    <rect x="778" y="138" width="96" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="826" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Datacenter 6</text>
+    <text x="826" y="188" text-anchor="middle" font-size="11" fill="#64748b">Backup UPS</text>
+    <text x="772" y="238" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Synchronous Replication</text>
+    <text x="772" y="258" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">&amp; Automatic Failover</text>
+
+    <!-- Latency Pill -->
+    <rect x="290" y="332" width="380" height="34" rx="17" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="480" y="354" text-anchor="middle" font-size="13" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#1d4ed8">Redundant Fiber Interconnect (&lt; 2ms RTT)</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#cbd5e1" fill-opacity="0.55"/>
+    </pattern>
+    <linearGradient id="gFn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="400" rx="18" fill="#f8fafc"/>
+  <rect width="960" height="400" rx="18" fill="url(#dotGrid)"/>
+
+  <g filter="url(#shadow)">
+    <!-- Client / Event Source -->
+    <rect x="44" y="138" width="180" height="106" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="134" y="182" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Clients &amp; Events</text>
+    <text x="134" y="206" text-anchor="middle" font-size="12" fill="#64748b">HTTP, Queue, Cron,</text>
+    <text x="134" y="224" text-anchor="middle" font-size="12" fill="#64748b">Object Upload</text>
+
+    <!-- API Gateway / Event Router -->
+    <rect x="284" y="138" width="180" height="106" rx="14" fill="#1e293b"/>
+    <text x="374" y="182" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">API Gateway</text>
+    <text x="374" y="206" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#38bdf8">Event Trigger</text>
+    <text x="374" y="224" text-anchor="middle" font-size="11.5" fill="#94a3b8">On-demand routing</text>
+
+    <!-- 3 Ephemeral Function Instances -->
+    <rect x="546" y="34" width="368" height="84" rx="14" fill="url(#gFn)"/>
+    <text x="730" y="72" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">Instantiated Function #1 (Your Code)</text>
+    <text x="730" y="96" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Spun up on request • Millisecond billing</text>
+
+    <rect x="546" y="148" width="368" height="84" rx="14" fill="url(#gFn)"/>
+    <text x="730" y="186" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">Instantiated Function #2 (Your Code)</text>
+    <text x="730" y="210" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Concurrent execution • Stateless</text>
+
+    <rect x="546" y="262" width="368" height="84" rx="14" fill="url(#gFn)"/>
+    <text x="730" y="300" text-anchor="middle" font-size="15" font-weight="800" fill="#ffffff">Instantiated Function #N (Your Code)</text>
+    <text x="730" y="324" text-anchor="middle" font-size="12" font-family="'JetBrains Mono', monospace" fill="#dbeafe">Scales from 0 to 1,000s automatically</text>
+
+    <!-- Bottom Abstracted Infrastructure Bar -->
+    <rect x="44" y="358" width="870" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="480" y="377" text-anchor="middle" font-size="12.5" font-weight="700" fill="#475569">Underlying Compute Fleet Fully Abstracted &amp; Managed by the Cloud Provider</text>
+  </g>
+
+  <line x1="226" y1="191" x2="276" y2="191" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="466" y1="168" x2="538" y2="82" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="466" y1="191" x2="538" y2="191" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="466" y1="214" x2="538" y2="300" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+</svg>
