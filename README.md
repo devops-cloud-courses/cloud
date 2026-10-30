@@ -3,6 +3,7 @@
 An interactive presentation on **Cloud Computing (`SaaS`, `IaaS`, `PaaS`, `Serverless`), Cloud Migration, and Enterprise Cloud Architectures**, powered by [Reveal.js 6.0.2](https://revealjs.com/).
 
 * **Live Presentation:** [https://devops-cloud-courses.github.io/cloud](https://devops-cloud-courses.github.io/cloud)
+* **Download PDF (Latest Release):** [cloud-in-a-nutshell.pdf](https://github.com/devops-cloud-courses/cloud/releases/latest/download/cloud-in-a-nutshell.pdf)
 * **PDF Export View:** [https://devops-cloud-courses.github.io/cloud/?print-pdf&pdfSeparateFragments=false](https://devops-cloud-courses.github.io/cloud/?print-pdf&pdfSeparateFragments=false)
 
 ---

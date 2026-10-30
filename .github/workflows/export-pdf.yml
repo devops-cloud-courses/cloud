@@ -1,0 +1,107 @@
+name: Export Slides to PDF & Release
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'index.html'
+      - 'css/**'
+      - 'img/**'
+      - 'slides/**'
+      - '.github/workflows/export-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export-and-release:
+    name: Build PDF & Publish GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright Chromium
+        run: |
+          npm init -y
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Render Reveal.js slides to PDF
+        run: |
+          python3 -m http.server 8000 &
+          SERVER_PID=$!
+
+          # Wait for local HTTP server to be ready
+          for i in $(seq 1 15); do
+            if curl -sSf http://localhost:8000 >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+
+          node << 'EOF'
+          const { chromium } = require('playwright');
+
+          (async () => {
+            const browser = await chromium.launch();
+            const page = await browser.newPage();
+
+            await page.goto('http://localhost:8000/?print-pdf&pdfSeparateFragments=false', {
+              waitUntil: 'networkidle',
+              timeout: 60000
+            });
+
+            // Wait for Reveal.js and external Markdown plugins to finish rendering all slides
+            await page.waitForFunction(() => {
+              return (
+                typeof Reveal !== 'undefined' &&
+                Reveal.isReady() &&
+                document.querySelectorAll('.pdf-page').length > 0
+              );
+            }, { timeout: 30000 });
+
+            // Wait for web fonts and SVG images to settle
+            await page.evaluate(() => document.fonts.ready);
+            await page.waitForTimeout(1000);
+
+            await page.pdf({
+              path: 'cloud-in-a-nutshell.pdf',
+              printBackground: true,
+              preferCSSPageSize: true
+            });
+
+            await browser.close();
+          })();
+          EOF
+
+          kill $SERVER_PID || true
+          ls -lh cloud-in-a-nutshell.pdf
+
+      - name: Upload PDF as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloud-in-a-nutshell-pdf
+          path: cloud-in-a-nutshell.pdf
+          retention-days: 90
+
+      - name: Create GitHub Release with PDF asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v$(date -u +'%Y.%m.%d')-${GITHUB_RUN_NUMBER}"
+          TITLE="Cloud in a Nutshell — Slides PDF (${TAG})"
+          NOTES="Automated PDF export of the **Cloud in a Nutshell** presentation built from commit \`${GITHUB_SHA::7}\`."
+
+          gh release create "${TAG}" cloud-in-a-nutshell.pdf \
+            --title "${TITLE}" \
+            --notes "${NOTES}" \
+            --latest

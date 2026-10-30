@@ -121,11 +121,11 @@
 }
 
 /* Section Cover Slides (only h2 on the slide) */
-.reveal .slides section:has(> h2:only-child) {
+.reveal .slides section:has(> h2):not(:has(> :not(h2):not(aside):not(.slide-background))) {
   text-align: center;
 }
 
-.reveal .slides section:has(> h2:only-child) h2 {
+.reveal .slides section:has(> h2):not(:has(> :not(h2):not(aside):not(.slide-background))) h2 {
   font-size: 2.8em;
   padding: 0.9em 1.8em;
   background: var(--surface-card);
@@ -134,18 +134,18 @@
   box-shadow: var(--shadow-md);
 }
 
-.reveal .slides section:has(> h2:only-child) h2::after {
+.reveal .slides section:has(> h2):not(:has(> :not(h2):not(aside):not(.slide-background))) h2::after {
   margin: 16px auto 0 auto;
   width: 80px;
   height: 6px;
 }
 
 /* Discussion / Question Slide (only h3 on the slide) */
-.reveal .slides section:has(> h3:only-child) {
+.reveal .slides section:has(> h3):not(:has(> :not(h3):not(aside):not(.slide-background))) {
   text-align: center;
 }
 
-.reveal .slides section:has(> h3:only-child) h3 {
+.reveal .slides section:has(> h3):not(:has(> :not(h3):not(aside):not(.slide-background))) h3 {
   display: inline-flex;
   font-size: 2.2em;
   padding: 1em 1.8em;
@@ -155,7 +155,7 @@
   box-shadow: var(--shadow-md);
 }
 
-.reveal .slides section:has(> h3:only-child) h3::before {
+.reveal .slides section:has(> h3):not(:has(> :not(h3):not(aside):not(.slide-background))) h3::before {
   display: none;
 }
 
@@ -550,4 +550,22 @@
   right: 20px;
   bottom: 20px;
   box-shadow: var(--shadow-sm);
+}
+
+/* Print / PDF Export Styles */
+html.print-pdf {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+html.print-pdf .reveal-viewport,
+html.print-pdf .pdf-page {
+  background: var(--bg-primary) !important;
+  background-image: var(--bg-gradient) !important;
+}
+
+html.print-pdf .reveal h1 {
+  background: none !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  color: #1d4ed8 !important;
 }
